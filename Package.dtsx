@@ -1,0 +1,698 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/10/2026 3:13:09 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-9HVLOIP"
+  DTS:CreatorName="DESKTOP-9HVLOIP\1234"
+  DTS:DTSID="{F0876E63-93D5-4D60-834F-A6FF8B8EE3DF}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{8E11D58F-76D2-4DF0-926A-5E312CC65EF1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[192.168.0.18.SalesForceAdmin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7511E214-CB1F-4426-A00C-44F247A0E867}"
+      DTS:ObjectName="192.168.0.18.SalesForceAdmin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=192.168.0.18;User ID=SalesForceAdmin;Provider=SQLOLEDB.1;Application Name=SSIS-Package-{7511E214-CB1F-4426-A00C-44F247A0E867}192.168.0.18.SalesForceAdmin;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABH0ZPiVxF1LaSsMyI/uvkc7saNfaVku7R59SUX/sIEFwAAAAAOgAAAAAIAACAAAAD+DtqHgxT/OCAtQ2cRkOFfcz0qQHxdpTQoIswD+jPTECAAAAA3P6DCPh5DDvqsoxdLqxGf8jKYZfobwxLt+Oif0AikKUAAAABhpkCFXk/5LZ9MG8TrpR1c8xv+BC7y0qrjxTZpIVAnQnVuEIZ842gZ1hVgo4bx59daLA/yN569awLY4koMBX0S</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task Plus"
+      DTS:CreationName="CozyRoc.Pipeline"
+      DTS:Description="Data Flow Task Plus"
+      DTS:DTSID="{0E12FCE8-983B-4037-98BD-54778431F1F6}"
+      DTS:ExecutableType="CozyRoc.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task Plus"
+      DTS:TaskContact="Data Flow Task Plus;CozyRoc LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              id="1"
+              name="OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              description="OLE DB Source"
+              usesDispositions="true"
+              version="7"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  id="2"
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  id="3"
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Customer]</property>
+                <property
+                  id="4"
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  id="5"
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  id="6"
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  id="7"
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  id="8"
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  id="9"
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  id="15"
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  id="10"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{7511E214-CB1F-4426-A00C-44F247A0E867}" />
+              </connections>
+              <outputs>
+                <output
+                  id="11"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      id="37"
+                      name="CustomerId"
+                      lineageId="37"
+                      length="6"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="36" />
+                    <outputColumn
+                      id="40"
+                      name="Name"
+                      lineageId="40"
+                      length="100"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="39" />
+                    <outputColumn
+                      id="43"
+                      name="Street"
+                      lineageId="43"
+                      length="40"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="42" />
+                    <outputColumn
+                      id="46"
+                      name="District"
+                      lineageId="46"
+                      length="40"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="45" />
+                    <outputColumn
+                      id="49"
+                      name="Country"
+                      lineageId="49"
+                      length="3"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="48" />
+                    <outputColumn
+                      id="52"
+                      name="County"
+                      lineageId="52"
+                      length="40"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="51" />
+                    <outputColumn
+                      id="55"
+                      name="State"
+                      lineageId="55"
+                      length="40"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="54" />
+                    <outputColumn
+                      id="58"
+                      name="PostalCode"
+                      lineageId="58"
+                      length="40"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="57" />
+                    <outputColumn
+                      id="61"
+                      name="City"
+                      lineageId="61"
+                      length="40"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="60" />
+                    <outputColumn
+                      id="64"
+                      name="CustomerKeyword"
+                      lineageId="64"
+                      length="10"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="63" />
+                    <outputColumn
+                      id="67"
+                      name="SalesRep"
+                      lineageId="67"
+                      length="40"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="66" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="36"
+                      name="CustomerId"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="39"
+                      name="Name"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      id="42"
+                      name="Street"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="45"
+                      name="District"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="48"
+                      name="Country"
+                      dataType="wstr"
+                      length="3" />
+                    <externalMetadataColumn
+                      id="51"
+                      name="County"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="54"
+                      name="State"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="57"
+                      name="PostalCode"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="60"
+                      name="City"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="63"
+                      name="CustomerKeyword"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="66"
+                      name="SalesRep"
+                      dataType="wstr"
+                      length="40" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  id="12"
+                  name="OLE DB Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="38"
+                      name="CustomerId"
+                      lineageId="38"
+                      length="6"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="41"
+                      name="Name"
+                      lineageId="41"
+                      length="100"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="44"
+                      name="Street"
+                      lineageId="44"
+                      length="40"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="47"
+                      name="District"
+                      lineageId="47"
+                      length="40"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="50"
+                      name="Country"
+                      lineageId="50"
+                      length="3"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="53"
+                      name="County"
+                      lineageId="53"
+                      length="40"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="56"
+                      name="State"
+                      lineageId="56"
+                      length="40"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="59"
+                      name="PostalCode"
+                      lineageId="59"
+                      length="40"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="62"
+                      name="City"
+                      lineageId="62"
+                      length="40"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="65"
+                      name="CustomerKeyword"
+                      lineageId="65"
+                      length="10"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="68"
+                      name="SalesRep"
+                      lineageId="68"
+                      length="40"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="13"
+                      name="ErrorCode"
+                      lineageId="13"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="14"
+                      name="ErrorColumn"
+                      lineageId="14"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="16"
+              name="Salesforce Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Extracts data from Salesforce services."
+              contactInfo="Extracts data from Salesforce services.; COZYROC LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
+              <properties>
+                <property
+                  id="21"
+                  name="ComponentObject"
+                  dataType="System.Null"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  id="22"
+                  name="DtsComponentDesigner"
+                  dataType="System.String"
+                  typeConverter="NOTBROWSABLE">CozyRoc.SqlServer.SSIS.SforceSourceDesigner, CozyRoc.SSISPlus.UI.2025, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=16cf490bb80c34ea</property>
+                <property
+                  id="23"
+                  name="BatchSize"
+                  dataType="System.Int32"
+                  description="Specifies query batch size."
+                  expressionType="Notify">500</property>
+                <property
+                  id="24"
+                  name="InputType"
+                  dataType="System.Int32"
+                  description="Specifies how to access the service."
+                  typeConverter="CozyRoc.SqlServer.SSIS.SforceSource+InputTypes">0</property>
+                <property
+                  id="25"
+                  name="Object"
+                  dataType="System.String"
+                  description="Salesforce object."
+                  typeConverter="CozyRoc.SqlServer.SSIS.TableEditor"
+                  expressionType="Notify"></property>
+                <property
+                  id="26"
+                  name="Statement"
+                  dataType="System.String"
+                  description="SOQL statement."
+                  UITypeEditor="CozyRoc.SqlServer.SSIS.TextDialogEditor"
+                  expressionType="Notify"></property>
+                <property
+                  id="27"
+                  name="IncludeDeleted"
+                  dataType="System.Boolean"
+                  description="Specifies to include deleted records.">false</property>
+                <property
+                  id="28"
+                  name="PKChunkSize"
+                  dataType="System.Int32"
+                  description="Specifies the primary key chunk size in bulk mode. Value of 0 disables PK chunking.">0</property>
+                <property
+                  id="29"
+                  name="ObjectFilter"
+                  dataType="System.String"
+                  description="Filter statement. Optional."
+                  expressionType="Notify"></property>
+                <property
+                  id="30"
+                  name="Mode"
+                  dataType="System.Int32"
+                  description="Specifies source load type."
+                  typeConverter="CozyRoc.SqlServer.SSIS.SforceSource+ModeTypes">0</property>
+                <property
+                  id="32"
+                  name="UserComponentTypeName"
+                  dataType="System.String">CozyRoc.SforceSource</property>
+              </properties>
+              <connections>
+                <connection
+                  id="20"
+                  name="SFORCE"
+                  description="Salesforce Connection Manager" />
+              </connections>
+              <outputs>
+                <output
+                  id="31"
+                  name="Salesforce Source Output">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="104"
+              name="Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              usesDispositions="true"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  id="105"
+                  name="Conditional Split Input"
+                  description="Input to the Conditional Split Transformation">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="106"
+                  name="Conditional Split Default Output"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="105">
+                  <properties>
+                    <property
+                      id="107"
+                      name="IsDefaultOut"
+                      dataType="System.Boolean">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="108"
+                  name="Conditional Split Error Output"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="105"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="109"
+                      name="ErrorCode"
+                      lineageId="109"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="110"
+                      name="ErrorColumn"
+                      lineageId="110"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="111"
+              name="OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  id="112"
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  id="113"
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."></property>
+                <property
+                  id="114"
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  id="115"
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  id="116"
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  id="117"
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  id="118"
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  id="120"
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="121"
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="122"
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
+                <property
+                  id="123"
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  id="119"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database." />
+              </connections>
+              <inputs>
+                <input
+                  id="124"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="125"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="124"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="126"
+                      name="ErrorCode"
+                      lineageId="126"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="127"
+                      name="ErrorColumn"
+                      lineageId="127"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <ScriptProject
+            Name="ST_babb791e2b12485b8dffc586793bd786"
+            VSTAMajorVersion="17"
+            VSTAMinorVersion="0"
+            Language="VisualBasic" />
+          <ArrayOfDynamicComponentProperties xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Data Flow Task Plus"
+          TopLeft="113,213" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task Plus">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="169,42"
+          Id="16"
+          TopLeft="64,454" />
+        <NodeLayout
+          Size="157,42"
+          Id="1"
+          TopLeft="62,85" />
+        <NodeLayout
+          Size="159,42"
+          Id="104"
+          TopLeft="464,359" />
+        <NodeLayout
+          Size="177,42"
+          Id="111"
+          TopLeft="458,549" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Plus\1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
