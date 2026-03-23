@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{BC75170F-7EAE-4359-9F71-3D06D5B6DFEC}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{339031ED-57CB-421D-A72C-5A513BF295F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACf/yjuOu6ekDWrCjF8US4Tt5fHIxEpoiGHpBfWsoXvGgAAAAAOgAAAAAIAACAAAAA5SfF/yA+4RLoX7C9ZrG2rxOrimoFtIOgs14GTBFWVIiAAAAA+DlPfCMovSfCDjkqS5ce/MYJ+vELP4xpTlt7JR3XjOEAAAAA715jBosLPImVmHToaHdoqiuf6fCYHZceM+1TIC8YsXUg4IGnVQZ6sEkeu7X3UBm07WP8eAV7zd2Nyjnj0qmER</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD9vKqOkpv8j4TGl+jc1vMzoXmNrVbhp4bZsibzpYtUkgAAAAAOgAAAAAIAACAAAADxDzbxyDx/jcgoUZ4uC0vGOlQdAjnGEoXFGRJh4Z1OLiAAAAAhMCU+vSxWJnuaKH4t31JDNPNCwWjeqzJq3FPQFGjkIkAAAADlSczVOFAk9HR73WHCl9WrFAhiaklcUuBrdXvhiuaGN6LNX6YdY/HRGazD1oyxosHtJmo06HxgLv5GvRXq1hIv</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD8mqC9Fg4d6mWrIq3k7ah62jdxkgQB6dHRcq7eITQ8+wAAAAAOgAAAAAIAACAAAABYrqpCZN2LCX3LQoICewKSNM0jlEaveL8Q72GhBKJAUFAAAABGrfzqaV1gR+1Gwk7OQ/5whx5J5HdHzuiONXLYFLmSbm819gEzzDmBqEGHjpfjQ+FjySJOLgw00ihUGDwHfXxF9kaKOFh66GieKuKgrm1XA0AAAAARUDayc74uOpCZa41QKHqn+nzS0kvGutZBrcRxdIDgP+Uv3OotUqH2WPo/P3sXvIcHcNY3lOA1TQ1HXW6C2aZ6</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADC1Rgb3bInMqRUwSlaDUexHnsjNCrVGxR1vyhUPMjjnAAAAAAOgAAAAAIAACAAAAAKQMrhsqy6QNAFnP72lLkizc9DShH6i0YAA6FB6FRXL1AAAADtTZvzyh64bi1/IVD1Ofrhp+sDKMwOw1DCEuYaWEaIIwl0FjB8WV131uf5x7FMfBBF6vBJP3N/ynwmrQTiduMWC8/DY0wfn/De8nFn76goFUAAAADzJHngTBeTNt7sdL0q7sIdsCSAW82TIA0fFzLQE2y6nrOTdWKejPm7rrCKJsqJRPtPVE9TvIzQNaZql2q+rlq6</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -65,6 +65,426 @@
         <pipeline
           version="1">
           <components>
+            <component
+              id="112"
+              name="Derived Column Plus"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Use JavaScript code to automate any custom logic in the package data flow."
+              usesDispositions="true"
+              contactInfo="Use JavaScript code to automate any custom logic in the package data flow.; COZYROC LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
+              <properties>
+                <property
+                  id="116"
+                  name="JavaScriptCode"
+                  dataType="System.String"
+                  description="Code of the linked JavaScript file."
+                  typeConverter="NOTBROWSABLE">// This module contains derived columns base functions and component methods.
+require('derived.columns.js');
+
+// This module contains mathematical, string, datetime and miscellaneous functions.
+require('common.functions.js');
+
+// Component derived columns
+component.columns = [];
+
+// You may define custom JavaScript functions bellow for usage in a derived column expression
+// They will be become available in the Functions tree on the right side of the editor</property>
+                <property
+                  id="117"
+                  name="ParametersValues"
+                  state="cdata"
+                  dataType="System.String"
+                  description="Serialized parameters keys and values."
+                  typeConverter="NOTBROWSABLE"><![CDATA[<dictionary />]]></property>
+                <property
+                  id="118"
+                  name="PackageConnection"
+                  dataType="System.String"
+                  description="Specifies the Package connection manager that the task uses."
+                  typeConverter="NOTBROWSABLE"></property>
+                <property
+                  id="119"
+                  name="JavaScriptLinkedComponent"
+                  dataType="System.String"
+                  description="Select JavaScriptComponent."
+                  typeConverter="NOTBROWSABLE"></property>
+                <property
+                  id="120"
+                  name="Breakpoints"
+                  dataType="System.String"
+                  isArray="true"
+                  description="List of breakpoints in the script."
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  id="121"
+                  name="ComponentObject"
+                  dataType="System.Null"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  id="126"
+                  name="UserComponentTypeName"
+                  dataType="System.String">CozyRoc.DerivedColumnComponent</property>
+              </properties>
+              <inputs>
+                <input
+                  id="114"
+                  name="Input 0"
+                  hasSideEffects="true">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="115"
+                  name="Output 0"
+                  synchronousInputId="114">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="122"
+                  name="Derived Column Plus Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="114"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="123"
+                      name="ErrorCode"
+                      lineageId="123"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="124"
+                      name="ErrorColumn"
+                      lineageId="124"
+                      dataType="i4"
+                      specialFlags="2" />
+                    <outputColumn
+                      id="125"
+                      name="ErrorDescription"
+                      lineageId="125"
+                      length="1024"
+                      dataType="wstr" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="81"
+              name="OLE DB Destination Create"
+              componentClassID="Microsoft.OLEDBDestination"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  id="82"
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  id="83"
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."></property>
+                <property
+                  id="84"
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  id="85"
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  id="86"
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  id="87"
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  id="88"
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  id="89"
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="90"
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="91"
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
+                <property
+                  id="92"
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  id="93"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database." />
+              </connections>
+              <inputs>
+                <input
+                  id="94"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="95"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="94"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="96"
+                      name="ErrorCode"
+                      lineageId="96"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="97"
+                      name="ErrorColumn"
+                      lineageId="97"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="64"
+              name="OLE DB Destination Update"
+              componentClassID="Microsoft.OLEDBDestination"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  id="65"
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  id="66"
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."></property>
+                <property
+                  id="67"
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  id="68"
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  id="69"
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  id="70"
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  id="71"
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  id="72"
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="73"
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="74"
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
+                <property
+                  id="75"
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  id="76"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database." />
+              </connections>
+              <inputs>
+                <input
+                  id="77"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="78"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="77"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="79"
+                      name="ErrorCode"
+                      lineageId="79"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="80"
+                      name="ErrorColumn"
+                      lineageId="80"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="52"
+              name="Conditional Split on Create or Update"
+              componentClassID="Microsoft.ConditionalSplit"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              usesDispositions="true"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  id="53"
+                  name="Conditional Split Input"
+                  description="Input to the Conditional Split Transformation">
+                  <inputColumns>
+                    <inputColumn
+                      id="54"
+                      lineageId="24"
+                      cachedName="SalesforceID"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="55"
+                  name="Cern Customers without SF Account ID"
+                  description="Output 1 of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="53"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      id="56"
+                      name="Expression"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      containsID="true">[ISNULL](#24)</property>
+                    <property
+                      id="57"
+                      name="FriendlyExpression"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      containsID="true"
+                      expressionType="Notify">ISNULL(SalesforceID)</property>
+                    <property
+                      id="58"
+                      name="EvaluationOrder"
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value.">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="59"
+                  name="Conditional Split Default Output"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="53">
+                  <properties>
+                    <property
+                      id="60"
+                      name="IsDefaultOut"
+                      dataType="System.Boolean">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="61"
+                  name="Conditional Split Error Output"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="53"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="62"
+                      name="ErrorCode"
+                      lineageId="62"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="63"
+                      name="ErrorColumn"
+                      lineageId="63"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               id="1"
               name="SQL Server Source Data"
@@ -144,9 +564,8 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="13"
                       name="CustomerId"
                       lineageId="13"
-                      length="6"
-                      dataType="str"
-                      codePage="1252"
+                      length="50"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
@@ -420,325 +839,8 @@ LEFT JOIN dbo.SalesforceIDMap s
                 </output>
               </outputs>
             </component>
-            <component
-              id="52"
-              name="Conditional Split on Create or Update"
-              componentClassID="Microsoft.ConditionalSplit"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              usesDispositions="true"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
-              <inputs>
-                <input
-                  id="53"
-                  name="Conditional Split Input"
-                  description="Input to the Conditional Split Transformation">
-                  <inputColumns>
-                    <inputColumn
-                      id="54"
-                      lineageId="24"
-                      cachedName="SalesforceID"
-                      cachedDataType="wstr"
-                      cachedLength="10" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  id="55"
-                  name="Cern Customers without SF Account ID"
-                  description="Output 1 of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  synchronousInputId="53"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      id="56"
-                      name="Expression"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      containsID="true">[ISNULL](#24)</property>
-                    <property
-                      id="57"
-                      name="FriendlyExpression"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      containsID="true"
-                      expressionType="Notify">ISNULL(SalesforceID)</property>
-                    <property
-                      id="58"
-                      name="EvaluationOrder"
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value.">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  id="59"
-                  name="Conditional Split Default Output"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  synchronousInputId="53">
-                  <properties>
-                    <property
-                      id="60"
-                      name="IsDefaultOut"
-                      dataType="System.Boolean">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  id="61"
-                  name="Conditional Split Error Output"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  synchronousInputId="53"
-                  isErrorOut="true">
-                  <outputColumns>
-                    <outputColumn
-                      id="62"
-                      name="ErrorCode"
-                      lineageId="62"
-                      dataType="i4"
-                      specialFlags="1" />
-                    <outputColumn
-                      id="63"
-                      name="ErrorColumn"
-                      lineageId="63"
-                      dataType="i4"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              id="64"
-              name="OLE DB Destination Update"
-              componentClassID="Microsoft.OLEDBDestination"
-              description="OLE DB Destination"
-              usesDispositions="true"
-              version="4"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
-              <properties>
-                <property
-                  id="65"
-                  name="CommandTimeout"
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
-                <property
-                  id="66"
-                  name="OpenRowset"
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."></property>
-                <property
-                  id="67"
-                  name="OpenRowsetVariable"
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
-                <property
-                  id="68"
-                  name="SqlCommand"
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  id="69"
-                  name="DefaultCodePage"
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
-                <property
-                  id="70"
-                  name="AlwaysUseDefaultCodePage"
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
-                <property
-                  id="71"
-                  name="AccessMode"
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">0</property>
-                <property
-                  id="72"
-                  name="FastLoadKeepIdentity"
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
-                <property
-                  id="73"
-                  name="FastLoadKeepNulls"
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
-                <property
-                  id="74"
-                  name="FastLoadOptions"
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
-                <property
-                  id="75"
-                  name="FastLoadMaxInsertCommitSize"
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  id="76"
-                  name="OleDbConnection"
-                  description="The OLE DB runtime connection used to access the database." />
-              </connections>
-              <inputs>
-                <input
-                  id="77"
-                  name="OLE DB Destination Input"
-                  hasSideEffects="true"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  id="78"
-                  name="OLE DB Destination Error Output"
-                  exclusionGroup="1"
-                  synchronousInputId="77"
-                  isErrorOut="true">
-                  <outputColumns>
-                    <outputColumn
-                      id="79"
-                      name="ErrorCode"
-                      lineageId="79"
-                      dataType="i4"
-                      specialFlags="1" />
-                    <outputColumn
-                      id="80"
-                      name="ErrorColumn"
-                      lineageId="80"
-                      dataType="i4"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              id="81"
-              name="OLE DB Destination Create"
-              componentClassID="Microsoft.OLEDBDestination"
-              description="OLE DB Destination"
-              usesDispositions="true"
-              version="4"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
-              <properties>
-                <property
-                  id="82"
-                  name="CommandTimeout"
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
-                <property
-                  id="83"
-                  name="OpenRowset"
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."></property>
-                <property
-                  id="84"
-                  name="OpenRowsetVariable"
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
-                <property
-                  id="85"
-                  name="SqlCommand"
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  id="86"
-                  name="DefaultCodePage"
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
-                <property
-                  id="87"
-                  name="AlwaysUseDefaultCodePage"
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
-                <property
-                  id="88"
-                  name="AccessMode"
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">0</property>
-                <property
-                  id="89"
-                  name="FastLoadKeepIdentity"
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
-                <property
-                  id="90"
-                  name="FastLoadKeepNulls"
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
-                <property
-                  id="91"
-                  name="FastLoadOptions"
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
-                <property
-                  id="92"
-                  name="FastLoadMaxInsertCommitSize"
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  id="93"
-                  name="OleDbConnection"
-                  description="The OLE DB runtime connection used to access the database." />
-              </connections>
-              <inputs>
-                <input
-                  id="94"
-                  name="OLE DB Destination Input"
-                  hasSideEffects="true"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  id="95"
-                  name="OLE DB Destination Error Output"
-                  exclusionGroup="1"
-                  synchronousInputId="94"
-                  isErrorOut="true">
-                  <outputColumns>
-                    <outputColumn
-                      id="96"
-                      name="ErrorCode"
-                      lineageId="96"
-                      dataType="i4"
-                      specialFlags="1" />
-                    <outputColumn
-                      id="97"
-                      name="ErrorColumn"
-                      lineageId="97"
-                      dataType="i4"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
-            <path
-              id="98"
-              name="OLE DB Source Output"
-              startId="12"
-              endId="53" />
             <path
               id="99"
               name="Conditional Split Default Output"
@@ -749,6 +851,11 @@ LEFT JOIN dbo.SalesforceIDMap s
               name="Cern Customers without SF Account ID"
               startId="55"
               endId="94" />
+            <path
+              id="140"
+              name="OLE DB Source Output"
+              startId="12"
+              endId="53" />
           </paths>
           <ScriptProject
             Name="ST_c4be453672ba4008b40425cf8038bc8c"
@@ -1327,7 +1434,7 @@ LEFT JOIN dbo.SalesforceIDMap s
             Name="ST_babb791e2b12485b8dffc586793bd786"
             VSTAMajorVersion="17"
             VSTAMinorVersion="0"
-            Language="VisualBasic" />
+            Language="CSharp" />
           <ArrayOfDynamicComponentProperties xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </pipeline>
       </DTS:ObjectData>
@@ -1425,9 +1532,8 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="13"
                       name="CustomerId"
                       lineageId="13"
-                      length="6"
-                      dataType="str"
-                      codePage="1252"
+                      length="50"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
@@ -1725,7 +1831,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                   dataType="System.String"
                   description="Destination object to load."
                   typeConverter="CozyRoc.SqlServer.SSIS.TableEditor"
-                  expressionType="Notify"></property>
+                  expressionType="Notify">CERM_Customer__c</property>
                 <property
                   id="56"
                   name="BatchSize"
@@ -1783,7 +1889,8 @@ LEFT JOIN dbo.SalesforceIDMap s
                 <connection
                   id="65"
                   name="SFORCE"
-                  description="Salesforce Connection" />
+                  description="Salesforce Connection"
+                  connectionManagerID="{3D4C295A-64F9-416C-9664-F78B71089DD3}" />
               </connections>
               <inputs>
                 <input
@@ -1793,7 +1900,126 @@ LEFT JOIN dbo.SalesforceIDMap s
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent">
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="122"
+                      name="Account__c"
+                      dataType="wstr"
+                      length="18">
+                      <properties>
+                        <property
+                          id="123"
+                          name="RelationshipName"
+                          dataType="System.String"
+                          description="Specifies relationship name.">Account__r</property>
+                        <property
+                          id="124"
+                          name="ReferenceType"
+                          dataType="System.String"
+                          description="Specifies referenced object type.">Account</property>
+                        <property
+                          id="125"
+                          name="ExternalId"
+                          dataType="System.String"
+                          description="Specifies external id field for update. Optional."></property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      id="126"
+                      name="County__c"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="127"
+                      name="Customer_Address__City__s"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="128"
+                      name="Customer_Address__CountryCode__s"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="129"
+                      name="Customer_Address__GeocodeAccuracy__s"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="130"
+                      name="Customer_Address__Latitude__s"
+                      dataType="numeric"
+                      precision="18"
+                      scale="15" />
+                    <externalMetadataColumn
+                      id="131"
+                      name="Customer_Address__Longitude__s"
+                      dataType="numeric"
+                      precision="18"
+                      scale="15" />
+                    <externalMetadataColumn
+                      id="132"
+                      name="Customer_Address__PostalCode__s"
+                      dataType="wstr"
+                      length="20" />
+                    <externalMetadataColumn
+                      id="133"
+                      name="Customer_Address__StateCode__s"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="134"
+                      name="Customer_Address__Street__s"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="135"
+                      name="Customer_CERM_ID__c"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="136"
+                      name="Customer_Keyword__c"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="137"
+                      name="District__c"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="138"
+                      name="Name"
+                      dataType="wstr"
+                      length="80" />
+                    <externalMetadataColumn
+                      id="139"
+                      name="OwnerId"
+                      dataType="wstr"
+                      length="18">
+                      <properties>
+                        <property
+                          id="140"
+                          name="RelationshipName"
+                          dataType="System.String"
+                          description="Specifies relationship name.">Owner</property>
+                        <property
+                          id="141"
+                          name="ReferenceType"
+                          dataType="System.String"
+                          description="Specifies referenced object type.">Group</property>
+                        <property
+                          id="142"
+                          name="ExternalId"
+                          dataType="System.String"
+                          description="Specifies external id field for update. Optional."></property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      id="143"
+                      name="Sales_Rep__c"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -1836,169 +2062,168 @@ LEFT JOIN dbo.SalesforceIDMap s
                       length="18"
                       dataType="wstr" />
                     <outputColumn
-                      id="73"
+                      id="98"
                       name="CustomerId"
-                      lineageId="73"
-                      length="6"
-                      dataType="str"
-                      codePage="1252">
+                      lineageId="98"
+                      length="50"
+                      dataType="wstr">
                       <properties>
                         <property
-                          id="74"
+                          id="99"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">13</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="75"
+                      id="100"
                       name="Name"
-                      lineageId="75"
+                      lineageId="100"
                       length="100"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="76"
+                          id="101"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">14</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="77"
+                      id="102"
                       name="Street"
-                      lineageId="77"
+                      lineageId="102"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="78"
+                          id="103"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">15</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="79"
+                      id="104"
                       name="District"
-                      lineageId="79"
+                      lineageId="104"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="80"
+                          id="105"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">16</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="81"
+                      id="106"
                       name="Country"
-                      lineageId="81"
+                      lineageId="106"
                       length="3"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="82"
+                          id="107"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">17</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="83"
+                      id="108"
                       name="County"
-                      lineageId="83"
+                      lineageId="108"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="84"
+                          id="109"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">18</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="85"
+                      id="110"
                       name="State"
-                      lineageId="85"
+                      lineageId="110"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="86"
+                          id="111"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">19</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="87"
+                      id="112"
                       name="PostalCode"
-                      lineageId="87"
+                      lineageId="112"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="88"
+                          id="113"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">20</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="89"
+                      id="114"
                       name="City"
-                      lineageId="89"
+                      lineageId="114"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="90"
+                          id="115"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">21</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="91"
+                      id="116"
                       name="CustomerKeyword"
-                      lineageId="91"
+                      lineageId="116"
                       length="10"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="92"
+                          id="117"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">22</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="93"
+                      id="118"
                       name="SalesRep"
-                      lineageId="93"
+                      lineageId="118"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="94"
+                          id="119"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">23</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="95"
+                      id="120"
                       name="SalesforceID"
-                      lineageId="95"
+                      lineageId="120"
                       length="10"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="96"
+                          id="121"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">24</property>
@@ -2119,9 +2344,8 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="13"
                       name="CustomerId"
                       lineageId="13"
-                      length="6"
-                      dataType="str"
-                      codePage="1252"
+                      length="50"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
@@ -2419,7 +2643,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                   dataType="System.String"
                   description="Destination object to load."
                   typeConverter="CozyRoc.SqlServer.SSIS.TableEditor"
-                  expressionType="Notify"></property>
+                  expressionType="Notify">CERM_Customer__c</property>
                 <property
                   id="56"
                   name="BatchSize"
@@ -2431,7 +2655,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                   name="Action"
                   dataType="System.Int32"
                   description="Specifies destination action type."
-                  typeConverter="CozyRoc.SqlServer.SSIS.SforceDestination+ActionTypes">0</property>
+                  typeConverter="CozyRoc.SqlServer.SSIS.SforceDestination+ActionTypes">1</property>
                 <property
                   id="58"
                   name="ExternalId"
@@ -2477,7 +2701,8 @@ LEFT JOIN dbo.SalesforceIDMap s
                 <connection
                   id="65"
                   name="SFORCE"
-                  description="Salesforce Connection" />
+                  description="Salesforce Connection"
+                  connectionManagerID="{3D4C295A-64F9-416C-9664-F78B71089DD3}" />
               </connections>
               <inputs>
                 <input
@@ -2487,7 +2712,131 @@ LEFT JOIN dbo.SalesforceIDMap s
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent">
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="146"
+                      name="Account__c"
+                      dataType="wstr"
+                      length="18">
+                      <properties>
+                        <property
+                          id="147"
+                          name="RelationshipName"
+                          dataType="System.String"
+                          description="Specifies relationship name.">Account__r</property>
+                        <property
+                          id="148"
+                          name="ReferenceType"
+                          dataType="System.String"
+                          description="Specifies referenced object type.">Account</property>
+                        <property
+                          id="149"
+                          name="ExternalId"
+                          dataType="System.String"
+                          description="Specifies external id field for update. Optional."></property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      id="150"
+                      name="County__c"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="151"
+                      name="Customer_Address__City__s"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="152"
+                      name="Customer_Address__CountryCode__s"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="153"
+                      name="Customer_Address__GeocodeAccuracy__s"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="154"
+                      name="Customer_Address__Latitude__s"
+                      dataType="numeric"
+                      precision="18"
+                      scale="15" />
+                    <externalMetadataColumn
+                      id="155"
+                      name="Customer_Address__Longitude__s"
+                      dataType="numeric"
+                      precision="18"
+                      scale="15" />
+                    <externalMetadataColumn
+                      id="156"
+                      name="Customer_Address__PostalCode__s"
+                      dataType="wstr"
+                      length="20" />
+                    <externalMetadataColumn
+                      id="157"
+                      name="Customer_Address__StateCode__s"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="158"
+                      name="Customer_Address__Street__s"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="159"
+                      name="Customer_CERM_ID__c"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="160"
+                      name="Customer_Keyword__c"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="161"
+                      name="District__c"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="162"
+                      name="Id"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="163"
+                      name="Name"
+                      dataType="wstr"
+                      length="80" />
+                    <externalMetadataColumn
+                      id="164"
+                      name="OwnerId"
+                      dataType="wstr"
+                      length="18">
+                      <properties>
+                        <property
+                          id="165"
+                          name="RelationshipName"
+                          dataType="System.String"
+                          description="Specifies relationship name.">Owner</property>
+                        <property
+                          id="166"
+                          name="ReferenceType"
+                          dataType="System.String"
+                          description="Specifies referenced object type.">Group</property>
+                        <property
+                          id="167"
+                          name="ExternalId"
+                          dataType="System.String"
+                          description="Specifies external id field for update. Optional."></property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      id="168"
+                      name="Sales_Rep__c"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -2530,338 +2879,168 @@ LEFT JOIN dbo.SalesforceIDMap s
                       length="18"
                       dataType="wstr" />
                     <outputColumn
-                      id="73"
+                      id="122"
                       name="CustomerId"
-                      lineageId="73"
-                      length="6"
-                      dataType="str"
-                      codePage="1252">
-                      <properties>
-                        <property
-                          id="74"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">281</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="75"
-                      name="Name"
-                      lineageId="75"
-                      length="100"
+                      lineageId="122"
+                      length="50"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="76"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">282</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="77"
-                      name="Street"
-                      lineageId="77"
-                      length="40"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="78"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">283</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="79"
-                      name="District"
-                      lineageId="79"
-                      length="40"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="80"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">284</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="81"
-                      name="Country"
-                      lineageId="81"
-                      length="3"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="82"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">285</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="83"
-                      name="County"
-                      lineageId="83"
-                      length="40"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="84"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">286</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="85"
-                      name="State"
-                      lineageId="85"
-                      length="40"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="86"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">287</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="87"
-                      name="PostalCode"
-                      lineageId="87"
-                      length="40"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="88"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">288</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="89"
-                      name="City"
-                      lineageId="89"
-                      length="40"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="90"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">289</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="91"
-                      name="CustomerKeyword"
-                      lineageId="91"
-                      length="10"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="92"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">290</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="93"
-                      name="SalesRep"
-                      lineageId="93"
-                      length="40"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="94"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">291</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="95"
-                      name="SalesforceID"
-                      lineageId="95"
-                      length="10"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="96"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">292</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="97"
-                      name="Record Create flow into SF Destination 1.CustomerId"
-                      lineageId="97"
-                      length="6"
-                      dataType="str"
-                      codePage="1252">
-                      <properties>
-                        <property
-                          id="98"
+                          id="123"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">13</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="99"
-                      name="Record Create flow into SF Destination 1.Name"
-                      lineageId="99"
+                      id="124"
+                      name="Name"
+                      lineageId="124"
                       length="100"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="100"
+                          id="125"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">14</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="101"
-                      name="Record Create flow into SF Destination 1.Street"
-                      lineageId="101"
+                      id="126"
+                      name="Street"
+                      lineageId="126"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="102"
+                          id="127"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">15</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="103"
-                      name="Record Create flow into SF Destination 1.District"
-                      lineageId="103"
+                      id="128"
+                      name="District"
+                      lineageId="128"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="104"
+                          id="129"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">16</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="105"
-                      name="Record Create flow into SF Destination 1.Country"
-                      lineageId="105"
+                      id="130"
+                      name="Country"
+                      lineageId="130"
                       length="3"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="106"
+                          id="131"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">17</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="107"
-                      name="Record Create flow into SF Destination 1.County"
-                      lineageId="107"
+                      id="132"
+                      name="County"
+                      lineageId="132"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="108"
+                          id="133"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">18</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="109"
-                      name="Record Create flow into SF Destination 1.State"
-                      lineageId="109"
+                      id="134"
+                      name="State"
+                      lineageId="134"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="110"
+                          id="135"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">19</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="111"
-                      name="Record Create flow into SF Destination 1.PostalCode"
-                      lineageId="111"
+                      id="136"
+                      name="PostalCode"
+                      lineageId="136"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="112"
+                          id="137"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">20</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="113"
-                      name="Record Create flow into SF Destination 1.City"
-                      lineageId="113"
+                      id="138"
+                      name="City"
+                      lineageId="138"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="114"
+                          id="139"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">21</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="115"
-                      name="Record Create flow into SF Destination 1.CustomerKeyword"
-                      lineageId="115"
+                      id="140"
+                      name="CustomerKeyword"
+                      lineageId="140"
                       length="10"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="116"
+                          id="141"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">22</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="117"
-                      name="Record Create flow into SF Destination 1.SalesRep"
-                      lineageId="117"
+                      id="142"
+                      name="SalesRep"
+                      lineageId="142"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="118"
+                          id="143"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">23</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="119"
-                      name="Record Create flow into SF Destination 1.SalesforceID"
-                      lineageId="119"
+                      id="144"
+                      name="SalesforceID"
+                      lineageId="144"
                       length="10"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="120"
+                          id="145"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">24</property>
@@ -2884,7 +3063,7 @@ LEFT JOIN dbo.SalesforceIDMap s
             Name="ST_b45bae8d61f14befa422ebde44f2cc42"
             VSTAMajorVersion="17"
             VSTAMinorVersion="0"
-            Language="VisualBasic" />
+            Language="CSharp" />
           <ArrayOfDynamicComponentProperties xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </pipeline>
       </DTS:ObjectData>
@@ -2929,68 +3108,24 @@ LEFT JOIN dbo.SalesforceIDMap s
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="233,42"
-          Id="Package\Refresh IDMap from Salesforce"
-          TopLeft="27,123" />
-        <NodeLayout
           Size="163,42"
           Id="Package\Process Records"
-          TopLeft="301,127" />
+          TopLeft="420,126" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\Refresh IDMap from Salesforce"
+          TopLeft="137,127" />
         <NodeLayout
           Size="146,42"
           Id="Package\Send Creates"
-          TopLeft="532,129" />
+          TopLeft="622,126" />
         <NodeLayout
           Size="149,42"
           Id="Package\Send Updates"
-          TopLeft="728,130" />
+          TopLeft="853,126" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="260,146">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="41,0"
-              Start="0,0"
-              End="33.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="33.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="464,149">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="68,0"
-              Start="0,0"
-              End="60.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="60.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="678,150.5">
+          TopLeft="370,147.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3010,36 +3145,42 @@ LEFT JOIN dbo.SalesforceIDMap s
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\Refresh IDMap from Salesforce">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="169,42"
-          Id="16"
-          TopLeft="70,342" />
-        <NodeLayout
-          Size="222,42"
-          Id="345"
-          TopLeft="333,340" />
         <EdgeLayout
-          Id="362"
-          TopLeft="239,362">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="583,147">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="94,0"
+              EndConnector="39,0"
               Start="0,0"
-              End="86.5,0">
+              End="31.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="86.5,0" />
+                    End="31.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="768,147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85,0"
+              Start="0,0"
+              End="77.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="77.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3050,36 +3191,107 @@ LEFT JOIN dbo.SalesforceIDMap s
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Refresh IDMap from Salesforce\345">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  </Package>
   <TaskHost
     design-time-name="Package\Process Records">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="182,42"
+          Id="112"
+          TopLeft="203,338" />
         <NodeLayout
           Size="200,42"
           Id="1"
-          TopLeft="5.5,5.5" />
+          TopLeft="38.5,169.5" />
         <NodeLayout
           Size="261,42"
           Id="52"
-          TopLeft="183,67" />
+          TopLeft="216,231" />
+        <NodeLayout
+          Size="216,42"
+          Id="64"
+          TopLeft="808,288" />
         <EdgeLayout
-          Id="98"
-          TopLeft="205.5,26.5">
+          Id="99"
+          TopLeft="477,257.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="331,51.3333333333333"
+              Start="0,0"
+              End="323.5,51.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="135.688073394495,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="135.688073394495,0"
+                    Point2="139.688073394495,0"
+                    Point3="139.688073394495,4" />
+                  <mssgle:LineSegment
+                    End="139.688073394495,47.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="139.688073394495,47.3333333333333"
+                    Point2="139.688073394495,51.3333333333333"
+                    Point3="143.688073394495,51.3333333333333" />
+                  <mssgle:LineSegment
+                    End="323.5,51.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="69.0741671444954,-17.658203125,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="213,42"
+          Id="81"
+          TopLeft="805,183" />
+        <EdgeLayout
+          Id="100"
+          TopLeft="477,246.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="328,-42.3333333333333"
+              Start="0,0"
+              End="320.5,-42.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="134.422018348624,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.422018348624,0"
+                    Point2="138.422018348624,0"
+                    Point3="138.422018348624,-4" />
+                  <mssgle:LineSegment
+                    End="138.422018348624,-38.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="138.422018348624,-38.3333333333333"
+                    Point2="138.422018348624,-42.3333333333333"
+                    Point3="142.422018348624,-42.3333333333333" />
+                  <mssgle:LineSegment
+                    End="320.5,-42.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="51.7082878798738,1,173.4274609375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="140"
+          TopLeft="238.5,190.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3105,105 +3317,44 @@ LEFT JOIN dbo.SalesforceIDMap s
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Refresh IDMap from Salesforce">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="216,42"
-          Id="64"
-          TopLeft="777,121" />
+          Size="169,42"
+          Id="16"
+          TopLeft="70,341" />
+        <NodeLayout
+          Size="222,42"
+          Id="345"
+          TopLeft="331,340" />
         <EdgeLayout
-          Id="99"
-          TopLeft="444,93.6666666666667">
+          Id="362"
+          TopLeft="239,361.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="333,48.3333333333333"
+              EndConnector="92,0"
               Start="0,0"
-              End="325.5,48.3333333333333">
+              End="84.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="136.532110091743,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="136.532110091743,0"
-                    Point2="140.532110091743,0"
-                    Point3="140.532110091743,4" />
-                  <mssgle:LineSegment
-                    End="140.532110091743,44.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="140.532110091743,44.3333333333333"
-                    Point2="140.532110091743,48.3333333333333"
-                    Point3="144.532110091743,48.3333333333333" />
-                  <mssgle:LineSegment
-                    End="325.5,48.3333333333333" />
+                    End="84.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="69.9182038417431,-17.658203125,141.2278125,11.658203125"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="213,42"
-          Id="81"
-          TopLeft="774,19" />
-        <EdgeLayout
-          Id="100"
-          TopLeft="444,88">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="330,-48"
-              Start="0,0"
-              End="322.5,-48">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="161,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="161,0"
-                    Point2="165,0"
-                    Point3="165,-4" />
-                  <mssgle:LineSegment
-                    End="165,-44" />
-                  <mssgle:CubicBezierSegment
-                    Point1="165,-44"
-                    Point2="165,-48"
-                    Point3="169,-48" />
-                  <mssgle:LineSegment
-                    End="322.5,-48" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="78.28626953125,1,173.4274609375,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <GroupLayout
-          Text="Group "
-          ParentId="Package\Process Records"
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="1078,254"
-          Size="1078,297"
-          Id="8aa6829c-25dd-459b-9094-20f7ec1c5d8d"
-          TopLeft="113,112">
-          <GroupLayout.ChildrenIds>
-            <s:String>1</s:String>
-            <s:String>52</s:String>
-            <s:String>98</s:String>
-            <s:String>64</s:String>
-            <s:String>99</s:String>
-            <s:String>81</s:String>
-            <s:String>100</s:String>
-          </GroupLayout.ChildrenIds>
-        </GroupLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3264,37 +3415,39 @@ LEFT JOIN dbo.SalesforceIDMap s
     design-time-name="Package\Send Updates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="227,42"
+          Id="52"
+          TopLeft="645,196" />
+        <NodeLayout
+          Size="271,42"
+          Id="1"
+          TopLeft="57.5,191.5" />
         <EdgeLayout
           Id="121"
-          TopLeft="328.5,213.25">
+          TopLeft="328.5,214.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="312.5,0"
+              EndConnector="316.5,0"
               Start="0,0"
-              End="305,0">
+              End="309,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="305,0" />
+                    End="309,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="227,42"
-          Id="52"
-          TopLeft="641,193" />
-        <NodeLayout
-          Size="271,42"
-          Id="1"
-          TopLeft="57.5,191.5" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
