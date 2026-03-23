@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{3B58DDAD-825F-4F07-BC6E-B03BF77DEC0B}">
+  DTS:VersionBuild="61"
+  DTS:VersionGUID="{34681A01-9B93-4374-BE06-9911010A2B8F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=192.168.0.18;User ID=SalesForceAdmin;Provider=SQLOLEDB.1;Auto Translate=False;Application Name=SSIS-Package-{7511E214-CB1F-4426-A00C-44F247A0E867}192.168.0.18.SalesForceAdmin;">
+          DTS:ConnectionString="Data Source=192.168.0.18;User ID=SalesForceAdmin;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{7511E214-CB1F-4426-A00C-44F247A0E867}192.168.0.18.SalesForceAdmin;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACEP/iZS8GwQaRPEeENce3QPkKS/ZdaZgTc3PXPYhz4cAAAAAAOgAAAAAIAACAAAABYoi1vSY3ak+UXT71gsRVUEtpTDFEFZiiLe8EsgkJtLCAAAADJ3NxdpnEtLp6/Jr/EPWikI68uY7XtJokX8lM2qk/nXkAAAAAzcDZb08peNlKFqvJ9YkEIeBa1yF4s7HEOdlx8gg7XxohSaiIK0+FkE0/PnsQarupxngmrvIQkbJ4YK/gf+To1</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAx658PFvJ70qUmU23bNnAlQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAYDMxqTfYERx40sYlBIcPfYIj1QH0gyBw8dBeHnp6fWQAAAAAOgAAAAAIAACAAAAA1yju+LtfacSD7TZeMsDfSSUF4hL4cQkzogPvdb/HgciAAAAB/4H89LUbh6P2gESDrws7ff8mHHw3TlIWWfdj6M8DLTEAAAACMj0zlEz14Pc8ehaVGbleawqPjAeSh0S30GYdVUTadxGygOiRM5jSUnHguSWbN1Bbdsvlw6mYjeXuzW3885ZIS</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,13 +44,40 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABzjDQRi6DKYDl4lqQiuyE2tWToegxUma3e+wKd6rGLWwAAAAAOgAAAAAIAACAAAACIUpd2qzAPFu36ClpUFfBUp05aQYPKulUJppsyZ/H7+1AAAAAzbMrVs8jDzZBtaXyMi8qS48cnVpXXulD0zpseT5dHmsympnt33KdeLgY/qZX77XLmThAJ1oadU3C5Qe/5Gc3+2yI72Zr4Vs9Oki4KbJhpfkAAAAC4huU8iZIbBNqqXyQkJ0rUOn/ct+xgFILxFVH9dcle2PauSwsAePeobYzdRebVDCbNbVu1FmLw65EHkS1Ew5WN</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAx658PFvJ70qUmU23bNnAlQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADER7OZux5fu50RlCrf5rmE23RmFzuuQHJxdDBR1Zk9iQAAAAAOgAAAAAIAACAAAAAK4F2t7RLttJxbYygdMJvNNR52tnds+dAaztYjoDhqzFAAAADP8g4Or2V9rzkdXft+bEPLR3Ug4JdTpPq8FCzx9rFTxPm8b19sPm9XAHoCqKob8vggwjusBw10ke24/KENee8n2fKOBt0EnQBU0+gfGqTvzEAAAACJomSyOfCwe9k/A2gMEwC1AYwf2fgZ27tRauQMv8MkWdgyGWvrOqlKygOtw1VHmta5DLQXQpeEcZhwhwRsQGwj</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{997D2CC1-55F9-4894-AB70-FDEC5B762B11}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CERMCustomerObjectName">
+      <DTS:VariableValue
+        DTS:DataType="8">CERMCustomer</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6E02C78E-74D7-4864-A157-9C62D73378B6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7511E214-CB1F-4426-A00C-44F247A0E867}"
+          SQLTask:SqlStatementSource="DELETE SalesforceIDMap;&#xA;DELETE Temp_Create_Accounts;&#xA;DELETE Temp_Update_Accounts;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Process Records"
       DTS:CreationName="CozyRoc.Pipeline"
@@ -153,7 +180,7 @@
                       externalMetadataColumnId="141"
                       cachedName="CustomerId"
                       cachedDataType="wstr"
-                      cachedLength="50" />
+                      cachedLength="6" />
                     <inputColumn
                       id="154"
                       lineageId="14"
@@ -224,13 +251,6 @@
                       cachedName="SalesRep"
                       cachedDataType="wstr"
                       cachedLength="40" />
-                    <inputColumn
-                      id="164"
-                      lineageId="24"
-                      externalMetadataColumnId="152"
-                      cachedName="SalesforceID"
-                      cachedDataType="wstr"
-                      cachedLength="10" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -289,11 +309,6 @@
                       name="SalesRep"
                       dataType="wstr"
                       length="40" />
-                    <externalMetadataColumn
-                      id="152"
-                      name="SalesforceID"
-                      dataType="wstr"
-                      length="50" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -340,7 +355,7 @@
                   id="66"
                   name="OpenRowset"
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Temp_Update_Accounts]</property>
+                  description="Specifies the name of the database object used to open a rowset.">[OLE DB Destination Update]</property>
                 <property
                   id="67"
                   name="OpenRowsetVariable"
@@ -410,7 +425,7 @@
                       externalMetadataColumnId="165"
                       cachedName="CustomerId"
                       cachedDataType="wstr"
-                      cachedLength="50" />
+                      cachedLength="6" />
                     <inputColumn
                       id="178"
                       lineageId="14"
@@ -483,11 +498,11 @@
                       cachedLength="40" />
                     <inputColumn
                       id="188"
-                      lineageId="24"
+                      lineageId="300"
                       externalMetadataColumnId="176"
                       cachedName="SalesforceID"
                       cachedDataType="wstr"
-                      cachedLength="10" />
+                      cachedLength="18" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -550,7 +565,7 @@
                       id="176"
                       name="SalesforceID"
                       dataType="wstr"
-                      length="50" />
+                      length="18" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -593,11 +608,11 @@
                   description="Input to the Conditional Split Transformation">
                   <inputColumns>
                     <inputColumn
-                      id="54"
-                      lineageId="24"
+                      id="313"
+                      lineageId="300"
                       cachedName="SalesforceID"
                       cachedDataType="wstr"
-                      cachedLength="10" />
+                      cachedLength="18" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -618,7 +633,7 @@
                       name="Expression"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      containsID="true">[ISNULL](#24)</property>
+                      containsID="true">[ISNULL](#300)</property>
                     <property
                       id="57"
                       name="FriendlyExpression"
@@ -704,7 +719,7 @@
                   description="The SQL command to be executed."
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
     c.*,
-    s.SalesforceID
+    COALESCE(s.SalesforceID, '') AS SalesforceID 
 FROM dbo.Customer c
 LEFT JOIN dbo.SalesforceIDMap s
     ON c.CustomerId COLLATE DATABASE_DEFAULT 
@@ -729,7 +744,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                   name="AccessMode"
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">2</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   id="10"
                   name="ParameterMapping"
@@ -752,7 +767,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="13"
                       name="CustomerId"
                       lineageId="13"
-                      length="50"
+                      length="6"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -858,16 +873,6 @@ LEFT JOIN dbo.SalesforceIDMap s
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="35" />
-                    <outputColumn
-                      id="24"
-                      name="SalesforceID"
-                      lineageId="24"
-                      length="10"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="36" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -926,11 +931,6 @@ LEFT JOIN dbo.SalesforceIDMap s
                       name="SalesRep"
                       dataType="wstr"
                       length="40" />
-                    <externalMetadataColumn
-                      id="36"
-                      name="SalesforceID"
-                      dataType="wstr"
-                      length="10" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1005,12 +1005,6 @@ LEFT JOIN dbo.SalesforceIDMap s
                       length="40"
                       dataType="wstr" />
                     <outputColumn
-                      id="49"
-                      name="SalesforceID"
-                      lineageId="49"
-                      length="10"
-                      dataType="wstr" />
-                    <outputColumn
                       id="50"
                       name="ErrorCode"
                       lineageId="50"
@@ -1020,6 +1014,180 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="51"
                       name="ErrorColumn"
                       lineageId="51"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="238"
+              name="Lookup"
+              componentClassID="Microsoft.Lookup"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              usesDispositions="true"
+              version="6"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6">
+              <properties>
+                <property
+                  id="241"
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"
+                  expressionType="Notify">select * from [dbo].[SalesforceIDMap]</property>
+                <property
+                  id="242"
+                  name="SqlCommandParam"
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"
+                  expressionType="Notify">select * from (select * from [dbo].[SalesforceIDMap]) [refTable]
+where [refTable].[DatabaseID] = ?</property>
+                <property
+                  id="243"
+                  name="ConnectionType"
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  id="245"
+                  name="CacheType"
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  typeConverter="CacheType">0</property>
+                <property
+                  id="246"
+                  name="NoMatchBehavior"
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  id="247"
+                  name="NoMatchCachePercentage"
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset.">0</property>
+                <property
+                  id="248"
+                  name="MaxMemoryUsage"
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform.">25</property>
+                <property
+                  id="249"
+                  name="MaxMemoryUsage64"
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform.">25</property>
+                <property
+                  id="250"
+                  name="ReferenceMetadataXml"
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format.">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DatabaseID" dataType="DT_WSTR" length="6" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalesforceAccountID" dataType="DT_WSTR" length="18" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ObjectName" dataType="DT_WSTR" length="80" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalesforceRecordID" dataType="DT_WSTR" length="18" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  id="251"
+                  name="ParameterMap"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  containsID="true">#13;</property>
+                <property
+                  id="252"
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  id="253"
+                  name="TreatDuplicateKeysAsError"
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used.">false</property>
+              </properties>
+              <connections>
+                <connection
+                  id="244"
+                  name="OleDbConnection"
+                  description="Connection manager used to access lookup data."
+                  connectionManagerID="{7511E214-CB1F-4426-A00C-44F247A0E867}" />
+              </connections>
+              <inputs>
+                <input
+                  id="239"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      id="297"
+                      lineageId="13"
+                      cachedName="CustomerId"
+                      cachedDataType="wstr"
+                      cachedLength="6">
+                      <properties>
+                        <property
+                          id="298"
+                          name="JoinToReferenceColumn"
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins.">DatabaseID</property>
+                        <property
+                          id="299"
+                          name="CopyFromReferenceColumn"
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied." />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="240"
+                  name="Lookup Match Output"
+                  exclusionGroup="1"
+                  synchronousInputId="239"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure">
+                  <outputColumns>
+                    <outputColumn
+                      id="300"
+                      name="SalesforceID"
+                      lineageId="300"
+                      length="18"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          id="301"
+                          name="CopyFromReferenceColumn"
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied.">SalesforceRecordID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="254"
+                  name="Lookup No Match Output"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  synchronousInputId="239">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="255"
+                  name="Lookup Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="239"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="256"
+                      name="ErrorCode"
+                      lineageId="256"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="257"
+                      name="ErrorColumn"
+                      lineageId="257"
                       dataType="i4"
                       specialFlags="2" />
                   </outputColumns>
@@ -1040,16 +1208,21 @@ LEFT JOIN dbo.SalesforceIDMap s
               startId="55"
               endId="94" />
             <path
-              id="140"
+              id="258"
               name="OLE DB Source Output"
               startId="12"
+              endId="239" />
+            <path
+              id="261"
+              name="Lookup Match Output"
+              startId="240"
               endId="53" />
           </paths>
           <ScriptProject
             Name="ST_c4be453672ba4008b40425cf8038bc8c"
             VSTAMajorVersion="17"
             VSTAMinorVersion="0"
-            Language="VisualBasic" />
+            Language="CSharp" />
           <ArrayOfDynamicComponentProperties xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </pipeline>
       </DTS:ObjectData>
@@ -1544,44 +1717,56 @@ LEFT JOIN dbo.SalesforceIDMap s
                   errorRowDisposition="FailComponent">
                   <inputColumns>
                     <inputColumn
-                      id="419"
+                      id="448"
                       lineageId="390"
-                      externalMetadataColumnId="415"
+                      externalMetadataColumnId="444"
                       cachedName="Customer_CERM_ID__c"
                       cachedDataType="wstr"
                       cachedLength="6" />
                     <inputColumn
-                      id="420"
+                      id="449"
                       lineageId="364"
-                      externalMetadataColumnId="416"
+                      externalMetadataColumnId="445"
                       cachedName="Account__c"
                       cachedDataType="wstr"
                       cachedLength="18" />
                     <inputColumn
-                      id="421"
-                      lineageId="408"
-                      externalMetadataColumnId="417"
-                      cachedName="Name"
+                      id="450"
+                      lineageId="396"
+                      externalMetadataColumnId="447"
+                      cachedName="Id"
                       cachedDataType="wstr"
-                      cachedLength="80" />
+                      cachedLength="18" />
+                    <inputColumn
+                      id="524"
+                      lineageId="520"
+                      externalMetadataColumnId="446"
+                      cachedName="ObjectName"
+                      cachedDataType="wstr"
+                      cachedLength="12" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      id="415"
-                      name="CermID"
+                      id="444"
+                      name="DatabaseID"
                       dataType="wstr"
-                      length="10" />
+                      length="6" />
                     <externalMetadataColumn
-                      id="416"
-                      name="SalesforceID"
+                      id="445"
+                      name="SalesforceAccountID"
                       dataType="wstr"
-                      length="10" />
+                      length="18" />
                     <externalMetadataColumn
-                      id="417"
-                      name="SalesforceName"
+                      id="446"
+                      name="ObjectName"
                       dataType="wstr"
-                      length="10" />
+                      length="80" />
+                    <externalMetadataColumn
+                      id="447"
+                      name="SalesforceRecordID"
+                      dataType="wstr"
+                      length="18" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1610,12 +1795,93 @@ LEFT JOIN dbo.SalesforceIDMap s
                 </output>
               </outputs>
             </component>
+            <component
+              id="487"
+              name="Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              usesDispositions="true"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  id="488"
+                  name="Derived Column Input"
+                  description="Input to the Derived Column Transformation">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="489"
+                  name="Derived Column Output"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="488">
+                  <outputColumns>
+                    <outputColumn
+                      id="520"
+                      name="ObjectName"
+                      lineageId="520"
+                      length="12"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          id="521"
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">@[User::CERMCustomerObjectName]</property>
+                        <property
+                          id="522"
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">@[User::CERMCustomerObjectName]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="490"
+                  name="Derived Column Error Output"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="488"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="491"
+                      name="ErrorCode"
+                      lineageId="491"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="492"
+                      name="ErrorColumn"
+                      lineageId="492"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
-              id="362"
+              id="493"
               name="Salesforce Source Output"
               startId="31"
+              endId="488" />
+            <path
+              id="523"
+              name="Derived Column Output"
+              startId="489"
               endId="358" />
           </paths>
           <ScriptProject
@@ -1659,7 +1925,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                   id="3"
                   name="OpenRowset"
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Customer]</property>
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Temp_Create_Accounts]</property>
                 <property
                   id="4"
                   name="OpenRowsetVariable"
@@ -1670,13 +1936,9 @@ LEFT JOIN dbo.SalesforceIDMap s
                   name="SqlCommand"
                   dataType="System.String"
                   description="The SQL command to be executed."
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-    c.*,
-    s.SalesforceID
-FROM dbo.Customer c
-LEFT JOIN dbo.SalesforceIDMap s
-    ON c.CustomerId COLLATE DATABASE_DEFAULT 
-       = s.CermID COLLATE DATABASE_DEFAULT</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+  FROM [SalesForce].[dbo].[Temp_Create_Accounts]
+  WHERE NOT(LEN(State)&gt;2) AND Country != 'PR'</property>
                 <property
                   id="6"
                   name="SqlCommandVariable"
@@ -1720,7 +1982,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="13"
                       name="CustomerId"
                       lineageId="13"
-                      length="50"
+                      length="6"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1826,16 +2088,6 @@ LEFT JOIN dbo.SalesforceIDMap s
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="35" />
-                    <outputColumn
-                      id="24"
-                      name="SalesforceID"
-                      lineageId="24"
-                      length="10"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="36" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1894,11 +2146,6 @@ LEFT JOIN dbo.SalesforceIDMap s
                       name="SalesRep"
                       dataType="wstr"
                       length="40" />
-                    <externalMetadataColumn
-                      id="36"
-                      name="SalesforceID"
-                      dataType="wstr"
-                      length="10" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1971,12 +2218,6 @@ LEFT JOIN dbo.SalesforceIDMap s
                       name="SalesRep"
                       lineageId="48"
                       length="40"
-                      dataType="wstr" />
-                    <outputColumn
-                      id="49"
-                      name="SalesforceID"
-                      lineageId="49"
-                      length="10"
                       dataType="wstr" />
                     <outputColumn
                       id="50"
@@ -2101,7 +2342,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                       externalMetadataColumnId="135"
                       cachedName="CustomerId"
                       cachedDataType="wstr"
-                      cachedLength="50" />
+                      cachedLength="6" />
                     <inputColumn
                       id="170"
                       lineageId="23"
@@ -2165,13 +2406,6 @@ LEFT JOIN dbo.SalesforceIDMap s
                       cachedName="County"
                       cachedDataType="wstr"
                       cachedLength="40" />
-                    <inputColumn
-                      id="179"
-                      lineageId="24"
-                      externalMetadataColumnId="122"
-                      cachedName="SalesforceID"
-                      cachedDataType="wstr"
-                      cachedLength="10" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2520,7 +2754,7 @@ LEFT JOIN dbo.SalesforceIDMap s
             Name="ST_eca8ceb731b246f49ed451f0f54cdbfd"
             VSTAMajorVersion="17"
             VSTAMinorVersion="0"
-            Language="VisualBasic" />
+            Language="CSharp" />
           <ArrayOfDynamicComponentProperties xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </pipeline>
       </DTS:ObjectData>
@@ -2557,7 +2791,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                   id="3"
                   name="OpenRowset"
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Customer]</property>
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Temp_Update_Accounts]</property>
                 <property
                   id="4"
                   name="OpenRowsetVariable"
@@ -2595,7 +2829,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                   name="AccessMode"
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">2</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   id="10"
                   name="ParameterMapping"
@@ -2618,7 +2852,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="13"
                       name="CustomerId"
                       lineageId="13"
-                      length="50"
+                      length="6"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2728,7 +2962,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="24"
                       name="SalesforceID"
                       lineageId="24"
-                      length="10"
+                      length="18"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2796,7 +3030,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="36"
                       name="SalesforceID"
                       dataType="wstr"
-                      length="10" />
+                      length="18" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2874,7 +3108,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                       id="49"
                       name="SalesforceID"
                       lineageId="49"
-                      length="10"
+                      length="18"
                       dataType="wstr" />
                     <outputColumn
                       id="50"
@@ -2994,13 +3228,6 @@ LEFT JOIN dbo.SalesforceIDMap s
                       cachedDataType="wstr"
                       cachedLength="100" />
                     <inputColumn
-                      id="170"
-                      lineageId="24"
-                      externalMetadataColumnId="146"
-                      cachedName="SalesforceID"
-                      cachedDataType="wstr"
-                      cachedLength="10" />
-                    <inputColumn
                       id="171"
                       lineageId="23"
                       externalMetadataColumnId="168"
@@ -3013,7 +3240,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                       externalMetadataColumnId="159"
                       cachedName="CustomerId"
                       cachedDataType="wstr"
-                      cachedLength="50" />
+                      cachedLength="6" />
                     <inputColumn
                       id="173"
                       lineageId="16"
@@ -3070,6 +3297,13 @@ LEFT JOIN dbo.SalesforceIDMap s
                       cachedName="County"
                       cachedDataType="wstr"
                       cachedLength="40" />
+                    <inputColumn
+                      id="181"
+                      lineageId="24"
+                      externalMetadataColumnId="162"
+                      cachedName="SalesforceID"
+                      cachedDataType="wstr"
+                      cachedLength="18" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3454,6 +3688,14 @@ LEFT JOIN dbo.SalesforceIDMap s
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\Send Updates" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{9E96F825-2CBA-4E61-946B-7E4D54913261}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Refresh IDMap from Salesforce" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -3466,37 +3708,37 @@ LEFT JOIN dbo.SalesforceIDMap s
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
+          Size="163.2,41.6"
           Id="Package\Process Records"
           TopLeft="420,126" />
         <NodeLayout
-          Size="233,42"
+          Size="224,41.6"
           Id="Package\Refresh IDMap from Salesforce"
           TopLeft="137,127" />
         <NodeLayout
-          Size="146,42"
+          Size="141.6,41.6"
           Id="Package\Send Creates"
           TopLeft="622,126" />
         <NodeLayout
-          Size="149,42"
+          Size="148.8,41.6"
           Id="Package\Send Updates"
           TopLeft="853,126" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="370,147.5">
+          TopLeft="361,147.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50,0"
+              EndConnector="59,0"
               Start="0,0"
-              End="42.5,0">
+              End="51.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="42.5,0" />
+                    End="51.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3507,18 +3749,18 @@ LEFT JOIN dbo.SalesforceIDMap s
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="583,147">
+          TopLeft="583.2,146.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="39,0"
+              EndConnector="38.8,0"
               Start="0,0"
-              End="31.5,0">
+              End="31.3,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="31.5,0" />
+                    End="31.3,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3529,18 +3771,56 @@ LEFT JOIN dbo.SalesforceIDMap s
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="768,147">
+          TopLeft="763.6,146.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="85,0"
+              EndConnector="89.4,0"
               Start="0,0"
-              End="77.5,0">
+              End="81.9,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="77.5,0" />
+                    End="81.9,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="35.8333313754864,51.9999996383985" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="118.233331375486,93.5999996383985">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130.766668624514,33.4000003616015"
+              Start="0,0"
+              End="130.766668624514,25.9000003616015">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.7000001808007" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.7000001808007"
+                    Point2="0,16.7000001808007"
+                    Point3="4,16.7000001808007" />
+                  <mssgle:LineSegment
+                    End="126.766668624514,16.7000001808007" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126.766668624514,16.7000001808007"
+                    Point2="130.766668624514,16.7000001808007"
+                    Point3="130.766668624514,20.7000001808007" />
+                  <mssgle:LineSegment
+                    End="130.766668624514,25.9000003616015" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3556,23 +3836,23 @@ LEFT JOIN dbo.SalesforceIDMap s
     design-time-name="Package\Process Records">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="216,42"
-          Id="64"
-          TopLeft="808,288" />
-        <NodeLayout
-          Size="200,42"
-          Id="1"
-          TopLeft="38.5,169.5" />
-        <NodeLayout
-          Size="213,42"
+          Size="212.8,41.6"
           Id="81"
           TopLeft="805,183" />
         <NodeLayout
-          Size="261,42"
+          Size="260.8,41.6"
           Id="52"
           TopLeft="216,231" />
+        <NodeLayout
+          Size="216,41.6"
+          Id="64"
+          TopLeft="808,288" />
+        <NodeLayout
+          Size="192.8,41.6"
+          Id="1"
+          TopLeft="38.5,112.300000397762" />
         <EdgeLayout
           Id="100"
           TopLeft="477,246.333333333333">
@@ -3605,7 +3885,7 @@ LEFT JOIN dbo.SalesforceIDMap s
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="51.7082878798738,1,173.4274609375,9.7490234375"
+              BoundingBox="51.708287879874,1,173.4274609375,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3641,36 +3921,82 @@ LEFT JOIN dbo.SalesforceIDMap s
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-114.36390625,57.5,141.2278125,11.658203125"
+              BoundingBox="69.074167144495,-17.658203125,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="238"
+          TopLeft="59.9999967217447,204.333332363036" />
         <EdgeLayout
-          Id="140"
-          TopLeft="238.5,190.5">
+          Id="258"
+          TopLeft="134.9,153.900000397762">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="108,40.5"
+              EndConnector="-18.5000032782553,50.4333319652743"
               Start="0,0"
-              End="108,33">
+              End="-18.5000032782553,42.9333319652743">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="104,0" />
+                    End="0,21.2166659826371" />
                   <mssgle:CubicBezierSegment
-                    Point1="104,0"
-                    Point2="108,0"
-                    Point3="108,4" />
+                    Point1="0,21.2166659826371"
+                    Point2="0,25.2166659826371"
+                    Point3="-4,25.2166659826371" />
                   <mssgle:LineSegment
-                    End="108,33" />
+                    End="-14.5000032782553,25.2166659826371" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.5000032782553,25.2166659826371"
+                    Point2="-18.5000032782553,25.2166659826371"
+                    Point3="-18.5000032782553,29.2166659826371" />
+                  <mssgle:LineSegment
+                    End="-18.5000032782553,42.9333319652743" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="261"
+          TopLeft="172.799996721745,225.133332363036">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43.2000032782553,26.6666676369641"
+              Start="0,0"
+              End="35.7000032782553,26.6666676369641">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="17.6000016391276,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.6000016391276,0"
+                    Point2="21.6000016391276,0"
+                    Point3="21.6000016391276,4" />
+                  <mssgle:LineSegment
+                    End="21.6000016391276,22.6666676369641" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.6000016391276,22.6666676369641"
+                    Point2="21.6000016391276,26.6666676369641"
+                    Point3="25.6000016391276,26.6666676369641" />
+                  <mssgle:LineSegment
+                    End="35.7000032782553,26.6666676369641" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-26.5913850796224,-17.609375,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3702,33 +4028,84 @@ LEFT JOIN dbo.SalesforceIDMap s
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Process Records\1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Refresh IDMap from Salesforce">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="169,42"
+          Size="168.8,41.6"
           Id="16"
           TopLeft="70,341" />
         <NodeLayout
-          Size="222,42"
+          Size="213.6,41.6"
           Id="345"
           TopLeft="331,340" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="487"
+          TopLeft="214.99999679625,289.799996706843" />
         <EdgeLayout
-          Id="362"
-          TopLeft="239,361.5">
+          Id="493"
+          TopLeft="154.4,341">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="92,0"
+              EndConnector="60.5999967962503,-30.4000032931565"
               Start="0,0"
-              End="84.5,0">
+              End="53.0999967962503,-30.4000032931565">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="84.5,0" />
+                    End="0,-26.4000032931565" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-26.4000032931565"
+                    Point2="0,-30.4000032931565"
+                    Point3="4,-30.4000032931565" />
+                  <mssgle:LineSegment
+                    End="53.0999967962503,-30.4000032931565" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="523"
+          TopLeft="367.79999679625,310.599996706843">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70.0000032037497,29.4000032931565"
+              Start="0,0"
+              End="70.0000032037497,21.9000032931565">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="66.0000032037497,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.0000032037497,0"
+                    Point2="70.0000032037497,0"
+                    Point3="70.0000032037497,4" />
+                  <mssgle:LineSegment
+                    End="70.0000032037497,21.9000032931565" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3740,17 +4117,30 @@ LEFT JOIN dbo.SalesforceIDMap s
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Refresh IDMap from Salesforce\345">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Send Creates">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="269,42"
+          Size="268.8,41.6"
           Id="1"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="225,42"
+          Size="224.8,41.6"
           Id="52"
           TopLeft="373,6" />
         <EdgeLayout
@@ -3780,8 +4170,8 @@ LEFT JOIN dbo.SalesforceIDMap s
           ParentId="Package\Send Creates"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="949,285"
-          Size="949,328"
+          PanelSize="948.8,284.8"
+          Size="948.8,328"
           Id="3c449fce-0f51-4456-a024-5d44ee496f9d"
           TopLeft="65,98">
           <GroupLayout.ChildrenIds>
@@ -3793,17 +4183,30 @@ LEFT JOIN dbo.SalesforceIDMap s
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Send Creates\1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Send Updates">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="227,42"
+          Size="227.2,41.6"
           Id="52"
           TopLeft="645,196" />
         <NodeLayout
-          Size="271,42"
+          Size="271.2,41.6"
           Id="1"
           TopLeft="57.5,191.5" />
         <EdgeLayout
@@ -3831,5 +4234,41 @@ LEFT JOIN dbo.SalesforceIDMap s
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Send Updates\1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Process Records\238">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[SalesforceIDMap]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
