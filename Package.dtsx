@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{339031ED-57CB-421D-A72C-5A513BF295F5}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{3B58DDAD-825F-4F07-BC6E-B03BF77DEC0B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD9vKqOkpv8j4TGl+jc1vMzoXmNrVbhp4bZsibzpYtUkgAAAAAOgAAAAAIAACAAAADxDzbxyDx/jcgoUZ4uC0vGOlQdAjnGEoXFGRJh4Z1OLiAAAAAhMCU+vSxWJnuaKH4t31JDNPNCwWjeqzJq3FPQFGjkIkAAAADlSczVOFAk9HR73WHCl9WrFAhiaklcUuBrdXvhiuaGN6LNX6YdY/HRGazD1oyxosHtJmo06HxgLv5GvRXq1hIv</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACEP/iZS8GwQaRPEeENce3QPkKS/ZdaZgTc3PXPYhz4cAAAAAAOgAAAAAIAACAAAABYoi1vSY3ak+UXT71gsRVUEtpTDFEFZiiLe8EsgkJtLCAAAADJ3NxdpnEtLp6/Jr/EPWikI68uY7XtJokX8lM2qk/nXkAAAAAzcDZb08peNlKFqvJ9YkEIeBa1yF4s7HEOdlx8gg7XxohSaiIK0+FkE0/PnsQarupxngmrvIQkbJ4YK/gf+To1</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADC1Rgb3bInMqRUwSlaDUexHnsjNCrVGxR1vyhUPMjjnAAAAAAOgAAAAAIAACAAAAAKQMrhsqy6QNAFnP72lLkizc9DShH6i0YAA6FB6FRXL1AAAADtTZvzyh64bi1/IVD1Ofrhp+sDKMwOw1DCEuYaWEaIIwl0FjB8WV131uf5x7FMfBBF6vBJP3N/ynwmrQTiduMWC8/DY0wfn/De8nFn76goFUAAAADzJHngTBeTNt7sdL0q7sIdsCSAW82TIA0fFzLQE2y6nrOTdWKejPm7rrCKJsqJRPtPVE9TvIzQNaZql2q+rlq6</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABzjDQRi6DKYDl4lqQiuyE2tWToegxUma3e+wKd6rGLWwAAAAAOgAAAAAIAACAAAACIUpd2qzAPFu36ClpUFfBUp05aQYPKulUJppsyZ/H7+1AAAAAzbMrVs8jDzZBtaXyMi8qS48cnVpXXulD0zpseT5dHmsympnt33KdeLgY/qZX77XLmThAJ1oadU3C5Qe/5Gc3+2yI72Zr4Vs9Oki4KbJhpfkAAAAC4huU8iZIbBNqqXyQkJ0rUOn/ct+xgFILxFVH9dcle2PauSwsAePeobYzdRebVDCbNbVu1FmLw65EHkS1Ew5WN</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -66,114 +66,6 @@
           version="1">
           <components>
             <component
-              id="112"
-              name="Derived Column Plus"
-              componentClassID="Microsoft.ManagedComponentHost"
-              description="Use JavaScript code to automate any custom logic in the package data flow."
-              usesDispositions="true"
-              contactInfo="Use JavaScript code to automate any custom logic in the package data flow.; COZYROC LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
-              <properties>
-                <property
-                  id="116"
-                  name="JavaScriptCode"
-                  dataType="System.String"
-                  description="Code of the linked JavaScript file."
-                  typeConverter="NOTBROWSABLE">// This module contains derived columns base functions and component methods.
-require('derived.columns.js');
-
-// This module contains mathematical, string, datetime and miscellaneous functions.
-require('common.functions.js');
-
-// Component derived columns
-component.columns = [];
-
-// You may define custom JavaScript functions bellow for usage in a derived column expression
-// They will be become available in the Functions tree on the right side of the editor</property>
-                <property
-                  id="117"
-                  name="ParametersValues"
-                  state="cdata"
-                  dataType="System.String"
-                  description="Serialized parameters keys and values."
-                  typeConverter="NOTBROWSABLE"><![CDATA[<dictionary />]]></property>
-                <property
-                  id="118"
-                  name="PackageConnection"
-                  dataType="System.String"
-                  description="Specifies the Package connection manager that the task uses."
-                  typeConverter="NOTBROWSABLE"></property>
-                <property
-                  id="119"
-                  name="JavaScriptLinkedComponent"
-                  dataType="System.String"
-                  description="Select JavaScriptComponent."
-                  typeConverter="NOTBROWSABLE"></property>
-                <property
-                  id="120"
-                  name="Breakpoints"
-                  dataType="System.String"
-                  isArray="true"
-                  description="List of breakpoints in the script."
-                  typeConverter="NOTBROWSABLE">
-                  <arrayElements
-                    arrayElementCount="0" />
-                </property>
-                <property
-                  id="121"
-                  name="ComponentObject"
-                  dataType="System.Null"
-                  typeConverter="NOTBROWSABLE" />
-                <property
-                  id="126"
-                  name="UserComponentTypeName"
-                  dataType="System.String">CozyRoc.DerivedColumnComponent</property>
-              </properties>
-              <inputs>
-                <input
-                  id="114"
-                  name="Input 0"
-                  hasSideEffects="true">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  id="115"
-                  name="Output 0"
-                  synchronousInputId="114">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  id="122"
-                  name="Derived Column Plus Error Output"
-                  exclusionGroup="1"
-                  synchronousInputId="114"
-                  isErrorOut="true">
-                  <outputColumns>
-                    <outputColumn
-                      id="123"
-                      name="ErrorCode"
-                      lineageId="123"
-                      dataType="i4"
-                      specialFlags="1" />
-                    <outputColumn
-                      id="124"
-                      name="ErrorColumn"
-                      lineageId="124"
-                      dataType="i4"
-                      specialFlags="2" />
-                    <outputColumn
-                      id="125"
-                      name="ErrorDescription"
-                      lineageId="125"
-                      length="1024"
-                      dataType="wstr" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               id="81"
               name="OLE DB Destination Create"
               componentClassID="Microsoft.OLEDBDestination"
@@ -191,7 +83,7 @@ component.columns = [];
                   id="83"
                   name="OpenRowset"
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."></property>
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Temp_Create_Accounts]</property>
                 <property
                   id="84"
                   name="OpenRowsetVariable"
@@ -218,7 +110,7 @@ component.columns = [];
                   name="AccessMode"
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   id="89"
                   name="FastLoadKeepIdentity"
@@ -228,12 +120,12 @@ component.columns = [];
                   id="90"
                   name="FastLoadKeepNulls"
                   dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">true</property>
                 <property
                   id="91"
                   name="FastLoadOptions"
                   dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   id="92"
                   name="FastLoadMaxInsertCommitSize"
@@ -244,7 +136,8 @@ component.columns = [];
                 <connection
                   id="93"
                   name="OleDbConnection"
-                  description="The OLE DB runtime connection used to access the database." />
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{7511E214-CB1F-4426-A00C-44F247A0E867}" />
               </connections>
               <inputs>
                 <input
@@ -253,8 +146,155 @@ component.columns = [];
                   hasSideEffects="true"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      id="153"
+                      lineageId="13"
+                      externalMetadataColumnId="141"
+                      cachedName="CustomerId"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      id="154"
+                      lineageId="14"
+                      externalMetadataColumnId="142"
+                      cachedName="Name"
+                      cachedDataType="wstr"
+                      cachedLength="100" />
+                    <inputColumn
+                      id="155"
+                      lineageId="15"
+                      externalMetadataColumnId="143"
+                      cachedName="Street"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="156"
+                      lineageId="16"
+                      externalMetadataColumnId="144"
+                      cachedName="District"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="157"
+                      lineageId="17"
+                      externalMetadataColumnId="145"
+                      cachedName="Country"
+                      cachedDataType="wstr"
+                      cachedLength="3" />
+                    <inputColumn
+                      id="158"
+                      lineageId="18"
+                      externalMetadataColumnId="146"
+                      cachedName="County"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="159"
+                      lineageId="19"
+                      externalMetadataColumnId="147"
+                      cachedName="State"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="160"
+                      lineageId="20"
+                      externalMetadataColumnId="148"
+                      cachedName="PostalCode"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="161"
+                      lineageId="21"
+                      externalMetadataColumnId="149"
+                      cachedName="City"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="162"
+                      lineageId="22"
+                      externalMetadataColumnId="150"
+                      cachedName="CustomerKeyword"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                    <inputColumn
+                      id="163"
+                      lineageId="23"
+                      externalMetadataColumnId="151"
+                      cachedName="SalesRep"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="164"
+                      lineageId="24"
+                      externalMetadataColumnId="152"
+                      cachedName="SalesforceID"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="141"
+                      name="CustomerId"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="142"
+                      name="Name"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      id="143"
+                      name="Street"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="144"
+                      name="District"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="145"
+                      name="Country"
+                      dataType="wstr"
+                      length="3" />
+                    <externalMetadataColumn
+                      id="146"
+                      name="County"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="147"
+                      name="State"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="148"
+                      name="PostalCode"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="149"
+                      name="City"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="150"
+                      name="CustomerKeyword"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="151"
+                      name="SalesRep"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="152"
+                      name="SalesforceID"
+                      dataType="wstr"
+                      length="50" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -300,7 +340,7 @@ component.columns = [];
                   id="66"
                   name="OpenRowset"
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."></property>
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Temp_Update_Accounts]</property>
                 <property
                   id="67"
                   name="OpenRowsetVariable"
@@ -327,7 +367,7 @@ component.columns = [];
                   name="AccessMode"
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   id="72"
                   name="FastLoadKeepIdentity"
@@ -337,12 +377,12 @@ component.columns = [];
                   id="73"
                   name="FastLoadKeepNulls"
                   dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">true</property>
                 <property
                   id="74"
                   name="FastLoadOptions"
                   dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   id="75"
                   name="FastLoadMaxInsertCommitSize"
@@ -353,7 +393,8 @@ component.columns = [];
                 <connection
                   id="76"
                   name="OleDbConnection"
-                  description="The OLE DB runtime connection used to access the database." />
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{7511E214-CB1F-4426-A00C-44F247A0E867}" />
               </connections>
               <inputs>
                 <input
@@ -362,8 +403,155 @@ component.columns = [];
                   hasSideEffects="true"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      id="177"
+                      lineageId="13"
+                      externalMetadataColumnId="165"
+                      cachedName="CustomerId"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      id="178"
+                      lineageId="14"
+                      externalMetadataColumnId="166"
+                      cachedName="Name"
+                      cachedDataType="wstr"
+                      cachedLength="100" />
+                    <inputColumn
+                      id="179"
+                      lineageId="15"
+                      externalMetadataColumnId="167"
+                      cachedName="Street"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="180"
+                      lineageId="16"
+                      externalMetadataColumnId="168"
+                      cachedName="District"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="181"
+                      lineageId="17"
+                      externalMetadataColumnId="169"
+                      cachedName="Country"
+                      cachedDataType="wstr"
+                      cachedLength="3" />
+                    <inputColumn
+                      id="182"
+                      lineageId="18"
+                      externalMetadataColumnId="170"
+                      cachedName="County"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="183"
+                      lineageId="19"
+                      externalMetadataColumnId="171"
+                      cachedName="State"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="184"
+                      lineageId="20"
+                      externalMetadataColumnId="172"
+                      cachedName="PostalCode"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="185"
+                      lineageId="21"
+                      externalMetadataColumnId="173"
+                      cachedName="City"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="186"
+                      lineageId="22"
+                      externalMetadataColumnId="174"
+                      cachedName="CustomerKeyword"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                    <inputColumn
+                      id="187"
+                      lineageId="23"
+                      externalMetadataColumnId="175"
+                      cachedName="SalesRep"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="188"
+                      lineageId="24"
+                      externalMetadataColumnId="176"
+                      cachedName="SalesforceID"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="165"
+                      name="CustomerId"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="166"
+                      name="Name"
+                      dataType="wstr"
+                      length="100" />
+                    <externalMetadataColumn
+                      id="167"
+                      name="Street"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="168"
+                      name="District"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="169"
+                      name="Country"
+                      dataType="wstr"
+                      length="3" />
+                    <externalMetadataColumn
+                      id="170"
+                      name="County"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="171"
+                      name="State"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="172"
+                      name="PostalCode"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="173"
+                      name="City"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="174"
+                      name="CustomerKeyword"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="175"
+                      name="SalesRep"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="176"
+                      name="SalesforceID"
+                      dataType="wstr"
+                      length="50" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -1899,6 +2087,92 @@ LEFT JOIN dbo.SalesforceIDMap s
                   hasSideEffects="true"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      id="144"
+                      lineageId="14"
+                      externalMetadataColumnId="138"
+                      cachedName="Name"
+                      cachedDataType="wstr"
+                      cachedLength="100" />
+                    <inputColumn
+                      id="145"
+                      lineageId="13"
+                      externalMetadataColumnId="135"
+                      cachedName="CustomerId"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      id="170"
+                      lineageId="23"
+                      externalMetadataColumnId="143"
+                      cachedName="SalesRep"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="171"
+                      lineageId="16"
+                      externalMetadataColumnId="137"
+                      cachedName="District"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="172"
+                      lineageId="22"
+                      externalMetadataColumnId="136"
+                      cachedName="CustomerKeyword"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                    <inputColumn
+                      id="173"
+                      lineageId="15"
+                      externalMetadataColumnId="134"
+                      cachedName="Street"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="174"
+                      lineageId="19"
+                      externalMetadataColumnId="133"
+                      cachedName="State"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="175"
+                      lineageId="20"
+                      externalMetadataColumnId="132"
+                      cachedName="PostalCode"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="176"
+                      lineageId="17"
+                      externalMetadataColumnId="128"
+                      cachedName="Country"
+                      cachedDataType="wstr"
+                      cachedLength="3" />
+                    <inputColumn
+                      id="177"
+                      lineageId="21"
+                      externalMetadataColumnId="127"
+                      cachedName="City"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="178"
+                      lineageId="18"
+                      externalMetadataColumnId="126"
+                      cachedName="County"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="179"
+                      lineageId="24"
+                      externalMetadataColumnId="122"
+                      cachedName="SalesforceID"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
@@ -2062,168 +2336,168 @@ LEFT JOIN dbo.SalesforceIDMap s
                       length="18"
                       dataType="wstr" />
                     <outputColumn
-                      id="98"
+                      id="146"
                       name="CustomerId"
-                      lineageId="98"
+                      lineageId="146"
                       length="50"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="99"
+                          id="147"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">13</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="100"
+                      id="148"
                       name="Name"
-                      lineageId="100"
+                      lineageId="148"
                       length="100"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="101"
+                          id="149"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">14</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="102"
+                      id="150"
                       name="Street"
-                      lineageId="102"
+                      lineageId="150"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="103"
+                          id="151"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">15</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="104"
+                      id="152"
                       name="District"
-                      lineageId="104"
+                      lineageId="152"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="105"
+                          id="153"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">16</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="106"
+                      id="154"
                       name="Country"
-                      lineageId="106"
+                      lineageId="154"
                       length="3"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="107"
+                          id="155"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">17</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="108"
+                      id="156"
                       name="County"
-                      lineageId="108"
+                      lineageId="156"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="109"
+                          id="157"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">18</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="110"
+                      id="158"
                       name="State"
-                      lineageId="110"
+                      lineageId="158"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="111"
+                          id="159"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">19</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="112"
+                      id="160"
                       name="PostalCode"
-                      lineageId="112"
+                      lineageId="160"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="113"
+                          id="161"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">20</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="114"
+                      id="162"
                       name="City"
-                      lineageId="114"
+                      lineageId="162"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="115"
+                          id="163"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">21</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="116"
+                      id="164"
                       name="CustomerKeyword"
-                      lineageId="116"
+                      lineageId="164"
                       length="10"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="117"
+                          id="165"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">22</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="118"
+                      id="166"
                       name="SalesRep"
-                      lineageId="118"
+                      lineageId="166"
                       length="40"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="119"
+                          id="167"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">23</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="120"
+                      id="168"
                       name="SalesforceID"
-                      lineageId="120"
+                      lineageId="168"
                       length="10"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="121"
+                          id="169"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">24</property>
@@ -2711,6 +2985,92 @@ LEFT JOIN dbo.SalesforceIDMap s
                   hasSideEffects="true"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      id="169"
+                      lineageId="14"
+                      externalMetadataColumnId="163"
+                      cachedName="Name"
+                      cachedDataType="wstr"
+                      cachedLength="100" />
+                    <inputColumn
+                      id="170"
+                      lineageId="24"
+                      externalMetadataColumnId="146"
+                      cachedName="SalesforceID"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                    <inputColumn
+                      id="171"
+                      lineageId="23"
+                      externalMetadataColumnId="168"
+                      cachedName="SalesRep"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="172"
+                      lineageId="13"
+                      externalMetadataColumnId="159"
+                      cachedName="CustomerId"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      id="173"
+                      lineageId="16"
+                      externalMetadataColumnId="161"
+                      cachedName="District"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="174"
+                      lineageId="22"
+                      externalMetadataColumnId="160"
+                      cachedName="CustomerKeyword"
+                      cachedDataType="wstr"
+                      cachedLength="10" />
+                    <inputColumn
+                      id="175"
+                      lineageId="15"
+                      externalMetadataColumnId="158"
+                      cachedName="Street"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="176"
+                      lineageId="19"
+                      externalMetadataColumnId="157"
+                      cachedName="State"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="177"
+                      lineageId="20"
+                      externalMetadataColumnId="156"
+                      cachedName="PostalCode"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="178"
+                      lineageId="17"
+                      externalMetadataColumnId="155"
+                      cachedName="Country"
+                      cachedDataType="wstr"
+                      cachedLength="3" />
+                    <inputColumn
+                      id="179"
+                      lineageId="21"
+                      externalMetadataColumnId="151"
+                      cachedName="City"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                    <inputColumn
+                      id="180"
+                      lineageId="18"
+                      externalMetadataColumnId="150"
+                      cachedName="County"
+                      cachedDataType="wstr"
+                      cachedLength="40" />
+                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
@@ -3198,61 +3558,21 @@ LEFT JOIN dbo.SalesforceIDMap s
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="182,42"
-          Id="112"
-          TopLeft="203,338" />
+          Size="216,42"
+          Id="64"
+          TopLeft="808,288" />
         <NodeLayout
           Size="200,42"
           Id="1"
           TopLeft="38.5,169.5" />
         <NodeLayout
-          Size="261,42"
-          Id="52"
-          TopLeft="216,231" />
-        <NodeLayout
-          Size="216,42"
-          Id="64"
-          TopLeft="808,288" />
-        <EdgeLayout
-          Id="99"
-          TopLeft="477,257.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="331,51.3333333333333"
-              Start="0,0"
-              End="323.5,51.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="135.688073394495,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="135.688073394495,0"
-                    Point2="139.688073394495,0"
-                    Point3="139.688073394495,4" />
-                  <mssgle:LineSegment
-                    End="139.688073394495,47.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="139.688073394495,47.3333333333333"
-                    Point2="139.688073394495,51.3333333333333"
-                    Point3="143.688073394495,51.3333333333333" />
-                  <mssgle:LineSegment
-                    End="323.5,51.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="69.0741671444954,-17.658203125,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="213,42"
           Id="81"
           TopLeft="805,183" />
+        <NodeLayout
+          Size="261,42"
+          Id="52"
+          TopLeft="216,231" />
         <EdgeLayout
           Id="100"
           TopLeft="477,246.333333333333">
@@ -3290,6 +3610,42 @@ LEFT JOIN dbo.SalesforceIDMap s
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="99"
+          TopLeft="477,257.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="331,51.3333333333333"
+              Start="0,0"
+              End="323.5,51.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="135.688073394495,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="135.688073394495,0"
+                    Point2="139.688073394495,0"
+                    Point3="139.688073394495,4" />
+                  <mssgle:LineSegment
+                    End="139.688073394495,47.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="139.688073394495,47.3333333333333"
+                    Point2="139.688073394495,51.3333333333333"
+                    Point3="143.688073394495,51.3333333333333" />
+                  <mssgle:LineSegment
+                    End="323.5,51.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-114.36390625,57.5,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="140"
           TopLeft="238.5,190.5">
           <EdgeLayout.Curve>
@@ -3320,6 +3676,32 @@ LEFT JOIN dbo.SalesforceIDMap s
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Process Records\81">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Process Records\64">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Refresh IDMap from Salesforce">
     <LayoutInfo>
@@ -3415,7 +3797,7 @@ LEFT JOIN dbo.SalesforceIDMap s
     design-time-name="Package\Send Updates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="227,42"
           Id="52"
@@ -3443,9 +3825,7 @@ LEFT JOIN dbo.SalesforceIDMap s
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
