@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{34681A01-9B93-4374-BE06-9911010A2B8F}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{8AECDF35-93BE-48F9-8FFD-C6B2D2123E65}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAx658PFvJ70qUmU23bNnAlQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAYDMxqTfYERx40sYlBIcPfYIj1QH0gyBw8dBeHnp6fWQAAAAAOgAAAAAIAACAAAAA1yju+LtfacSD7TZeMsDfSSUF4hL4cQkzogPvdb/HgciAAAAB/4H89LUbh6P2gESDrws7ff8mHHw3TlIWWfdj6M8DLTEAAAACMj0zlEz14Pc8ehaVGbleawqPjAeSh0S30GYdVUTadxGygOiRM5jSUnHguSWbN1Bbdsvlw6mYjeXuzW3885ZIS</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABo5dRN+zvdJymspcIEJc0IAycm5NeKpNofB1v0qhUC8AAAAAAOgAAAAAIAACAAAAAhcGSvK/IT3n587KZ4Z+U8BvKohTXb32x5f7AcEAKsiCAAAADyyQusmUsxoU3moOZWlPZ4EWJwMeOGvUbMC/EdPkLTHkAAAABTZ67k/GYe5KTy2QRcSXA8UscNZ6KgIG+7OUiJeTtBf+qIgFqlfJs6LTVJ3SzSIB3OuR38kiJnIQg6Wb8t5VhW</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAx658PFvJ70qUmU23bNnAlQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADER7OZux5fu50RlCrf5rmE23RmFzuuQHJxdDBR1Zk9iQAAAAAOgAAAAAIAACAAAAAK4F2t7RLttJxbYygdMJvNNR52tnds+dAaztYjoDhqzFAAAADP8g4Or2V9rzkdXft+bEPLR3Ug4JdTpPq8FCzx9rFTxPm8b19sPm9XAHoCqKob8vggwjusBw10ke24/KENee8n2fKOBt0EnQBU0+gfGqTvzEAAAACJomSyOfCwe9k/A2gMEwC1AYwf2fgZ27tRauQMv8MkWdgyGWvrOqlKygOtw1VHmta5DLQXQpeEcZhwhwRsQGwj</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACJa/4BVzxYkRMkQxS2FYRBnFOqBkt1WKPQZB7A9M1DmwAAAAAOgAAAAAIAACAAAABVfBN+LnG7egPeaAp/XtLuFsG7tjaezJKA4gn79P+GKlAAAAAf8u/GRSmMA5DaiEliY/46cImNeAIhWJb5XFEzouVbW57wVHg3sCy067P5vCEjqi7FGqafNj+2AyEmNyNET94tHM0SietJKissy9f2pN8KrkAAAAByT/vV6a/ADY1fjfaV1e6GfWfxaRwciimkAZX1TLo5CeRfeYDtzbiV1WBT4pWkgnEWGtLxEsvmI/LoDx2ZOQnV</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -355,7 +355,7 @@
                   id="66"
                   name="OpenRowset"
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset.">[OLE DB Destination Update]</property>
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Temp_Update_Accounts]</property>
                 <property
                   id="67"
                   name="OpenRowsetVariable"
@@ -3662,6 +3662,422 @@ LEFT JOIN dbo.SalesforceIDMap s
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Client Table"
+      DTS:CreationName="CozyRoc.Pipeline"
+      DTS:Description="Data Flow Task Plus"
+      DTS:DTSID="{A55F9E17-5120-4548-A7DA-357AEAFE8BA8}"
+      DTS:ExecutableType="CozyRoc.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Client Table"
+      DTS:TaskContact="Data Flow Task Plus;CozyRoc LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              id="1"
+              name="Salesforce Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Extracts data from Salesforce services."
+              contactInfo="Extracts data from Salesforce services.; COZYROC LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
+              <properties>
+                <property
+                  id="2"
+                  name="ComponentObject"
+                  dataType="System.Null"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  id="3"
+                  name="DtsComponentDesigner"
+                  dataType="System.String"
+                  typeConverter="NOTBROWSABLE">CozyRoc.SqlServer.SSIS.SforceSourceDesigner, CozyRoc.SSISPlus.UI.2025, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=16cf490bb80c34ea</property>
+                <property
+                  id="4"
+                  name="BatchSize"
+                  dataType="System.Int32"
+                  description="Specifies query batch size."
+                  expressionType="Notify">500</property>
+                <property
+                  id="5"
+                  name="InputType"
+                  dataType="System.Int32"
+                  description="Specifies how to access the service."
+                  typeConverter="CozyRoc.SqlServer.SSIS.SforceSource+InputTypes">0</property>
+                <property
+                  id="6"
+                  name="Object"
+                  dataType="System.String"
+                  description="Salesforce object."
+                  typeConverter="CozyRoc.SqlServer.SSIS.TableEditor"
+                  expressionType="Notify">CERM_Customer__c</property>
+                <property
+                  id="7"
+                  name="Statement"
+                  dataType="System.String"
+                  description="SOQL statement."
+                  UITypeEditor="CozyRoc.SqlServer.SSIS.TextDialogEditor"
+                  expressionType="Notify"></property>
+                <property
+                  id="8"
+                  name="IncludeDeleted"
+                  dataType="System.Boolean"
+                  description="Specifies to include deleted records.">false</property>
+                <property
+                  id="9"
+                  name="PKChunkSize"
+                  dataType="System.Int32"
+                  description="Specifies the primary key chunk size in bulk mode. Value of 0 disables PK chunking.">0</property>
+                <property
+                  id="10"
+                  name="ObjectFilter"
+                  dataType="System.String"
+                  description="Filter statement. Optional."
+                  expressionType="Notify"></property>
+                <property
+                  id="11"
+                  name="Mode"
+                  dataType="System.Int32"
+                  description="Specifies source load type."
+                  typeConverter="CozyRoc.SqlServer.SSIS.SforceSource+ModeTypes">0</property>
+                <property
+                  id="12"
+                  name="UserComponentTypeName"
+                  dataType="System.String">CozyRoc.SforceSource</property>
+              </properties>
+              <connections>
+                <connection
+                  id="13"
+                  name="SFORCE"
+                  description="Salesforce Connection Manager"
+                  connectionManagerID="{3D4C295A-64F9-416C-9664-F78B71089DD3}" />
+              </connections>
+              <outputs>
+                <output
+                  id="14"
+                  name="Salesforce Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      id="15"
+                      name="Account__c"
+                      lineageId="15"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="41" />
+                    <outputColumn
+                      id="28"
+                      name="Customer_CERM_ID__c"
+                      lineageId="28"
+                      length="6"
+                      dataType="wstr"
+                      externalMetadataColumnId="54" />
+                    <outputColumn
+                      id="31"
+                      name="Id"
+                      lineageId="31"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="57" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="41"
+                      name="Account__c"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="42"
+                      name="County__c"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="43"
+                      name="CreatedById"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="44"
+                      name="CreatedDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="45"
+                      name="Customer_Address__c"
+                      dataType="wstr"
+                      length="4000" />
+                    <externalMetadataColumn
+                      id="46"
+                      name="Customer_Address__City__s"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="47"
+                      name="Customer_Address__CountryCode__s"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="48"
+                      name="Customer_Address__GeocodeAccuracy__s"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="49"
+                      name="Customer_Address__Latitude__s"
+                      dataType="numeric"
+                      precision="18"
+                      scale="15" />
+                    <externalMetadataColumn
+                      id="50"
+                      name="Customer_Address__Longitude__s"
+                      dataType="numeric"
+                      precision="18"
+                      scale="15" />
+                    <externalMetadataColumn
+                      id="51"
+                      name="Customer_Address__PostalCode__s"
+                      dataType="wstr"
+                      length="20" />
+                    <externalMetadataColumn
+                      id="52"
+                      name="Customer_Address__StateCode__s"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="53"
+                      name="Customer_Address__Street__s"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="54"
+                      name="Customer_CERM_ID__c"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="55"
+                      name="Customer_Keyword__c"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      id="56"
+                      name="District__c"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="57"
+                      name="Id"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="58"
+                      name="IsDeleted"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="59"
+                      name="LastModifiedById"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="60"
+                      name="LastModifiedDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="61"
+                      name="LastReferencedDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="62"
+                      name="LastViewedDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="63"
+                      name="Name"
+                      dataType="wstr"
+                      length="80" />
+                    <externalMetadataColumn
+                      id="64"
+                      name="OwnerId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="65"
+                      name="Sales_Rep__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="66"
+                      name="SystemModstamp"
+                      dataType="dbTimeStamp" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="76"
+              name="SQL Server Client Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  id="77"
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  id="78"
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Client]</property>
+                <property
+                  id="79"
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  id="80"
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  id="81"
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  id="82"
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  id="83"
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  id="84"
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="85"
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">true</property>
+                <property
+                  id="86"
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  id="87"
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  id="88"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{7511E214-CB1F-4426-A00C-44F247A0E867}" />
+              </connections>
+              <inputs>
+                <input
+                  id="89"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      id="109"
+                      lineageId="28"
+                      externalMetadataColumnId="108"
+                      cachedName="Customer_CERM_ID__c"
+                      cachedDataType="wstr"
+                      cachedLength="6" />
+                    <inputColumn
+                      id="122"
+                      lineageId="15"
+                      externalMetadataColumnId="107"
+                      cachedName="Account__c"
+                      cachedDataType="wstr"
+                      cachedLength="18" />
+                    <inputColumn
+                      id="125"
+                      lineageId="31"
+                      externalMetadataColumnId="124"
+                      cachedName="Id"
+                      cachedDataType="wstr"
+                      cachedLength="18" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="107"
+                      name="AccountId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="108"
+                      name="CustomerId"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="124"
+                      name="CermCustomerRecordID"
+                      dataType="wstr"
+                      length="18" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="98"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="89"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="99"
+                      name="ErrorCode"
+                      lineageId="99"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="100"
+                      name="ErrorColumn"
+                      lineageId="100"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              id="123"
+              name="Salesforce Source Output"
+              startId="14"
+              endId="89" />
+          </paths>
+          <ScriptProject
+            Name="ST_5e185270a71b4a058c6a96267f569bde"
+            VSTAMajorVersion="17"
+            VSTAMinorVersion="0"
+            Language="VisualBasic" />
+          <ArrayOfDynamicComponentProperties xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -3696,6 +4112,14 @@ LEFT JOIN dbo.SalesforceIDMap s
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Refresh IDMap from Salesforce" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{37220C17-E92B-4E1F-947F-D307F0CEB80D}"
+      DTS:From="Package\Send Updates"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Update Client Table" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -3710,19 +4134,23 @@ LEFT JOIN dbo.SalesforceIDMap s
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163.2,41.6"
+          Size="165,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="35.8333313754864,51.9999996383985" />
+        <NodeLayout
+          Size="163,42"
           Id="Package\Process Records"
           TopLeft="420,126" />
         <NodeLayout
-          Size="224,41.6"
+          Size="224,42"
           Id="Package\Refresh IDMap from Salesforce"
           TopLeft="137,127" />
         <NodeLayout
-          Size="141.6,41.6"
+          Size="142,42"
           Id="Package\Send Creates"
           TopLeft="622,126" />
         <NodeLayout
-          Size="148.8,41.6"
+          Size="149,42"
           Id="Package\Send Updates"
           TopLeft="853,126" />
         <EdgeLayout
@@ -3791,10 +4219,6 @@ LEFT JOIN dbo.SalesforceIDMap s
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Execute SQL Task"
-          TopLeft="35.8333313754864,51.9999996383985" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="118.233331375486,93.5999996383985">
@@ -3829,6 +4253,44 @@ LEFT JOIN dbo.SalesforceIDMap s
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Update Client Table"
+          TopLeft="855,225" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="927.5,168">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.5,57"
+              Start="0,0"
+              End="15.5,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="4,28.5" />
+                  <mssgle:LineSegment
+                    End="11.5,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,28.5"
+                    Point2="15.5,28.5"
+                    Point3="15.5,32.5" />
+                  <mssgle:LineSegment
+                    End="15.5,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3838,123 +4300,39 @@ LEFT JOIN dbo.SalesforceIDMap s
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="212.8,41.6"
-          Id="81"
-          TopLeft="805,183" />
-        <NodeLayout
-          Size="260.8,41.6"
-          Id="52"
-          TopLeft="216,231" />
-        <NodeLayout
-          Size="216,41.6"
-          Id="64"
-          TopLeft="808,288" />
-        <NodeLayout
-          Size="192.8,41.6"
-          Id="1"
-          TopLeft="38.5,112.300000397762" />
-        <EdgeLayout
-          Id="100"
-          TopLeft="477,246.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="328,-42.3333333333333"
-              Start="0,0"
-              End="320.5,-42.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="134.422018348624,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="134.422018348624,0"
-                    Point2="138.422018348624,0"
-                    Point3="138.422018348624,-4" />
-                  <mssgle:LineSegment
-                    End="138.422018348624,-38.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="138.422018348624,-38.3333333333333"
-                    Point2="138.422018348624,-42.3333333333333"
-                    Point3="142.422018348624,-42.3333333333333" />
-                  <mssgle:LineSegment
-                    End="320.5,-42.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="51.708287879874,1,173.4274609375,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="99"
-          TopLeft="477,257.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="331,51.3333333333333"
-              Start="0,0"
-              End="323.5,51.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="135.688073394495,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="135.688073394495,0"
-                    Point2="139.688073394495,0"
-                    Point3="139.688073394495,4" />
-                  <mssgle:LineSegment
-                    End="139.688073394495,47.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="139.688073394495,47.3333333333333"
-                    Point2="139.688073394495,51.3333333333333"
-                    Point3="143.688073394495,51.3333333333333" />
-                  <mssgle:LineSegment
-                    End="323.5,51.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="69.074167144495,-17.658203125,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="112.8,41.6"
+          Size="115,42"
           Id="238"
-          TopLeft="59.9999967217447,204.333332363036" />
+          TopLeft="329.5,107.5" />
+        <NodeLayout
+          Size="213,42"
+          Id="81"
+          TopLeft="5.50000000000006,311.5" />
+        <NodeLayout
+          Size="261,42"
+          Id="52"
+          TopLeft="256.5,209.5" />
+        <NodeLayout
+          Size="216,42"
+          Id="64"
+          TopLeft="279,311.5" />
+        <NodeLayout
+          Size="200,42"
+          Id="1"
+          TopLeft="287,5.5" />
         <EdgeLayout
           Id="258"
-          TopLeft="134.9,153.900000397762">
+          TopLeft="387,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18.5000032782553,50.4333319652743"
+              EndConnector="0,60"
               Start="0,0"
-              End="-18.5000032782553,42.9333319652743">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.2166659826371" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.2166659826371"
-                    Point2="0,25.2166659826371"
-                    Point3="-4,25.2166659826371" />
-                  <mssgle:LineSegment
-                    End="-14.5000032782553,25.2166659826371" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.5000032782553,25.2166659826371"
-                    Point2="-18.5000032782553,25.2166659826371"
-                    Point3="-18.5000032782553,29.2166659826371" />
-                  <mssgle:LineSegment
-                    End="-18.5000032782553,42.9333319652743" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3965,56 +4343,103 @@ LEFT JOIN dbo.SalesforceIDMap s
         </EdgeLayout>
         <EdgeLayout
           Id="261"
-          TopLeft="172.799996721745,225.133332363036">
+          TopLeft="387,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.2000032782553,26.6666676369641"
+              EndConnector="0,60"
               Start="0,0"
-              End="35.7000032782553,26.6666676369641">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="17.6000016391276,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="17.6000016391276,0"
-                    Point2="21.6000016391276,0"
-                    Point3="21.6000016391276,4" />
-                  <mssgle:LineSegment
-                    End="21.6000016391276,22.6666676369641" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.6000016391276,22.6666676369641"
-                    Point2="21.6000016391276,26.6666676369641"
-                    Point3="25.6000016391276,26.6666676369641" />
-                  <mssgle:LineSegment
-                    End="35.7000032782553,26.6666676369641" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-26.5913850796224,-17.609375,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="100"
+          TopLeft="344.833333333333,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-232.833333333333,60"
+              Start="0,0"
+              End="-232.833333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2193450114242" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2193450114242"
+                    Point2="0,24.2193450114242"
+                    Point3="-4,24.2193450114242" />
+                  <mssgle:LineSegment
+                    End="-228.833333333333,24.2193450114242" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-228.833333333333,24.2193450114242"
+                    Point2="-232.833333333333,24.2193450114242"
+                    Point3="-232.833333333333,28.2193450114242" />
+                  <mssgle:LineSegment
+                    End="-232.833333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-203.130397135417,29.2193450114242,173.4274609375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="99"
+          TopLeft="429.166666666667,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-42.1666666666667,60"
+              Start="0,0"
+              End="-42.1666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2193450114242" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2193450114242"
+                    Point2="0,24.2193450114242"
+                    Point3="-4,24.2193450114242" />
+                  <mssgle:LineSegment
+                    End="-38.1666666666667,24.2193450114242" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-38.1666666666667,24.2193450114242"
+                    Point2="-42.1666666666667,24.2193450114242"
+                    Point3="-42.1666666666667,28.2193450114242" />
+                  <mssgle:LineSegment
+                    End="-42.1666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.6972395833334,29.2193450114242,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Process Records\81">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Process Records\64">
     <Properties>
@@ -4028,56 +4453,37 @@ LEFT JOIN dbo.SalesforceIDMap s
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Process Records\1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Refresh IDMap from Salesforce">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="168.8,41.6"
+          Size="169,42"
           Id="16"
-          TopLeft="70,341" />
+          TopLeft="32,5.5" />
         <NodeLayout
-          Size="213.6,41.6"
-          Id="345"
-          TopLeft="331,340" />
-        <NodeLayout
-          Size="152.8,41.6"
+          Size="158,42"
           Id="487"
-          TopLeft="214.99999679625,289.799996706843" />
+          TopLeft="37.5,107.5" />
+        <NodeLayout
+          Size="222,42"
+          Id="345"
+          TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
           Id="493"
-          TopLeft="154.4,341">
+          TopLeft="116.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.5999967962503,-30.4000032931565"
+              EndConnector="0,60"
               Start="0,0"
-              End="53.0999967962503,-30.4000032931565">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-26.4000032931565" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-26.4000032931565"
-                    Point2="0,-30.4000032931565"
-                    Point3="4,-30.4000032931565" />
-                  <mssgle:LineSegment
-                    End="53.0999967962503,-30.4000032931565" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4088,24 +4494,18 @@ LEFT JOIN dbo.SalesforceIDMap s
         </EdgeLayout>
         <EdgeLayout
           Id="523"
-          TopLeft="367.79999679625,310.599996706843">
+          TopLeft="116.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.0000032037497,29.4000032931565"
+              EndConnector="0,60"
               Start="0,0"
-              End="70.0000032037497,21.9000032931565">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="66.0000032037497,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="66.0000032037497,0"
-                    Point2="70.0000032037497,0"
-                    Point3="70.0000032037497,4" />
-                  <mssgle:LineSegment
-                    End="70.0000032037497,21.9000032931565" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4117,112 +4517,119 @@ LEFT JOIN dbo.SalesforceIDMap s
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Refresh IDMap from Salesforce\345">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Send Creates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="268.8,41.6"
-          Id="1"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
-          Size="224.8,41.6"
+          Size="NaN,NaN"
           Id="52"
-          TopLeft="373,6" />
+          TopLeft="NaN,NaN" />
+        <NodeLayout
+          Size="NaN,NaN"
+          Id="1"
+          TopLeft="NaN,NaN" />
         <EdgeLayout
           Id="97"
-          TopLeft="274.5,26.75">
+          TopLeft="NaN,NaN">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98.5,0"
+              EndConnector="{assembly:Null}"
               Start="0,0"
-              End="91,0">
+              End="0,0">
               <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="91,0" />
-                </mssgle:SegmentCollection>
+                <assembly:Null />
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <GroupLayout
-          Text="Group "
-          ParentId="Package\Send Creates"
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="948.8,284.8"
-          Size="948.8,328"
-          Id="3c449fce-0f51-4456-a024-5d44ee496f9d"
-          TopLeft="65,98">
-          <GroupLayout.ChildrenIds>
-            <s:String>1</s:String>
-            <s:String>52</s:String>
-            <s:String>97</s:String>
-          </GroupLayout.ChildrenIds>
-        </GroupLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Send Creates\1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Send Updates">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="227.2,41.6"
+          Size="227,42"
           Id="52"
-          TopLeft="645,196" />
+          TopLeft="27.5,107.5" />
         <NodeLayout
-          Size="271.2,41.6"
+          Size="271,42"
           Id="1"
-          TopLeft="57.5,191.5" />
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="121"
-          TopLeft="328.5,214.75">
+          TopLeft="141,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="316.5,0"
+              EndConnector="0,60"
               Start="0,0"
-              End="309,0">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="309,0" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Update Client Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169,42"
+          Id="1"
+          TopLeft="58.5,11" />
+        <NodeLayout
+          Size="198,42"
+          Id="76"
+          TopLeft="32,215" />
+        <EdgeLayout
+          Id="123"
+          TopLeft="143,53">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12,162"
+              Start="0,0"
+              End="-12,154.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,77"
+                    Point2="0,81"
+                    Point3="-4,81" />
+                  <mssgle:LineSegment
+                    End="-8,81" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8,81"
+                    Point2="-12,81"
+                    Point3="-12,85" />
+                  <mssgle:LineSegment
+                    End="-12,154.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4235,7 +4642,7 @@ LEFT JOIN dbo.SalesforceIDMap s
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Send Updates\1">
+    design-time-name="Package\Update Client Table\76">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4244,29 +4651,6 @@ LEFT JOIN dbo.SalesforceIDMap s
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Process Records\238">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[SalesforceIDMap]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
