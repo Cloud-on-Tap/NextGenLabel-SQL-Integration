@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="84"
-  DTS:VersionGUID="{4F3ED4CE-3037-4783-8584-157DFCC3D335}">
+  DTS:VersionBuild="85"
+  DTS:VersionGUID="{FA628E36-79B0-4E5D-AF04-82A15ECEBE2D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADp+c09V+ELXfNg5FpYGsojnpEMZGo9llx67DFXcVFw5gAAAAAOgAAAAAIAACAAAAAqdZThWQ2d0F5LFa4vLSjS3oDf9Lqvm0fJicuKA1paISAAAAAsQfPs0qH+buidNJ90XJow7m1xwUKN+tuoaIresqmqbkAAAADOqwHRwlAOqihXL6NNeQFj3Lgyy3KMeVIrTH+8I3eJZZSLvDX8tNAf1ZdjkOmaOzXpjAMXF/CW5+o8v1p0KpaJ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC97Cjl3YdxEh/9vIi7kGMVodvK4dGyvv39bqYM6RziOAAAAAAOgAAAAAIAACAAAADxCIY0htlyKfDluuEFYjf7CTiPAsO0xTaMsjPtHS75tCAAAABBudbYATOpNjZg+juw6Zvuc6QpN9cSy9ifBPB358nEvUAAAADwSrsiBTisyNesOBhmxbkSfB1pGbItF6u2UJ8XxDXRz3PN/0A/2g5qN/xwj9h7aJDn3wPLIwgFuq0M3Z6Ek0lS</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADW7PEGkU5O2d1sH87yWar5xmaP6t+/5l6oyeDV32WyJwAAAAAOgAAAAAIAACAAAABbbGRDG4DpIAnY0ynuLtm6mwWF23bVT3tqRKE10uC8IFAAAABHh3wjl2WatPe9/sz+mvT66jzxKaWPOpfk9pIPKBHg2sIxWTZ19B01P2T4JQ3c/erqlnJbvSYTfAXi08QdX/dIbmSueVRrevImLvZHGzdI+0AAAABCLmG6tm8VGvwZBO+1hwmqT80yh23KygHV/MUcY79zJgUCtAosEzHFYsUddqjiB1s/bk+q1K3BaqRYdMqnEqzZ</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAcEhR1nO28ZP3Q9ICELx/gkbaw0DtC2GxSWBsAukDG5wAAAAAOgAAAAAIAACAAAABgrPGYl/vVTcBILGVPpbVp5ffHnoLeN0q5c52/ejI2IVAAAACIw3z3IKHt+34Z+yTO/3TFOwKCvBMaRRnGEX7j5njoVh5rZmWq3h+kE8HKzIH8Oj2wKn47sBqA8496UgW7w94x3oN0NMuKdrYUUZ7WmVre00AAAAAFkXfmobnKtblubOjfvn7LsdYdByFE1ranVO06gZsSQzQcHfCfkr1ZgWDBbrg/arNlGUvmSU71jN8ZPKX5QtV0</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -4942,37 +4942,25 @@ WHERE        (CustomerId = ?)</property>
         <NodeLayout
           Size="225,42"
           Id="52"
-          TopLeft="NaN,NaN" />
+          TopLeft="113.333333333333,135" />
         <NodeLayout
           Size="269,42"
           Id="1"
-          TopLeft="NaN,NaN" />
+          TopLeft="99.1666666666667,3.33333333333334" />
         <EdgeLayout
           Id="97"
-          TopLeft="NaN,NaN">
+          TopLeft="229.75,45.3333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="NaN,NaN"
+              EndConnector="0,89.6666666666667"
               Start="0,0"
-              End="NaN,NaN">
+              End="0,82.1666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,NaN" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,NaN"
-                    Point2="0,NaN"
-                    Point3="-4,NaN" />
-                  <mssgle:LineSegment
-                    End="NaN,NaN" />
-                  <mssgle:CubicBezierSegment
-                    Point1="NaN,NaN"
-                    Point2="NaN,NaN"
-                    Point3="NaN,NaN" />
-                  <mssgle:LineSegment
-                    End="NaN,NaN" />
+                    End="0,82.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
