@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="85"
-  DTS:VersionGUID="{FA628E36-79B0-4E5D-AF04-82A15ECEBE2D}">
+  DTS:VersionBuild="97"
+  DTS:VersionGUID="{530CC435-1653-4DD6-A668-017E6F7D01C8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC97Cjl3YdxEh/9vIi7kGMVodvK4dGyvv39bqYM6RziOAAAAAAOgAAAAAIAACAAAADxCIY0htlyKfDluuEFYjf7CTiPAsO0xTaMsjPtHS75tCAAAABBudbYATOpNjZg+juw6Zvuc6QpN9cSy9ifBPB358nEvUAAAADwSrsiBTisyNesOBhmxbkSfB1pGbItF6u2UJ8XxDXRz3PN/0A/2g5qN/xwj9h7aJDn3wPLIwgFuq0M3Z6Ek0lS</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACVtgG8mBrmHTFAzq/HpPpoMGj0cP8Z0dmMl6Ofx4mjIwAAAAAOgAAAAAIAACAAAAAWC6h1ozTzbwScrGB43/NNWFnQS3VIFblogDedIxLOBSAAAAC8f6QRh+ThHc8Eyu6JzW63Dnzrq8TthpQPiiv0GdHrzkAAAACSOArlHlwszyRWQjqXEPxVU0K1y+Eo3mcJfWlZSze0oG9X3TBxaS7iI17XXAPt3RZdhTl2/cS2UCT8ex1FyWF+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAcEhR1nO28ZP3Q9ICELx/gkbaw0DtC2GxSWBsAukDG5wAAAAAOgAAAAAIAACAAAABgrPGYl/vVTcBILGVPpbVp5ffHnoLeN0q5c52/ejI2IVAAAACIw3z3IKHt+34Z+yTO/3TFOwKCvBMaRRnGEX7j5njoVh5rZmWq3h+kE8HKzIH8Oj2wKn47sBqA8496UgW7w94x3oN0NMuKdrYUUZ7WmVre00AAAAAFkXfmobnKtblubOjfvn7LsdYdByFE1ranVO06gZsSQzQcHfCfkr1ZgWDBbrg/arNlGUvmSU71jN8ZPKX5QtV0</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG1+1ebVDrk+n4CDG0F+cFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAh5jlItW5QpVCtqlaWQSTlfEMWImXQJi35JilraT/zQwAAAAAOgAAAAAIAACAAAAAo+tR3mOePRkJg5Xkrubnef93KOQ0wWX+Y42Mvr+97tVAAAADDceXaU63dZBSFojWS7tDWCAp7OaRxLY7yPXLssS4QwRyod1tCLTTLC4GPIwtjXoo8PWtwyqRP6jzZt0xWGeoM4Clviozl6Qd3RuiZuMQzVUAAAABOuBoXOSgmr1pqXZEHNswVUfPrzQnaHmk0BuL/DA3suHES7RX1IGl6iMgK2PUOU7OljP8VKY9ZEovv+xxiYLCc</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -4508,6 +4508,2060 @@ WHERE        (CustomerId = ?)</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Forcast Table"
+      DTS:CreationName="CozyRoc.Pipeline"
+      DTS:Description="Data Flow Task Plus"
+      DTS:DTSID="{6B3F070F-47BE-4F3C-9DCE-2E2022DF2F8B}"
+      DTS:ExecutableType="CozyRoc.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Forcast Table"
+      DTS:TaskContact="Data Flow Task Plus;CozyRoc LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              id="1"
+              name="Salesforce Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Extracts data from Salesforce services."
+              contactInfo="Extracts data from Salesforce services.; COZYROC LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
+              <properties>
+                <property
+                  id="6"
+                  name="ComponentObject"
+                  dataType="System.Null"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  id="7"
+                  name="DtsComponentDesigner"
+                  dataType="System.String"
+                  typeConverter="NOTBROWSABLE">CozyRoc.SqlServer.SSIS.SforceSourceDesigner, CozyRoc.SSISPlus.UI.2025, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=16cf490bb80c34ea</property>
+                <property
+                  id="8"
+                  name="BatchSize"
+                  dataType="System.Int32"
+                  description="Specifies query batch size."
+                  expressionType="Notify">500</property>
+                <property
+                  id="9"
+                  name="InputType"
+                  dataType="System.Int32"
+                  description="Specifies how to access the service."
+                  typeConverter="CozyRoc.SqlServer.SSIS.SforceSource+InputTypes">0</property>
+                <property
+                  id="10"
+                  name="Object"
+                  dataType="System.String"
+                  description="Salesforce object."
+                  typeConverter="CozyRoc.SqlServer.SSIS.TableEditor"
+                  expressionType="Notify">Opportunity</property>
+                <property
+                  id="11"
+                  name="Statement"
+                  dataType="System.String"
+                  description="SOQL statement."
+                  UITypeEditor="CozyRoc.SqlServer.SSIS.TextDialogEditor"
+                  expressionType="Notify"></property>
+                <property
+                  id="12"
+                  name="IncludeDeleted"
+                  dataType="System.Boolean"
+                  description="Specifies to include deleted records.">false</property>
+                <property
+                  id="13"
+                  name="PKChunkSize"
+                  dataType="System.Int32"
+                  description="Specifies the primary key chunk size in bulk mode. Value of 0 disables PK chunking.">0</property>
+                <property
+                  id="14"
+                  name="ObjectFilter"
+                  dataType="System.String"
+                  description="Filter statement. Optional."
+                  expressionType="Notify"></property>
+                <property
+                  id="15"
+                  name="Mode"
+                  dataType="System.Int32"
+                  description="Specifies source load type."
+                  typeConverter="CozyRoc.SqlServer.SSIS.SforceSource+ModeTypes">0</property>
+                <property
+                  id="17"
+                  name="UserComponentTypeName"
+                  dataType="System.String">CozyRoc.SforceSource</property>
+              </properties>
+              <connections>
+                <connection
+                  id="5"
+                  name="SFORCE"
+                  description="Salesforce Connection Manager"
+                  connectionManagerID="{3D4C295A-64F9-416C-9664-F78B71089DD3}" />
+              </connections>
+              <outputs>
+                <output
+                  id="16"
+                  name="Salesforce Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      id="19"
+                      name="Account_Type__c"
+                      lineageId="19"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="18" />
+                    <outputColumn
+                      id="21"
+                      name="AccountId"
+                      lineageId="21"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="20" />
+                    <outputColumn
+                      id="23"
+                      name="AgeInDays"
+                      lineageId="23"
+                      dataType="i4"
+                      externalMetadataColumnId="22" />
+                    <outputColumn
+                      id="25"
+                      name="Agreed_upon_proposal__c"
+                      lineageId="25"
+                      dataType="bool"
+                      externalMetadataColumnId="24" />
+                    <outputColumn
+                      id="27"
+                      name="Amount"
+                      lineageId="27"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="26" />
+                    <outputColumn
+                      id="29"
+                      name="April_Actual__c"
+                      lineageId="29"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="28" />
+                    <outputColumn
+                      id="31"
+                      name="April_Actual_Formula__c"
+                      lineageId="31"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="30" />
+                    <outputColumn
+                      id="33"
+                      name="April_Forecast__c"
+                      lineageId="33"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="32" />
+                    <outputColumn
+                      id="35"
+                      name="April_Forecast_Comments__c"
+                      lineageId="35"
+                      dataType="nText"
+                      externalMetadataColumnId="34" />
+                    <outputColumn
+                      id="37"
+                      name="August_Actual__c"
+                      lineageId="37"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="36" />
+                    <outputColumn
+                      id="39"
+                      name="August_Actual_Formula__c"
+                      lineageId="39"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="38" />
+                    <outputColumn
+                      id="41"
+                      name="August_Forecast__c"
+                      lineageId="41"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="40" />
+                    <outputColumn
+                      id="43"
+                      name="August_Forecast_Comments__c"
+                      lineageId="43"
+                      dataType="nText"
+                      externalMetadataColumnId="42" />
+                    <outputColumn
+                      id="45"
+                      name="Budget__c"
+                      lineageId="45"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="44" />
+                    <outputColumn
+                      id="47"
+                      name="Budget_Confirmed__c"
+                      lineageId="47"
+                      dataType="bool"
+                      externalMetadataColumnId="46" />
+                    <outputColumn
+                      id="49"
+                      name="Campaign_Info__c"
+                      lineageId="49"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="48" />
+                    <outputColumn
+                      id="51"
+                      name="CampaignId"
+                      lineageId="51"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="50" />
+                    <outputColumn
+                      id="53"
+                      name="CERM_Classification__c"
+                      lineageId="53"
+                      length="50"
+                      dataType="wstr"
+                      externalMetadataColumnId="52" />
+                    <outputColumn
+                      id="55"
+                      name="CloseDate"
+                      lineageId="55"
+                      dataType="dbDate"
+                      externalMetadataColumnId="54" />
+                    <outputColumn
+                      id="57"
+                      name="Competitor_Name__c"
+                      lineageId="57"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="56" />
+                    <outputColumn
+                      id="59"
+                      name="Completed_Required_Tasks__c"
+                      lineageId="59"
+                      precision="3"
+                      dataType="numeric"
+                      externalMetadataColumnId="58" />
+                    <outputColumn
+                      id="61"
+                      name="ContactId"
+                      lineageId="61"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="60" />
+                    <outputColumn
+                      id="63"
+                      name="ContractId"
+                      lineageId="63"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="62" />
+                    <outputColumn
+                      id="65"
+                      name="CreatedById"
+                      lineageId="65"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="64" />
+                    <outputColumn
+                      id="67"
+                      name="CreatedDate"
+                      lineageId="67"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="66" />
+                    <outputColumn
+                      id="69"
+                      name="December_Actual__c"
+                      lineageId="69"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="68" />
+                    <outputColumn
+                      id="71"
+                      name="December_Actual_Formula__c"
+                      lineageId="71"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="70" />
+                    <outputColumn
+                      id="73"
+                      name="December_Forecast__c"
+                      lineageId="73"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="72" />
+                    <outputColumn
+                      id="75"
+                      name="December_Forecast_Comments__c"
+                      lineageId="75"
+                      dataType="nText"
+                      externalMetadataColumnId="74" />
+                    <outputColumn
+                      id="77"
+                      name="Description"
+                      lineageId="77"
+                      dataType="nText"
+                      externalMetadataColumnId="76" />
+                    <outputColumn
+                      id="79"
+                      name="Discovery_Completed__c"
+                      lineageId="79"
+                      dataType="bool"
+                      externalMetadataColumnId="78" />
+                    <outputColumn
+                      id="81"
+                      name="Expected_Value_CY__c"
+                      lineageId="81"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="80" />
+                    <outputColumn
+                      id="83"
+                      name="Explanation__c"
+                      lineageId="83"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="82" />
+                    <outputColumn
+                      id="85"
+                      name="Feb__c"
+                      lineageId="85"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="84" />
+                    <outputColumn
+                      id="87"
+                      name="February_Actual__c"
+                      lineageId="87"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="86" />
+                    <outputColumn
+                      id="89"
+                      name="February_Actual_Formula__c"
+                      lineageId="89"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="88" />
+                    <outputColumn
+                      id="91"
+                      name="February_Forecast_Comments__c"
+                      lineageId="91"
+                      dataType="nText"
+                      externalMetadataColumnId="90" />
+                    <outputColumn
+                      id="93"
+                      name="Fiscal"
+                      lineageId="93"
+                      length="6"
+                      dataType="wstr"
+                      externalMetadataColumnId="92" />
+                    <outputColumn
+                      id="95"
+                      name="FiscalQuarter"
+                      lineageId="95"
+                      dataType="i4"
+                      externalMetadataColumnId="94" />
+                    <outputColumn
+                      id="97"
+                      name="FiscalYear"
+                      lineageId="97"
+                      dataType="i4"
+                      externalMetadataColumnId="96" />
+                    <outputColumn
+                      id="99"
+                      name="Forecast__c"
+                      lineageId="99"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="98" />
+                    <outputColumn
+                      id="101"
+                      name="ForecastCategory"
+                      lineageId="101"
+                      length="40"
+                      dataType="wstr"
+                      externalMetadataColumnId="100" />
+                    <outputColumn
+                      id="103"
+                      name="ForecastCategoryName"
+                      lineageId="103"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="102" />
+                    <outputColumn
+                      id="105"
+                      name="HasOpenActivity"
+                      lineageId="105"
+                      dataType="bool"
+                      externalMetadataColumnId="104" />
+                    <outputColumn
+                      id="107"
+                      name="HasOpportunityLineItem"
+                      lineageId="107"
+                      dataType="bool"
+                      externalMetadataColumnId="106" />
+                    <outputColumn
+                      id="109"
+                      name="HasOverdueTask"
+                      lineageId="109"
+                      dataType="bool"
+                      externalMetadataColumnId="108" />
+                    <outputColumn
+                      id="111"
+                      name="Id"
+                      lineageId="111"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="110" />
+                    <outputColumn
+                      id="113"
+                      name="Important_Opportunity__c"
+                      lineageId="113"
+                      dataType="bool"
+                      externalMetadataColumnId="112" />
+                    <outputColumn
+                      id="115"
+                      name="Initial_Event_trip_report__c"
+                      lineageId="115"
+                      dataType="bool"
+                      externalMetadataColumnId="114" />
+                    <outputColumn
+                      id="117"
+                      name="IsClosed"
+                      lineageId="117"
+                      dataType="bool"
+                      externalMetadataColumnId="116" />
+                    <outputColumn
+                      id="119"
+                      name="IsDeleted"
+                      lineageId="119"
+                      dataType="bool"
+                      externalMetadataColumnId="118" />
+                    <outputColumn
+                      id="121"
+                      name="IsPriorityRecord"
+                      lineageId="121"
+                      dataType="bool"
+                      externalMetadataColumnId="120" />
+                    <outputColumn
+                      id="123"
+                      name="IsWon"
+                      lineageId="123"
+                      dataType="bool"
+                      externalMetadataColumnId="122" />
+                    <outputColumn
+                      id="125"
+                      name="January_Actual__c"
+                      lineageId="125"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="124" />
+                    <outputColumn
+                      id="127"
+                      name="January_Actual_Formula__c"
+                      lineageId="127"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="126" />
+                    <outputColumn
+                      id="129"
+                      name="January_Forecast__c"
+                      lineageId="129"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="128" />
+                    <outputColumn
+                      id="131"
+                      name="January_Forecast_Comments__c"
+                      lineageId="131"
+                      dataType="nText"
+                      externalMetadataColumnId="130" />
+                    <outputColumn
+                      id="133"
+                      name="July_Actual__c"
+                      lineageId="133"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="132" />
+                    <outputColumn
+                      id="135"
+                      name="July_Actual_Formula__c"
+                      lineageId="135"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="134" />
+                    <outputColumn
+                      id="137"
+                      name="July_Forecast__c"
+                      lineageId="137"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="136" />
+                    <outputColumn
+                      id="139"
+                      name="July_Forecast_Comments__c"
+                      lineageId="139"
+                      dataType="nText"
+                      externalMetadataColumnId="138" />
+                    <outputColumn
+                      id="141"
+                      name="June_Actual__c"
+                      lineageId="141"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="140" />
+                    <outputColumn
+                      id="143"
+                      name="June_Actual_Formula__c"
+                      lineageId="143"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="142" />
+                    <outputColumn
+                      id="145"
+                      name="June_Forecast__c"
+                      lineageId="145"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="144" />
+                    <outputColumn
+                      id="147"
+                      name="June_Forecast_Comments__c"
+                      lineageId="147"
+                      dataType="nText"
+                      externalMetadataColumnId="146" />
+                    <outputColumn
+                      id="149"
+                      name="Key_Opportunity__c"
+                      lineageId="149"
+                      dataType="bool"
+                      externalMetadataColumnId="148" />
+                    <outputColumn
+                      id="151"
+                      name="LastActivityDate"
+                      lineageId="151"
+                      dataType="dbDate"
+                      externalMetadataColumnId="150" />
+                    <outputColumn
+                      id="153"
+                      name="LastActivityInDays"
+                      lineageId="153"
+                      dataType="i4"
+                      externalMetadataColumnId="152" />
+                    <outputColumn
+                      id="155"
+                      name="LastAmountChangedHistoryId"
+                      lineageId="155"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="154" />
+                    <outputColumn
+                      id="157"
+                      name="LastCloseDateChangedHistoryId"
+                      lineageId="157"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="156" />
+                    <outputColumn
+                      id="159"
+                      name="LastModifiedById"
+                      lineageId="159"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="158" />
+                    <outputColumn
+                      id="161"
+                      name="LastModifiedDate"
+                      lineageId="161"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="160" />
+                    <outputColumn
+                      id="163"
+                      name="LastReferencedDate"
+                      lineageId="163"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="162" />
+                    <outputColumn
+                      id="165"
+                      name="LastStageChangeDate"
+                      lineageId="165"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="164" />
+                    <outputColumn
+                      id="167"
+                      name="LastStageChangeInDays"
+                      lineageId="167"
+                      dataType="i4"
+                      externalMetadataColumnId="166" />
+                    <outputColumn
+                      id="169"
+                      name="LastViewedDate"
+                      lineageId="169"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="168" />
+                    <outputColumn
+                      id="171"
+                      name="LeadSource"
+                      lineageId="171"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="170" />
+                    <outputColumn
+                      id="173"
+                      name="Loss_Details__c"
+                      lineageId="173"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="172" />
+                    <outputColumn
+                      id="175"
+                      name="Loss_Reason__c"
+                      lineageId="175"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="174" />
+                    <outputColumn
+                      id="177"
+                      name="March_Actual__c"
+                      lineageId="177"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="176" />
+                    <outputColumn
+                      id="179"
+                      name="March_Actual_Formula__c"
+                      lineageId="179"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="178" />
+                    <outputColumn
+                      id="181"
+                      name="March_Forecast__c"
+                      lineageId="181"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="180" />
+                    <outputColumn
+                      id="183"
+                      name="March_Forecast_Comments__c"
+                      lineageId="183"
+                      dataType="nText"
+                      externalMetadataColumnId="182" />
+                    <outputColumn
+                      id="185"
+                      name="May_Actual__c"
+                      lineageId="185"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="184" />
+                    <outputColumn
+                      id="187"
+                      name="May_Actual_Formula__c"
+                      lineageId="187"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="186" />
+                    <outputColumn
+                      id="189"
+                      name="May_Forecast__c"
+                      lineageId="189"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="188" />
+                    <outputColumn
+                      id="191"
+                      name="May_Forecast_Comments__c"
+                      lineageId="191"
+                      dataType="nText"
+                      externalMetadataColumnId="190" />
+                    <outputColumn
+                      id="193"
+                      name="Name"
+                      lineageId="193"
+                      length="120"
+                      dataType="wstr"
+                      externalMetadataColumnId="192" />
+                    <outputColumn
+                      id="195"
+                      name="NextGen_Value__c"
+                      lineageId="195"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="194" />
+                    <outputColumn
+                      id="197"
+                      name="NextStep"
+                      lineageId="197"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="196" />
+                    <outputColumn
+                      id="199"
+                      name="Notes__c"
+                      lineageId="199"
+                      dataType="nText"
+                      externalMetadataColumnId="198" />
+                    <outputColumn
+                      id="201"
+                      name="November_Actual__c"
+                      lineageId="201"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="200" />
+                    <outputColumn
+                      id="203"
+                      name="November_Actual_Formula__c"
+                      lineageId="203"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="202" />
+                    <outputColumn
+                      id="205"
+                      name="November_Forecast__c"
+                      lineageId="205"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="204" />
+                    <outputColumn
+                      id="207"
+                      name="November_Forecast_Comments__c"
+                      lineageId="207"
+                      dataType="nText"
+                      externalMetadataColumnId="206" />
+                    <outputColumn
+                      id="209"
+                      name="October_Actual__c"
+                      lineageId="209"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="208" />
+                    <outputColumn
+                      id="211"
+                      name="October_Actual_Formula__c"
+                      lineageId="211"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="210" />
+                    <outputColumn
+                      id="213"
+                      name="October_Forecast__c"
+                      lineageId="213"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="212" />
+                    <outputColumn
+                      id="215"
+                      name="October_Forecast_Comments__c"
+                      lineageId="215"
+                      dataType="nText"
+                      externalMetadataColumnId="214" />
+                    <outputColumn
+                      id="217"
+                      name="Other_Description__c"
+                      lineageId="217"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="216" />
+                    <outputColumn
+                      id="219"
+                      name="Other_Lead_Source_Description__c"
+                      lineageId="219"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="218" />
+                    <outputColumn
+                      id="221"
+                      name="OwnerId"
+                      lineageId="221"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="220" />
+                    <outputColumn
+                      id="223"
+                      name="Planned_Activites__c"
+                      lineageId="223"
+                      dataType="nText"
+                      externalMetadataColumnId="222" />
+                    <outputColumn
+                      id="225"
+                      name="Pricebook2Id"
+                      lineageId="225"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="224" />
+                    <outputColumn
+                      id="227"
+                      name="Probability"
+                      lineageId="227"
+                      precision="3"
+                      dataType="numeric"
+                      externalMetadataColumnId="226" />
+                    <outputColumn
+                      id="229"
+                      name="Products_Used__c"
+                      lineageId="229"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="228" />
+                    <outputColumn
+                      id="231"
+                      name="PushCount"
+                      lineageId="231"
+                      dataType="i4"
+                      externalMetadataColumnId="230" />
+                    <outputColumn
+                      id="233"
+                      name="Qualified__c"
+                      lineageId="233"
+                      dataType="bool"
+                      externalMetadataColumnId="232" />
+                    <outputColumn
+                      id="235"
+                      name="RecordTypeId"
+                      lineageId="235"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="234" />
+                    <outputColumn
+                      id="237"
+                      name="Required_Tasks__c"
+                      lineageId="237"
+                      dataType="bool"
+                      externalMetadataColumnId="236" />
+                    <outputColumn
+                      id="239"
+                      name="Risk__c"
+                      lineageId="239"
+                      dataType="bool"
+                      externalMetadataColumnId="238" />
+                    <outputColumn
+                      id="241"
+                      name="ROI_Analysis_Completed__c"
+                      lineageId="241"
+                      dataType="bool"
+                      externalMetadataColumnId="240" />
+                    <outputColumn
+                      id="243"
+                      name="September_Actual__c"
+                      lineageId="243"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="242" />
+                    <outputColumn
+                      id="245"
+                      name="September_Actual_Formula__c"
+                      lineageId="245"
+                      precision="18"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="244" />
+                    <outputColumn
+                      id="247"
+                      name="September_Forecast__c"
+                      lineageId="247"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="246" />
+                    <outputColumn
+                      id="249"
+                      name="September_Forecast_Comments__c"
+                      lineageId="249"
+                      dataType="nText"
+                      externalMetadataColumnId="248" />
+                    <outputColumn
+                      id="251"
+                      name="StageName"
+                      lineageId="251"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="250" />
+                    <outputColumn
+                      id="253"
+                      name="Submitted_Proposal__c"
+                      lineageId="253"
+                      dataType="bool"
+                      externalMetadataColumnId="252" />
+                    <outputColumn
+                      id="255"
+                      name="Submitted_Quote__c"
+                      lineageId="255"
+                      dataType="bool"
+                      externalMetadataColumnId="254" />
+                    <outputColumn
+                      id="257"
+                      name="SyncedQuoteId"
+                      lineageId="257"
+                      length="18"
+                      dataType="wstr"
+                      externalMetadataColumnId="256" />
+                    <outputColumn
+                      id="259"
+                      name="SystemModstamp"
+                      lineageId="259"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="258" />
+                    <outputColumn
+                      id="261"
+                      name="Total_Required_Tasks__c"
+                      lineageId="261"
+                      precision="3"
+                      dataType="numeric"
+                      externalMetadataColumnId="260" />
+                    <outputColumn
+                      id="263"
+                      name="Total_Value__c"
+                      lineageId="263"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="262" />
+                    <outputColumn
+                      id="265"
+                      name="Type"
+                      lineageId="265"
+                      length="255"
+                      dataType="wstr"
+                      externalMetadataColumnId="264" />
+                    <outputColumn
+                      id="267"
+                      name="X1st_Appointment__c"
+                      lineageId="267"
+                      dataType="bool"
+                      externalMetadataColumnId="266" />
+                    <outputColumn
+                      id="269"
+                      name="Year_End__c"
+                      lineageId="269"
+                      dataType="dbDate"
+                      externalMetadataColumnId="268" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="18"
+                      name="Account_Type__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="20"
+                      name="AccountId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="22"
+                      name="AgeInDays"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="24"
+                      name="Agreed_upon_proposal__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="26"
+                      name="Amount"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="28"
+                      name="April_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="30"
+                      name="April_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="32"
+                      name="April_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="34"
+                      name="April_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="36"
+                      name="August_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="38"
+                      name="August_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="40"
+                      name="August_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="42"
+                      name="August_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="44"
+                      name="Budget__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="46"
+                      name="Budget_Confirmed__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="48"
+                      name="Campaign_Info__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="50"
+                      name="CampaignId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="52"
+                      name="CERM_Classification__c"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="54"
+                      name="CloseDate"
+                      dataType="dbDate" />
+                    <externalMetadataColumn
+                      id="56"
+                      name="Competitor_Name__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="58"
+                      name="Completed_Required_Tasks__c"
+                      dataType="numeric"
+                      precision="3" />
+                    <externalMetadataColumn
+                      id="60"
+                      name="ContactId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="62"
+                      name="ContractId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="64"
+                      name="CreatedById"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="66"
+                      name="CreatedDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="68"
+                      name="December_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="70"
+                      name="December_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="72"
+                      name="December_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="74"
+                      name="December_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="76"
+                      name="Description"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="78"
+                      name="Discovery_Completed__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="80"
+                      name="Expected_Value_CY__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="82"
+                      name="Explanation__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="84"
+                      name="Feb__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="86"
+                      name="February_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="88"
+                      name="February_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="90"
+                      name="February_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="92"
+                      name="Fiscal"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="94"
+                      name="FiscalQuarter"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="96"
+                      name="FiscalYear"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="98"
+                      name="Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="100"
+                      name="ForecastCategory"
+                      dataType="wstr"
+                      length="40" />
+                    <externalMetadataColumn
+                      id="102"
+                      name="ForecastCategoryName"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="104"
+                      name="HasOpenActivity"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="106"
+                      name="HasOpportunityLineItem"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="108"
+                      name="HasOverdueTask"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="110"
+                      name="Id"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="112"
+                      name="Important_Opportunity__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="114"
+                      name="Initial_Event_trip_report__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="116"
+                      name="IsClosed"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="118"
+                      name="IsDeleted"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="120"
+                      name="IsPriorityRecord"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="122"
+                      name="IsWon"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="124"
+                      name="January_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="126"
+                      name="January_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="128"
+                      name="January_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="130"
+                      name="January_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="132"
+                      name="July_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="134"
+                      name="July_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="136"
+                      name="July_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="138"
+                      name="July_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="140"
+                      name="June_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="142"
+                      name="June_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="144"
+                      name="June_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="146"
+                      name="June_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="148"
+                      name="Key_Opportunity__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="150"
+                      name="LastActivityDate"
+                      dataType="dbDate" />
+                    <externalMetadataColumn
+                      id="152"
+                      name="LastActivityInDays"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="154"
+                      name="LastAmountChangedHistoryId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="156"
+                      name="LastCloseDateChangedHistoryId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="158"
+                      name="LastModifiedById"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="160"
+                      name="LastModifiedDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="162"
+                      name="LastReferencedDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="164"
+                      name="LastStageChangeDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="166"
+                      name="LastStageChangeInDays"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="168"
+                      name="LastViewedDate"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="170"
+                      name="LeadSource"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="172"
+                      name="Loss_Details__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="174"
+                      name="Loss_Reason__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="176"
+                      name="March_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="178"
+                      name="March_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="180"
+                      name="March_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="182"
+                      name="March_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="184"
+                      name="May_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="186"
+                      name="May_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="188"
+                      name="May_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="190"
+                      name="May_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="192"
+                      name="Name"
+                      dataType="wstr"
+                      length="120" />
+                    <externalMetadataColumn
+                      id="194"
+                      name="NextGen_Value__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="196"
+                      name="NextStep"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="198"
+                      name="Notes__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="200"
+                      name="November_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="202"
+                      name="November_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="204"
+                      name="November_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="206"
+                      name="November_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="208"
+                      name="October_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="210"
+                      name="October_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="212"
+                      name="October_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="214"
+                      name="October_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="216"
+                      name="Other_Description__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="218"
+                      name="Other_Lead_Source_Description__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="220"
+                      name="OwnerId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="222"
+                      name="Planned_Activites__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="224"
+                      name="Pricebook2Id"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="226"
+                      name="Probability"
+                      dataType="numeric"
+                      precision="3" />
+                    <externalMetadataColumn
+                      id="228"
+                      name="Products_Used__c"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="230"
+                      name="PushCount"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="232"
+                      name="Qualified__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="234"
+                      name="RecordTypeId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="236"
+                      name="Required_Tasks__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="238"
+                      name="Risk__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="240"
+                      name="ROI_Analysis_Completed__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="242"
+                      name="September_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="244"
+                      name="September_Actual_Formula__c"
+                      dataType="numeric"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="246"
+                      name="September_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="248"
+                      name="September_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="250"
+                      name="StageName"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="252"
+                      name="Submitted_Proposal__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="254"
+                      name="Submitted_Quote__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="256"
+                      name="SyncedQuoteId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="258"
+                      name="SystemModstamp"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      id="260"
+                      name="Total_Required_Tasks__c"
+                      dataType="numeric"
+                      precision="3" />
+                    <externalMetadataColumn
+                      id="262"
+                      name="Total_Value__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="264"
+                      name="Type"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      id="266"
+                      name="X1st_Appointment__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="268"
+                      name="Year_End__c"
+                      dataType="dbDate" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="270"
+              name="OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  id="271"
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  id="272"
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Forecast]</property>
+                <property
+                  id="273"
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  id="274"
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  id="275"
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  id="276"
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  id="277"
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  id="279"
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="280"
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  id="281"
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  id="282"
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  id="278"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{7511E214-CB1F-4426-A00C-44F247A0E867}" />
+              </connections>
+              <inputs>
+                <input
+                  id="283"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      id="317"
+                      lineageId="21"
+                      externalMetadataColumnId="288"
+                      cachedName="AccountId"
+                      cachedDataType="wstr"
+                      cachedLength="18" />
+                    <inputColumn
+                      id="321"
+                      lineageId="129"
+                      externalMetadataColumnId="292"
+                      cachedName="January_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="322"
+                      lineageId="85"
+                      externalMetadataColumnId="293"
+                      cachedName="Feb__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="324"
+                      lineageId="181"
+                      externalMetadataColumnId="294"
+                      cachedName="March_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="325"
+                      lineageId="33"
+                      externalMetadataColumnId="295"
+                      cachedName="April_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="327"
+                      lineageId="189"
+                      externalMetadataColumnId="296"
+                      cachedName="May_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="332"
+                      lineageId="145"
+                      externalMetadataColumnId="297"
+                      cachedName="June_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="334"
+                      lineageId="137"
+                      externalMetadataColumnId="298"
+                      cachedName="July_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="337"
+                      lineageId="41"
+                      externalMetadataColumnId="299"
+                      cachedName="August_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="339"
+                      lineageId="247"
+                      externalMetadataColumnId="300"
+                      cachedName="September_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="341"
+                      lineageId="213"
+                      externalMetadataColumnId="301"
+                      cachedName="October_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="343"
+                      lineageId="205"
+                      externalMetadataColumnId="302"
+                      cachedName="November_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="345"
+                      lineageId="73"
+                      externalMetadataColumnId="303"
+                      cachedName="December_Forecast__c"
+                      cachedDataType="numeric"
+                      cachedPrecision="18" />
+                    <inputColumn
+                      id="347"
+                      lineageId="131"
+                      externalMetadataColumnId="304"
+                      cachedName="January_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="349"
+                      lineageId="91"
+                      externalMetadataColumnId="305"
+                      cachedName="February_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="351"
+                      lineageId="183"
+                      externalMetadataColumnId="306"
+                      cachedName="March_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="353"
+                      lineageId="35"
+                      externalMetadataColumnId="307"
+                      cachedName="April_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="355"
+                      lineageId="191"
+                      externalMetadataColumnId="308"
+                      cachedName="May_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="357"
+                      lineageId="147"
+                      externalMetadataColumnId="309"
+                      cachedName="June_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="359"
+                      lineageId="139"
+                      externalMetadataColumnId="310"
+                      cachedName="July_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="361"
+                      lineageId="43"
+                      externalMetadataColumnId="311"
+                      cachedName="August_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="365"
+                      lineageId="249"
+                      externalMetadataColumnId="312"
+                      cachedName="September_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="367"
+                      lineageId="215"
+                      externalMetadataColumnId="313"
+                      cachedName="October_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="370"
+                      lineageId="207"
+                      externalMetadataColumnId="314"
+                      cachedName="November_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="372"
+                      lineageId="75"
+                      externalMetadataColumnId="315"
+                      cachedName="December_Forecast_Comments__c"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="373"
+                      lineageId="111"
+                      externalMetadataColumnId="316"
+                      cachedName="Id"
+                      cachedDataType="wstr"
+                      cachedLength="18" />
+                    <inputColumn
+                      id="869"
+                      lineageId="865"
+                      externalMetadataColumnId="291"
+                      cachedName="DerivedYear"
+                      cachedDataType="i4" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      id="288"
+                      name="AccountId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="289"
+                      name="BrandId"
+                      dataType="wstr"
+                      length="6" />
+                    <externalMetadataColumn
+                      id="290"
+                      name="Size"
+                      dataType="wstr"
+                      length="20" />
+                    <externalMetadataColumn
+                      id="291"
+                      name="Year"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="292"
+                      name="Month01"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="293"
+                      name="Month02"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="294"
+                      name="Month03"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="295"
+                      name="Month04"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="296"
+                      name="Month05"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="297"
+                      name="Month06"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="298"
+                      name="Month07"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="299"
+                      name="Month08"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="300"
+                      name="Month09"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="301"
+                      name="Month10"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="302"
+                      name="Month11"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="303"
+                      name="Month12"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="304"
+                      name="Comment01"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="305"
+                      name="Comment02"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="306"
+                      name="Comment03"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="307"
+                      name="Comment04"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="308"
+                      name="Comment05"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="309"
+                      name="Comment06"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="310"
+                      name="Comment07"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="311"
+                      name="Comment08"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="312"
+                      name="Comment09"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="313"
+                      name="Comment10"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="314"
+                      name="Comment11"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="315"
+                      name="Comment12"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="316"
+                      name="OpportunityId"
+                      dataType="wstr"
+                      length="18" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="284"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="283"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="285"
+                      name="ErrorCode"
+                      lineageId="285"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="286"
+                      name="ErrorColumn"
+                      lineageId="286"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              id="731"
+              name="Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              usesDispositions="true"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  id="732"
+                  name="Derived Column Input"
+                  description="Input to the Derived Column Transformation">
+                  <inputColumns>
+                    <inputColumn
+                      id="763"
+                      lineageId="67"
+                      cachedName="CreatedDate"
+                      cachedDataType="dbTimeStamp" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="733"
+                  name="Derived Column Output"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="732">
+                  <outputColumns>
+                    <outputColumn
+                      id="865"
+                      name="DerivedYear"
+                      lineageId="865"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          id="866"
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">[YEAR](#67)</property>
+                        <property
+                          id="867"
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">YEAR(CreatedDate)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="734"
+                  name="Derived Column Error Output"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="732"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="735"
+                      name="ErrorCode"
+                      lineageId="735"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="736"
+                      name="ErrorColumn"
+                      lineageId="736"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              id="737"
+              name="Salesforce Source Output"
+              startId="16"
+              endId="732" />
+            <path
+              id="738"
+              name="Derived Column Output"
+              startId="733"
+              endId="283" />
+          </paths>
+          <ScriptProject
+            Name="ST_7522528b3ec148caa311f6be461af05f"
+            VSTAMajorVersion="17"
+            VSTAMinorVersion="0"
+            Language="CSharp" />
+          <ArrayOfDynamicComponentProperties xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -4550,6 +6604,14 @@ WHERE        (CustomerId = ?)</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\Update Client Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{69864652-0117-4A6E-B3D5-A5039BCC8F14}"
+      DTS:From="Package\Update Client Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Update Forcast Table" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -4586,7 +6648,11 @@ WHERE        (CustomerId = ?)</property>
         <NodeLayout
           Size="176,42"
           Id="Package\Update Client Table"
-          TopLeft="855,225" />
+          TopLeft="847,228" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Update Forcast Table"
+          TopLeft="842,341" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="361,147.3">
@@ -4689,30 +6755,40 @@ WHERE        (CustomerId = ?)</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="927.5,168">
+          TopLeft="931.25,168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="15.5,57"
+              EndConnector="0,60"
               Start="0,0"
-              End="15.5,49.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.5"
-                    Point2="0,28.5"
-                    Point3="4,28.5" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="934.75,270">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71"
+              Start="0,0"
+              End="0,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="11.5,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11.5,28.5"
-                    Point2="15.5,28.5"
-                    Point3="15.5,32.5" />
-                  <mssgle:LineSegment
-                    End="15.5,49.5" />
+                    End="0,63.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4938,7 +7014,7 @@ WHERE        (CustomerId = ?)</property>
     design-time-name="Package\Send Creates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="225,42"
           Id="52"
@@ -4966,25 +7042,19 @@ WHERE        (CustomerId = ?)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Send Creates\1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Send Updates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="227,42"
           Id="52"
@@ -5012,7 +7082,9 @@ WHERE        (CustomerId = ?)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5028,13 +7100,21 @@ WHERE        (CustomerId = ?)</property>
           Id="76"
           TopLeft="70,364" />
         <NodeLayout
-          Size="169,42"
-          Id="1"
-          TopLeft="302.5,12" />
-        <NodeLayout
           Size="115,42"
           Id="126"
           TopLeft="322,99" />
+        <NodeLayout
+          Size="173,42"
+          Id="193"
+          TopLeft="401,364" />
+        <NodeLayout
+          Size="159,42"
+          Id="156"
+          TopLeft="375,194" />
+        <NodeLayout
+          Size="169,42"
+          Id="1"
+          TopLeft="302.5,12" />
         <EdgeLayout
           Id="146"
           TopLeft="383.25,54">
@@ -5057,10 +7137,6 @@ WHERE        (CustomerId = ?)</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="156"
-          TopLeft="375,194" />
         <EdgeLayout
           Id="165"
           TopLeft="397.333333333333,141">
@@ -5098,46 +7174,6 @@ WHERE        (CustomerId = ?)</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="174"
-          TopLeft="361.666666666667,141">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-192.666666666667,223"
-              Start="0,0"
-              End="-192.666666666667,215.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,87.0360205831904" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,87.0360205831904"
-                    Point2="0,91.0360205831904"
-                    Point3="-4,91.0360205831904" />
-                  <mssgle:LineSegment
-                    End="-188.666666666667,91.0360205831904" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-188.666666666667,91.0360205831904"
-                    Point2="-192.666666666667,91.0360205831904"
-                    Point3="-192.666666666667,95.0360205831904" />
-                  <mssgle:LineSegment
-                    End="-192.666666666667,215.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-152.139720052083,96.0360205831904,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173,42"
-          Id="193"
-          TopLeft="401,364" />
-        <EdgeLayout
           Id="210"
           TopLeft="454.5,236">
           <EdgeLayout.Curve>
@@ -5173,11 +7209,135 @@ WHERE        (CustomerId = ?)</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="174"
+          TopLeft="361.666666666667,141">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-192.666666666667,223"
+              Start="0,0"
+              End="-192.666666666667,215.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.0360205831904" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,87.0360205831904"
+                    Point2="0,91.0360205831904"
+                    Point3="-4,91.0360205831904" />
+                  <mssgle:LineSegment
+                    End="-188.666666666667,91.0360205831904" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-188.666666666667,91.0360205831904"
+                    Point2="-192.666666666667,91.0360205831904"
+                    Point3="-192.666666666667,95.0360205831904" />
+                  <mssgle:LineSegment
+                    End="-192.666666666667,215.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-152.139720052084,96.0360205831904,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Update Forcast Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169,42"
+          Id="1"
+          TopLeft="178,25" />
+        <NodeLayout
+          Size="177,42"
+          Id="270"
+          TopLeft="163,271" />
+        <NodeLayout
+          Size="158,42"
+          Id="731"
+          TopLeft="288,136" />
+        <EdgeLayout
+          Id="737"
+          TopLeft="262.5,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104.5,69"
+              Start="0,0"
+              End="104.5,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
+                  <mssgle:LineSegment
+                    End="100.5,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="100.5,34.5"
+                    Point2="104.5,34.5"
+                    Point3="104.5,38.5" />
+                  <mssgle:LineSegment
+                    End="104.5,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="738"
+          TopLeft="367,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-115.5,93"
+              Start="0,0"
+              End="-115.5,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.5"
+                    Point2="0,46.5"
+                    Point3="-4,46.5" />
+                  <mssgle:LineSegment
+                    End="-111.5,46.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-111.5,46.5"
+                    Point2="-115.5,46.5"
+                    Point3="-115.5,50.5" />
+                  <mssgle:LineSegment
+                    End="-115.5,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Update Client Table\76">
+    design-time-name="Package\Update Forcast Table\270">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5186,29 +7346,6 @@ WHERE        (CustomerId = ?)</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Update Client Table\126">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Client]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
