@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="150"
-  DTS:VersionGUID="{6B917811-4C5D-4834-9707-093372847E2B}">
+  DTS:VersionBuild="163"
+  DTS:VersionGUID="{134D3CEA-1272-4BD0-B8AD-ABB76DC98E19}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3M7fvdK/lz5oUXaYU3YHWdahMxI6PIHIa5ReCCPUowQAAAAAOgAAAAAIAACAAAAB9hhcH0LBSde9kyNU2D4nTh7PQAXDnMn9x8YLDQfupuyAAAABH+tDzKMkOuDSEcvfvz/BIkJVFWFeM2Md1D3DdRKwUN0AAAABuCXEoO5lu3T0Qv+7SbGqoT9L69XwgbV0xmrP+pLR+7iYz6FWtGUxoqGfnMYg3TbVMaNWES5zHniNl+OO5Vp0R</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADdIDA/TSxMJAi5kTp7naPfVd/fi+6HsZHA68xhpOA4fAAAAAAOgAAAAAIAACAAAAASQjX8zGBht7FifdgHRkZVty+DIhpVaOkr+BordoYFWiAAAACalv3vVr57u29pqHSByimafKtqoXcYpLLdPTpV3FILCkAAAAAF6vX5J8rWBOqM644PXX9ww0MvnUJelaEQzCOzOsO6f4z3155VFzXzaMXXCAa4wESqZnBgot9sA5dEfjbFn5af</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB0uWDKtXR+nM6arla4OHdRB3to8Ee3AjyFsx1j+CJD3wAAAAAOgAAAAAIAACAAAAA/4VoiuiwaJSsQG918jAbN/FLlBSYXE9+ENYMHqDE0/1AAAADzGkq1wVxFinbjuDpAfBo4YNg5K/0E+soERs+j57BXRNGxcFIjrTg878TSLibcT3+ZQhKh7lBaKRbMQ9qjQow4/nFtSnL11HkK6WpUlPmkn0AAAABOkOuumbjalDymax5aXYYxcFaz1IgUjVwLAesbdiStSmLWXfFR+Q/0CYKB9dgITV2YDzjkLXTvIN4fUIyj0M5N</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACPpbeRq6fwG3ia2Me+9AZHRZWD/V3gnuVHhqIMsWnIywAAAAAOgAAAAAIAACAAAADBfu0bYwGcw07JXiLV0Ls9Py3Nv/LUp5/DSeXEiGVcdFAAAABJvh0+MvQjevZ74FgjitIUFKjlTy6iKMnpraBIZHMMOcSgrcc5LFkMofH8esTka88eH8OCWy+biJ5fp0pjJuNs6mSDcmDFZOOxNdw/67a1cEAAAADzx2+1DQPsp28vbQgS/Z3WG/hdsb0WhQdvNE/iWJ61Ow5uSVSPabmlKegh+6kEbGQk800+JfXdovQ8zkco7aro</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -369,19 +369,18 @@
                       cachedDataType="wstr"
                       cachedLength="18" />
                     <inputColumn
-                      id="743"
-                      lineageId="697"
-                      externalMetadataColumnId="202"
-                      cachedName="Size_converted"
-                      cachedDataType="wstr"
-                      cachedLength="50" />
-                    <inputColumn
                       id="744"
                       lineageId="534"
                       externalMetadataColumnId="737"
                       cachedName="ConcatenatedPK"
                       cachedDataType="wstr"
                       cachedLength="408" />
+                    <inputColumn
+                      id="745"
+                      lineageId="666"
+                      externalMetadataColumnId="202"
+                      cachedName="Size"
+                      cachedDataType="nText" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -806,7 +805,7 @@ where [refTable].[CustomerId] = ?</property>
                   name="NoMatchBehavior"
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   id="256"
                   name="NoMatchCachePercentage"
@@ -885,8 +884,7 @@ where [refTable].[CustomerId] = ?</property>
                   name="Lookup Match Output"
                   exclusionGroup="1"
                   synchronousInputId="248"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent">
+                  errorOrTruncationOperation="Lookup">
                   <outputColumns>
                     <outputColumn
                       id="470"
@@ -1330,13 +1328,6 @@ where [refTable].[CustomerId] = ?</property>
                   errorRowDisposition="FailComponent">
                   <inputColumns>
                     <inputColumn
-                      id="310"
-                      lineageId="390"
-                      externalMetadataColumnId="320"
-                      cachedName="Brand"
-                      cachedDataType="wstr"
-                      cachedLength="255" />
-                    <inputColumn
                       id="311"
                       lineageId="389"
                       externalMetadataColumnId="321"
@@ -1351,19 +1342,104 @@ where [refTable].[CustomerId] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="18" />
                     <inputColumn
-                      id="313"
-                      lineageId="449"
-                      externalMetadataColumnId="346"
-                      cachedName="Size_converted"
-                      cachedDataType="wstr"
-                      cachedLength="50" />
-                    <inputColumn
                       id="314"
                       lineageId="435"
                       externalMetadataColumnId="349"
                       cachedName="ConcatenatedPK"
                       cachedDataType="wstr"
-                      cachedLength="408" />
+                      cachedLength="152" />
+                    <inputColumn
+                      id="846"
+                      lineageId="422"
+                      externalMetadataColumnId="322"
+                      cachedName="CermCustomerRecordID"
+                      cachedDataType="wstr"
+                      cachedLength="18" />
+                    <inputColumn
+                      id="847"
+                      lineageId="469"
+                      externalMetadataColumnId="326"
+                      cachedName="Month01"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="848"
+                      lineageId="496"
+                      externalMetadataColumnId="327"
+                      cachedName="Month10"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="849"
+                      lineageId="499"
+                      externalMetadataColumnId="328"
+                      cachedName="Month11"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="850"
+                      lineageId="502"
+                      externalMetadataColumnId="329"
+                      cachedName="Month12"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="851"
+                      lineageId="472"
+                      externalMetadataColumnId="330"
+                      cachedName="Month02"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="852"
+                      lineageId="475"
+                      externalMetadataColumnId="331"
+                      cachedName="Month03"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="853"
+                      lineageId="478"
+                      externalMetadataColumnId="332"
+                      cachedName="Month04"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="854"
+                      lineageId="481"
+                      externalMetadataColumnId="333"
+                      cachedName="Month05"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="855"
+                      lineageId="484"
+                      externalMetadataColumnId="334"
+                      cachedName="Month06"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="856"
+                      lineageId="487"
+                      externalMetadataColumnId="335"
+                      cachedName="Month07"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="857"
+                      lineageId="490"
+                      externalMetadataColumnId="336"
+                      cachedName="Month08"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="858"
+                      lineageId="493"
+                      externalMetadataColumnId="337"
+                      cachedName="Month09"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="859"
+                      lineageId="391"
+                      externalMetadataColumnId="346"
+                      cachedName="Size"
+                      cachedDataType="wstr"
+                      cachedLength="20" />
+                    <inputColumn
+                      id="860"
+                      lineageId="466"
+                      externalMetadataColumnId="348"
+                      cachedName="Year"
+                      cachedDataType="i4" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1618,128 +1694,312 @@ where [refTable].[CustomerId] = ?</property>
                       length="18"
                       dataType="wstr" />
                     <outputColumn
-                      id="358"
-                      name="CustomerId"
-                      lineageId="358"
-                      length="6"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="359"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">388</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="360"
+                      id="700"
                       name="BrandId"
-                      lineageId="360"
+                      lineageId="700"
                       length="6"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="361"
+                          id="701"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">389</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="362"
-                      name="Brand"
-                      lineageId="362"
-                      length="255"
+                      id="702"
+                      name="Size"
+                      lineageId="702"
+                      length="20"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="363"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">390</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="364"
-                      name="Size"
-                      lineageId="364"
-                      dataType="nText">
-                      <properties>
-                        <property
-                          id="365"
+                          id="703"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">391</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="366"
-                      name="CermCustomerRecordID"
-                      lineageId="366"
+                      id="704"
+                      name="AccountId"
+                      lineageId="704"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="367"
+                          id="705"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">463</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="706"
+                      name="Year"
+                      lineageId="706"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="707"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">466</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="708"
+                      name="Month01"
+                      lineageId="708"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="709"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">469</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="710"
+                      name="Month02"
+                      lineageId="710"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="711"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">472</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="712"
+                      name="Month03"
+                      lineageId="712"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="713"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">475</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="714"
+                      name="Month04"
+                      lineageId="714"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="715"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">478</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="716"
+                      name="Month05"
+                      lineageId="716"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="717"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">481</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="718"
+                      name="Month06"
+                      lineageId="718"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="719"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">484</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="720"
+                      name="Month07"
+                      lineageId="720"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="721"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">487</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="722"
+                      name="Month08"
+                      lineageId="722"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="723"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">490</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="724"
+                      name="Month09"
+                      lineageId="724"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="725"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">493</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="726"
+                      name="Month10"
+                      lineageId="726"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="727"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">496</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="728"
+                      name="Month11"
+                      lineageId="728"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="729"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">499</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="730"
+                      name="Month12"
+                      lineageId="730"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="731"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">502</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="732"
+                      name="ForecastId"
+                      lineageId="732"
+                      length="18"
+                      dataType="wstr">
+                      <properties>
+                        <property
+                          id="733"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">505</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="734"
+                      name="CermCustomerRecordID"
+                      lineageId="734"
+                      length="18"
+                      dataType="wstr">
+                      <properties>
+                        <property
+                          id="735"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">422</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="368"
-                      name="Size_converted"
-                      lineageId="368"
-                      length="50"
+                      id="736"
+                      name="AccountIdFromClientTable"
+                      lineageId="736"
+                      length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="369"
+                          id="737"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">449</property>
+                          containsID="true">513</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="370"
-                      name="Copy of Brand"
-                      lineageId="370"
-                      length="255"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="371"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">452</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="372"
+                      id="738"
                       name="ConcatenatedPK"
-                      lineageId="372"
-                      length="408"
+                      lineageId="738"
+                      length="152"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="373"
+                          id="739"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">435</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="374"
+                      id="740"
                       name="RecTypeId"
-                      lineageId="374"
+                      lineageId="740"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="375"
+                          id="741"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">438</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="742"
+                      name="Size_converted"
+                      lineageId="742"
+                      length="50"
+                      dataType="wstr">
+                      <properties>
+                        <property
+                          id="743"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">817</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="744"
+                      name="Brand"
+                      lineageId="744"
+                      length="255"
+                      dataType="wstr">
+                      <properties>
+                        <property
+                          id="745"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">390</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1765,7 +2025,7 @@ where [refTable].[CustomerId] = ?</property>
                   id="378"
                   name="OpenRowset"
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset.">[dbo].[CustomerBrandWithBrandDescription]</property>
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Invoiced]</property>
                 <property
                   id="379"
                   name="OpenRowsetVariable"
@@ -1819,16 +2079,6 @@ where [refTable].[CustomerId] = ?</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      id="388"
-                      name="CustomerId"
-                      lineageId="388"
-                      length="6"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="392" />
-                    <outputColumn
                       id="389"
                       name="BrandId"
                       lineageId="389"
@@ -1839,46 +2089,227 @@ where [refTable].[CustomerId] = ?</property>
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="393" />
                     <outputColumn
-                      id="390"
-                      name="Brand"
-                      lineageId="390"
-                      length="255"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="394" />
-                    <outputColumn
                       id="391"
                       name="Size"
                       lineageId="391"
-                      dataType="nText"
+                      length="20"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="395" />
+                    <outputColumn
+                      id="463"
+                      name="AccountId"
+                      lineageId="463"
+                      length="18"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="462" />
+                    <outputColumn
+                      id="466"
+                      name="Year"
+                      lineageId="466"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="465" />
+                    <outputColumn
+                      id="469"
+                      name="Month01"
+                      lineageId="469"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="468" />
+                    <outputColumn
+                      id="472"
+                      name="Month02"
+                      lineageId="472"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="471" />
+                    <outputColumn
+                      id="475"
+                      name="Month03"
+                      lineageId="475"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="474" />
+                    <outputColumn
+                      id="478"
+                      name="Month04"
+                      lineageId="478"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="477" />
+                    <outputColumn
+                      id="481"
+                      name="Month05"
+                      lineageId="481"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="480" />
+                    <outputColumn
+                      id="484"
+                      name="Month06"
+                      lineageId="484"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="483" />
+                    <outputColumn
+                      id="487"
+                      name="Month07"
+                      lineageId="487"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="486" />
+                    <outputColumn
+                      id="490"
+                      name="Month08"
+                      lineageId="490"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="489" />
+                    <outputColumn
+                      id="493"
+                      name="Month09"
+                      lineageId="493"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="492" />
+                    <outputColumn
+                      id="496"
+                      name="Month10"
+                      lineageId="496"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="495" />
+                    <outputColumn
+                      id="499"
+                      name="Month11"
+                      lineageId="499"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="498" />
+                    <outputColumn
+                      id="502"
+                      name="Month12"
+                      lineageId="502"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="501" />
+                    <outputColumn
+                      id="505"
+                      name="ForecastId"
+                      lineageId="505"
+                      length="18"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="504" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      id="392"
-                      name="CustomerId"
-                      dataType="wstr"
-                      length="6" />
                     <externalMetadataColumn
                       id="393"
                       name="BrandId"
                       dataType="wstr"
                       length="6" />
                     <externalMetadataColumn
-                      id="394"
-                      name="Brand"
-                      dataType="wstr"
-                      length="255" />
-                    <externalMetadataColumn
                       id="395"
                       name="Size"
-                      dataType="nText" />
+                      dataType="wstr"
+                      length="20" />
+                    <externalMetadataColumn
+                      id="462"
+                      name="AccountId"
+                      dataType="wstr"
+                      length="18" />
+                    <externalMetadataColumn
+                      id="465"
+                      name="Year"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="468"
+                      name="Month01"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="471"
+                      name="Month02"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="474"
+                      name="Month03"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="477"
+                      name="Month04"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="480"
+                      name="Month05"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="483"
+                      name="Month06"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="486"
+                      name="Month07"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="489"
+                      name="Month08"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="492"
+                      name="Month09"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="495"
+                      name="Month10"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="498"
+                      name="Month11"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="501"
+                      name="Month12"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="504"
+                      name="ForecastId"
+                      dataType="wstr"
+                      length="18" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1887,10 +2318,10 @@ where [refTable].[CustomerId] = ?</property>
                   isErrorOut="true">
                   <outputColumns>
                     <outputColumn
-                      id="397"
-                      name="CustomerId"
-                      lineageId="397"
-                      length="6"
+                      id="464"
+                      name="AccountId"
+                      lineageId="464"
+                      length="18"
                       dataType="wstr" />
                     <outputColumn
                       id="398"
@@ -1899,17 +2330,82 @@ where [refTable].[CustomerId] = ?</property>
                       length="6"
                       dataType="wstr" />
                     <outputColumn
-                      id="399"
-                      name="Brand"
-                      lineageId="399"
-                      length="255"
-                      dataType="wstr" />
-                    <outputColumn
                       id="400"
                       name="ErrorCode"
                       lineageId="400"
                       dataType="i4"
                       specialFlags="1" />
+                    <outputColumn
+                      id="467"
+                      name="Year"
+                      lineageId="467"
+                      dataType="i4" />
+                    <outputColumn
+                      id="470"
+                      name="Month01"
+                      lineageId="470"
+                      dataType="i4" />
+                    <outputColumn
+                      id="473"
+                      name="Month02"
+                      lineageId="473"
+                      dataType="i4" />
+                    <outputColumn
+                      id="476"
+                      name="Month03"
+                      lineageId="476"
+                      dataType="i4" />
+                    <outputColumn
+                      id="479"
+                      name="Month04"
+                      lineageId="479"
+                      dataType="i4" />
+                    <outputColumn
+                      id="482"
+                      name="Month05"
+                      lineageId="482"
+                      dataType="i4" />
+                    <outputColumn
+                      id="485"
+                      name="Month06"
+                      lineageId="485"
+                      dataType="i4" />
+                    <outputColumn
+                      id="488"
+                      name="Month07"
+                      lineageId="488"
+                      dataType="i4" />
+                    <outputColumn
+                      id="491"
+                      name="Month08"
+                      lineageId="491"
+                      dataType="i4" />
+                    <outputColumn
+                      id="494"
+                      name="Month09"
+                      lineageId="494"
+                      dataType="i4" />
+                    <outputColumn
+                      id="497"
+                      name="Month10"
+                      lineageId="497"
+                      dataType="i4" />
+                    <outputColumn
+                      id="500"
+                      name="Month11"
+                      lineageId="500"
+                      dataType="i4" />
+                    <outputColumn
+                      id="503"
+                      name="Month12"
+                      lineageId="503"
+                      dataType="i4" />
+                    <outputColumn
+                      id="506"
+                      name="ForecastId"
+                      lineageId="506"
+                      length="18"
+                      dataType="wstr" />
                     <outputColumn
                       id="401"
                       name="ErrorColumn"
@@ -1920,7 +2416,8 @@ where [refTable].[CustomerId] = ?</property>
                       id="402"
                       name="Size"
                       lineageId="402"
-                      dataType="nText" />
+                      length="20"
+                      dataType="wstr" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1949,7 +2446,7 @@ where [refTable].[CustomerId] = ?</property>
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"
                   expressionType="Notify">select * from (select * from [dbo].[Client]) [refTable]
-where [refTable].[CustomerId] = ?</property>
+where [refTable].[AccountId] = ?</property>
                 <property
                   id="406"
                   name="ConnectionType"
@@ -1993,7 +2490,7 @@ where [refTable].[CustomerId] = ?</property>
                   name="ParameterMap"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  containsID="true">#388;</property>
+                  containsID="true">#463;</property>
                 <property
                   id="414"
                   name="DefaultCodePage"
@@ -2018,19 +2515,19 @@ where [refTable].[CustomerId] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      id="418"
-                      lineageId="388"
-                      cachedName="CustomerId"
+                      id="510"
+                      lineageId="463"
+                      cachedName="AccountId"
                       cachedDataType="wstr"
-                      cachedLength="6">
+                      cachedLength="18">
                       <properties>
                         <property
-                          id="419"
+                          id="511"
                           name="JoinToReferenceColumn"
                           dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins.">CustomerId</property>
+                          description="Specifies the column in the reference table that a column joins.">AccountId</property>
                         <property
-                          id="420"
+                          id="512"
                           name="CopyFromReferenceColumn"
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied." />
@@ -2063,6 +2560,22 @@ where [refTable].[CustomerId] = ?</property>
                           name="CopyFromReferenceColumn"
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied.">CermCustomerRecordID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="513"
+                      name="AccountIdFromClientTable"
+                      lineageId="513"
+                      length="18"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          id="514"
+                          name="CopyFromReferenceColumn"
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied.">AccountId</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2120,23 +2633,17 @@ where [refTable].[CustomerId] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="6" />
                     <inputColumn
-                      id="431"
-                      lineageId="390"
-                      cachedName="Brand"
+                      id="433"
+                      lineageId="817"
+                      cachedName="Size_converted"
                       cachedDataType="wstr"
-                      cachedLength="255" />
+                      cachedLength="50" />
                     <inputColumn
                       id="432"
                       lineageId="422"
                       cachedName="CermCustomerRecordID"
                       cachedDataType="wstr"
                       cachedLength="18" />
-                    <inputColumn
-                      id="433"
-                      lineageId="449"
-                      cachedName="Size_converted"
-                      cachedDataType="wstr"
-                      cachedLength="50" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2153,7 +2660,7 @@ where [refTable].[CustomerId] = ?</property>
                       id="435"
                       name="ConcatenatedPK"
                       lineageId="435"
-                      length="408"
+                      length="152"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2164,14 +2671,14 @@ where [refTable].[CustomerId] = ?</property>
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">(DT_WSTR,50)#422 + "|" + (DT_WSTR,50)#389 + "|" + #390 + "|" + #449</property>
+                          containsID="true">(DT_WSTR,50)#422 + "|" + (DT_WSTR,50)#389 + "|" + #817</property>
                         <property
                           id="437"
                           name="FriendlyExpression"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           containsID="true"
-                          expressionType="Notify">(DT_WSTR,50)CermCustomerRecordID + "|" + (DT_WSTR,50)BrandId + "|" + Brand + "|" + Size_converted</property>
+                          expressionType="Notify">(DT_WSTR,50)CermCustomerRecordID + "|" + (DT_WSTR,50)BrandId + "|" + Size_converted</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2189,14 +2696,14 @@ where [refTable].[CustomerId] = ?</property>
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">"012cx000001ermbAAA"</property>
+                          containsID="true">"012cx000001eroDAAQ"</property>
                         <property
                           id="440"
                           name="FriendlyExpression"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           containsID="true"
-                          expressionType="Notify">"012cx000001ermbAAA"</property>
+                          expressionType="Notify">"012cx000001eroDAAQ"</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2228,7 +2735,7 @@ where [refTable].[CustomerId] = ?</property>
               </outputs>
             </component>
             <component
-              id="444"
+              id="812"
               name="Data Conversion"
               componentClassID="Microsoft.DataConvert"
               description="Data Conversion"
@@ -2236,35 +2743,30 @@ where [refTable].[CustomerId] = ?</property>
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
               <inputs>
                 <input
-                  id="445"
+                  id="813"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      id="446"
+                      id="814"
                       lineageId="391"
                       cachedName="Size"
-                      cachedDataType="nText" />
-                    <inputColumn
-                      id="447"
-                      lineageId="390"
-                      cachedName="Brand"
                       cachedDataType="wstr"
-                      cachedLength="255" />
+                      cachedLength="20" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  id="448"
+                  id="816"
                   name="Data Conversion Output"
                   exclusionGroup="1"
-                  synchronousInputId="445">
+                  synchronousInputId="813">
                   <outputColumns>
                     <outputColumn
-                      id="449"
+                      id="817"
                       name="Size_converted"
-                      lineageId="449"
+                      lineageId="817"
                       length="50"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -2272,36 +2774,13 @@ where [refTable].[CustomerId] = ?</property>
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
-                          id="450"
+                          id="818"
                           name="SourceInputColumnLineageID"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           containsID="true">391</property>
                         <property
-                          id="451"
-                          name="FastParse"
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="452"
-                      name="Copy of Brand"
-                      lineageId="452"
-                      length="255"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          id="453"
-                          name="SourceInputColumnLineageID"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          containsID="true">390</property>
-                        <property
-                          id="454"
+                          id="819"
                           name="FastParse"
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
@@ -2311,22 +2790,22 @@ where [refTable].[CustomerId] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  id="455"
+                  id="823"
                   name="Data Conversion Error Output"
                   exclusionGroup="1"
-                  synchronousInputId="445"
+                  synchronousInputId="813"
                   isErrorOut="true">
                   <outputColumns>
                     <outputColumn
-                      id="456"
+                      id="824"
                       name="ErrorCode"
-                      lineageId="456"
+                      lineageId="824"
                       dataType="i4"
                       specialFlags="1" />
                     <outputColumn
-                      id="457"
+                      id="825"
                       name="ErrorColumn"
-                      lineageId="457"
+                      lineageId="825"
                       dataType="i4"
                       specialFlags="2" />
                   </outputColumns>
@@ -2337,24 +2816,24 @@ where [refTable].[CustomerId] = ?</property>
           </components>
           <paths>
             <path
-              id="458"
-              name="Derived Column Output"
-              startId="434"
-              endId="309" />
-            <path
               id="459"
               name="OLE DB Source Output"
               startId="387"
               endId="417" />
             <path
-              id="460"
+              id="699"
+              name="Derived Column Output"
+              startId="434"
+              endId="309" />
+            <path
+              id="826"
               name="Lookup Match Output"
               startId="421"
-              endId="445" />
+              endId="813" />
             <path
-              id="461"
+              id="827"
               name="Data Conversion Output"
-              startId="448"
+              startId="816"
               endId="429" />
           </paths>
           <ScriptProject
@@ -5090,13 +5569,9 @@ where [refTable].[DatabaseID] = ?</property>
                   name="SqlCommand"
                   dataType="System.String"
                   description="The SQL command to be executed."
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-    c.*,
-    s.SalesforceID
-FROM dbo.Customer c
-LEFT JOIN dbo.SalesforceIDMap s
-    ON c.CustomerId COLLATE DATABASE_DEFAULT 
-       = s.CermID COLLATE DATABASE_DEFAULT</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+  FROM [SalesForce].[dbo].[Temp_Update_Accounts]
+  WHERE NOT(LEN(State)&gt;2) AND Country != 'PR'</property>
                 <property
                   id="6"
                   name="SqlCommandVariable"
@@ -5117,7 +5592,7 @@ LEFT JOIN dbo.SalesforceIDMap s
                   name="AccessMode"
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   id="10"
                   name="ParameterMapping"
@@ -7093,7 +7568,7 @@ WHERE        (CustomerId = ?)</property>
                       id="2561"
                       name="Size__c"
                       lineageId="2561"
-                      length="255"
+                      length="20"
                       dataType="wstr"
                       externalMetadataColumnId="2560" />
                     <outputColumn
@@ -7718,7 +8193,7 @@ WHERE        (CustomerId = ?)</property>
                       externalMetadataColumnId="290"
                       cachedName="Size__c"
                       cachedDataType="wstr"
-                      cachedLength="255" />
+                      cachedLength="20" />
                     <inputColumn
                       id="2801"
                       lineageId="2553"
@@ -8987,7 +9462,7 @@ WHERE ForecastId = ?</property>
         <NodeLayout
           Size="191,42"
           Id="Package\Update Forecast Table"
-          TopLeft="805,327" />
+          TopLeft="804,327" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="370,147.5">
@@ -9116,9 +9591,9 @@ WHERE ForecastId = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-34.5,57"
+              EndConnector="-35.5,57"
               Start="0,0"
-              End="-34.5,49.5">
+              End="-35.5,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -9129,13 +9604,13 @@ WHERE ForecastId = ?</property>
                     Point2="0,28.5"
                     Point3="-4,28.5" />
                   <mssgle:LineSegment
-                    End="-30.5,28.5" />
+                    End="-31.5,28.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-30.5,28.5"
-                    Point2="-34.5,28.5"
-                    Point3="-34.5,32.5" />
+                    Point1="-31.5,28.5"
+                    Point2="-35.5,28.5"
+                    Point3="-35.5,32.5" />
                   <mssgle:LineSegment
-                    End="-34.5,49.5" />
+                    End="-35.5,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9146,13 +9621,13 @@ WHERE ForecastId = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="900.5,369">
+          TopLeft="899.5,369">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38,69"
+              EndConnector="39,69"
               Start="0,0"
-              End="38,61.5">
+              End="39,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -9163,13 +9638,13 @@ WHERE ForecastId = ?</property>
                     Point2="0,34.5"
                     Point3="4,34.5" />
                   <mssgle:LineSegment
-                    End="34,34.5" />
+                    End="35,34.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="34,34.5"
-                    Point2="38,34.5"
-                    Point3="38,38.5" />
+                    Point1="35,34.5"
+                    Point2="39,34.5"
+                    Point3="39,38.5" />
                   <mssgle:LineSegment
-                    End="38,61.5" />
+                    End="39,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9200,6 +9675,13 @@ WHERE ForecastId = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="needd"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="62,60"
+          Id="15529362-2fa1-4fbc-b934-96a543867847"
+          TopLeft="5.5,5.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -9211,7 +9693,7 @@ WHERE ForecastId = ?</property>
         <NodeLayout
           Size="322,42"
           Id="134"
-          TopLeft="213,297" />
+          TopLeft="214,353" />
         <NodeLayout
           Size="243,42"
           Id="79"
@@ -9221,23 +9703,27 @@ WHERE ForecastId = ?</property>
           Id="247"
           TopLeft="304,88" />
         <NodeLayout
+          Size="161,42"
+          Id="687"
+          TopLeft="287,164" />
+        <NodeLayout
           Size="158,42"
           Id="528"
-          TopLeft="288,227" />
+          TopLeft="291,249" />
         <EdgeLayout
           Id="543"
-          TopLeft="370.5,269">
+          TopLeft="372.5,291">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28"
+              EndConnector="0,62"
               Start="0,0"
-              End="0,20.5">
+              End="0,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5" />
+                    End="0,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9268,10 +9754,28 @@ WHERE ForecastId = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="687"
-          TopLeft="287,164" />
+        <EdgeLayout
+          Id="701"
+          TopLeft="368.75,206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="693"
           TopLeft="364.5,130">
@@ -9296,162 +9800,151 @@ WHERE ForecastId = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="701"
-          TopLeft="448,185">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-2,63"
-              Start="0,0"
-              End="5.5,63">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,59" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,59"
-                    Point2="22.5,63"
-                    Point3="18.5,63" />
-                  <mssgle:LineSegment
-                    End="5.5,63" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CustomerBrandWithBrandDescription To Salesforce\247">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Client]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Invoice Push To Salesforce">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="322,42"
-          Id="295"
-          TopLeft="224,326" />
+          Size="115,42"
+          Id="403"
+          TopLeft="354,28" />
         <NodeLayout
           Size="218,42"
           Id="376"
-          TopLeft="256,40" />
+          TopLeft="39,25" />
         <NodeLayout
-          Size="115,42"
-          Id="403"
-          TopLeft="315,117" />
+          Size="322,42"
+          Id="295"
+          TopLeft="267,326" />
+        <EdgeLayout
+          Id="459"
+          TopLeft="257,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="97,0"
+              Start="0,0"
+              End="89.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="89.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="158,42"
           Id="428"
-          TopLeft="299,256" />
+          TopLeft="340,204" />
+        <EdgeLayout
+          Id="699"
+          TopLeft="419,246">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,80"
+              Start="0,0"
+              End="9,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36"
+                    Point2="0,40"
+                    Point3="4,40" />
+                  <mssgle:LineSegment
+                    End="5,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,40"
+                    Point2="9,40"
+                    Point3="9,44" />
+                  <mssgle:LineSegment
+                    End="9,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="161,42"
-          Id="444"
-          TopLeft="298,193" />
+          Id="812"
+          TopLeft="335,117" />
         <EdgeLayout
-          Id="458"
-          TopLeft="381.5,298">
+          Id="826"
+          TopLeft="413.5,70">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28"
+              EndConnector="0,47"
               Start="0,0"
-              End="0,20.5">
+              End="0,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="459"
-          TopLeft="368.75,82">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="460"
-          TopLeft="375.5,159">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
+                    End="0,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.4453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,13.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="461"
-          TopLeft="459,214">
+          Id="827"
+          TopLeft="417.25,159">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-2,63"
+              EndConnector="0,45"
               Start="0,0"
-              End="5.5,63">
+              End="0,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,59" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,59"
-                    Point2="22.5,63"
-                    Point3="18.5,63" />
-                  <mssgle:LineSegment
-                    End="5.5,63" />
+                    End="0,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9463,6 +9956,42 @@ WHERE ForecastId = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Invoice Push To Salesforce\376">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Invoice Push To Salesforce\403">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Client]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Process Records">
     <LayoutInfo>
@@ -9507,9 +10036,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9615,7 +10142,7 @@ WHERE ForecastId = ?</property>
     design-time-name="Package\Refresh IDMap from Salesforce">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="215,42"
           Id="16"
@@ -9647,9 +10174,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9683,9 +10208,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9695,7 +10218,7 @@ WHERE ForecastId = ?</property>
     design-time-name="Package\Send Creates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="225,42"
           Id="52"
@@ -9723,19 +10246,25 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Send Creates\1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Send Updates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="227,42"
           Id="52"
@@ -9763,14 +10292,20 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Send Updates\1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Update Client Table">
     <LayoutInfo>
