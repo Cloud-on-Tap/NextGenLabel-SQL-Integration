@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="163"
-  DTS:VersionGUID="{134D3CEA-1272-4BD0-B8AD-ABB76DC98E19}">
+  DTS:VersionBuild="169"
+  DTS:VersionGUID="{B65BC0AC-301D-4452-8198-07C52CCE83AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADdIDA/TSxMJAi5kTp7naPfVd/fi+6HsZHA68xhpOA4fAAAAAAOgAAAAAIAACAAAAASQjX8zGBht7FifdgHRkZVty+DIhpVaOkr+BordoYFWiAAAACalv3vVr57u29pqHSByimafKtqoXcYpLLdPTpV3FILCkAAAAAF6vX5J8rWBOqM644PXX9ww0MvnUJelaEQzCOzOsO6f4z3155VFzXzaMXXCAa4wESqZnBgot9sA5dEfjbFn5af</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB5J8u7h0mqZkObTSJI/+4WKITm1gtmwVIMLnSJu2zKHAAAAAAOgAAAAAIAACAAAABB7YnVwMCHNPBOEdCJnZ65x5V47JWbj+50agM3V+7LnCAAAAD64qySAsLfNCyMM96tolAjLul1HBXUFO0rtniFTfi5+EAAAABlRPFxi+86/Dxwv31HzJxnP3Q4O7+sz4fot/lndEYsZ8S9eOEjOX2rWd8Q1wgrTgxAXULBVH+Hm8hddua5860+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACPpbeRq6fwG3ia2Me+9AZHRZWD/V3gnuVHhqIMsWnIywAAAAAOgAAAAAIAACAAAADBfu0bYwGcw07JXiLV0Ls9Py3Nv/LUp5/DSeXEiGVcdFAAAABJvh0+MvQjevZ74FgjitIUFKjlTy6iKMnpraBIZHMMOcSgrcc5LFkMofH8esTka88eH8OCWy+biJ5fp0pjJuNs6mSDcmDFZOOxNdw/67a1cEAAAADzx2+1DQPsp28vbQgS/Z3WG/hdsb0WhQdvNE/iWJ61Ow5uSVSPabmlKegh+6kEbGQk800+JfXdovQ8zkco7aro</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/YkSNrNw0paCRvEb8m9xla+gV+bS5kag6M10CwDqaHgAAAAAOgAAAAAIAACAAAACl5x/1Fy5KOSDhdlonOrcxi0W1EkuzXGekCeeT9mEyXlAAAACr4OSMQUU+GChjXO2xr365Tfg5rZ/7Y3TaEvdnRD+vmwqp6uh7e8z+nSPXXCn47GlYQU7P+E0bKScfDA0tZD+iCggU5q67s8YSg6In+blwBkAAAABaEJOZGkwz7s8KgbadoXNRgYu190sFEJXupTG9qckQyVF5YYheVpd4Akv8EYvNg4Rgo2/0fGvZfry4afEn63sq</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1329,7 +1329,7 @@ where [refTable].[CustomerId] = ?</property>
                   <inputColumns>
                     <inputColumn
                       id="311"
-                      lineageId="389"
+                      lineageId="1481"
                       externalMetadataColumnId="321"
                       cachedName="BrandId"
                       cachedDataType="wstr"
@@ -1357,89 +1357,90 @@ where [refTable].[CustomerId] = ?</property>
                       cachedLength="18" />
                     <inputColumn
                       id="847"
-                      lineageId="469"
+                      lineageId="1491"
                       externalMetadataColumnId="326"
-                      cachedName="Month01"
+                      cachedName="Invoiced01"
                       cachedDataType="i4" />
                     <inputColumn
                       id="848"
-                      lineageId="496"
+                      lineageId="1509"
                       externalMetadataColumnId="327"
-                      cachedName="Month10"
+                      cachedName="Invoiced10"
                       cachedDataType="i4" />
                     <inputColumn
                       id="849"
-                      lineageId="499"
+                      lineageId="1511"
                       externalMetadataColumnId="328"
-                      cachedName="Month11"
+                      cachedName="Invoiced11"
                       cachedDataType="i4" />
                     <inputColumn
                       id="850"
-                      lineageId="502"
+                      lineageId="1513"
                       externalMetadataColumnId="329"
-                      cachedName="Month12"
+                      cachedName="Invoiced12"
                       cachedDataType="i4" />
                     <inputColumn
                       id="851"
-                      lineageId="472"
+                      lineageId="1493"
                       externalMetadataColumnId="330"
-                      cachedName="Month02"
+                      cachedName="Invoiced02"
                       cachedDataType="i4" />
                     <inputColumn
                       id="852"
-                      lineageId="475"
+                      lineageId="1495"
                       externalMetadataColumnId="331"
-                      cachedName="Month03"
+                      cachedName="Invoiced03"
                       cachedDataType="i4" />
                     <inputColumn
                       id="853"
-                      lineageId="478"
+                      lineageId="1497"
                       externalMetadataColumnId="332"
-                      cachedName="Month04"
+                      cachedName="Invoiced04"
                       cachedDataType="i4" />
                     <inputColumn
                       id="854"
-                      lineageId="481"
+                      lineageId="1499"
                       externalMetadataColumnId="333"
-                      cachedName="Month05"
+                      cachedName="Invoiced05"
                       cachedDataType="i4" />
                     <inputColumn
                       id="855"
-                      lineageId="484"
+                      lineageId="1501"
                       externalMetadataColumnId="334"
-                      cachedName="Month06"
+                      cachedName="Invoiced06"
                       cachedDataType="i4" />
                     <inputColumn
                       id="856"
-                      lineageId="487"
+                      lineageId="1503"
                       externalMetadataColumnId="335"
-                      cachedName="Month07"
+                      cachedName="Invoiced07"
                       cachedDataType="i4" />
                     <inputColumn
                       id="857"
-                      lineageId="490"
+                      lineageId="1505"
                       externalMetadataColumnId="336"
-                      cachedName="Month08"
+                      cachedName="Invoiced08"
                       cachedDataType="i4" />
                     <inputColumn
                       id="858"
-                      lineageId="493"
+                      lineageId="1507"
                       externalMetadataColumnId="337"
-                      cachedName="Month09"
+                      cachedName="Invoiced09"
                       cachedDataType="i4" />
                     <inputColumn
                       id="859"
-                      lineageId="391"
+                      lineageId="1483"
                       externalMetadataColumnId="346"
                       cachedName="Size"
                       cachedDataType="wstr"
                       cachedLength="20" />
                     <inputColumn
-                      id="860"
-                      lineageId="466"
+                      id="1215"
+                      lineageId="1211"
                       externalMetadataColumnId="348"
-                      cachedName="Year"
-                      cachedDataType="i4" />
+                      cachedName="Year_String"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1694,312 +1695,936 @@ where [refTable].[CustomerId] = ?</property>
                       length="18"
                       dataType="wstr" />
                     <outputColumn
-                      id="700"
+                      id="1283"
                       name="BrandId"
-                      lineageId="700"
+                      lineageId="1283"
                       length="6"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="701"
+                          id="1284"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">389</property>
+                          containsID="true">1481</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="702"
+                      id="1285"
                       name="Size"
-                      lineageId="702"
+                      lineageId="1285"
                       length="20"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="703"
+                          id="1286"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">391</property>
+                          containsID="true">1483</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="704"
+                      id="1287"
                       name="AccountId"
-                      lineageId="704"
+                      lineageId="1287"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="705"
+                          id="1288"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">463</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="706"
+                      id="1289"
                       name="Year"
-                      lineageId="706"
+                      lineageId="1289"
                       dataType="i4">
                       <properties>
                         <property
-                          id="707"
+                          id="1290"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">466</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="708"
-                      name="Month01"
-                      lineageId="708"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="709"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">469</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="710"
-                      name="Month02"
-                      lineageId="710"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="711"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">472</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="712"
-                      name="Month03"
-                      lineageId="712"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="713"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">475</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="714"
-                      name="Month04"
-                      lineageId="714"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="715"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">478</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="716"
-                      name="Month05"
-                      lineageId="716"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="717"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">481</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="718"
-                      name="Month06"
-                      lineageId="718"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="719"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">484</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="720"
-                      name="Month07"
-                      lineageId="720"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="721"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">487</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="722"
-                      name="Month08"
-                      lineageId="722"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="723"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">490</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="724"
-                      name="Month09"
-                      lineageId="724"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="725"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">493</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="726"
-                      name="Month10"
-                      lineageId="726"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="727"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">496</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="728"
-                      name="Month11"
-                      lineageId="728"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="729"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">499</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="730"
-                      name="Month12"
-                      lineageId="730"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="731"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">502</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="732"
+                      id="1291"
                       name="ForecastId"
-                      lineageId="732"
+                      lineageId="1291"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="733"
+                          id="1292"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">505</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="734"
+                      id="1293"
+                      name="Invoiced01"
+                      lineageId="1293"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1294"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1491</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1295"
+                      name="Invoiced02"
+                      lineageId="1295"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1296"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1493</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1297"
+                      name="Invoiced03"
+                      lineageId="1297"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1298"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1495</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1299"
+                      name="Invoiced04"
+                      lineageId="1299"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1300"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1497</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1301"
+                      name="Invoiced05"
+                      lineageId="1301"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1302"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1499</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1303"
+                      name="Invoiced06"
+                      lineageId="1303"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1304"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1501</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1305"
+                      name="Invoiced07"
+                      lineageId="1305"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1306"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1503</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1307"
+                      name="Invoiced08"
+                      lineageId="1307"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1308"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1505</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1309"
+                      name="Invoiced09"
+                      lineageId="1309"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1310"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1507</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1311"
+                      name="Invoiced10"
+                      lineageId="1311"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1312"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1509</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1313"
+                      name="Invoiced11"
+                      lineageId="1313"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1314"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1511</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1315"
+                      name="Invoiced12"
+                      lineageId="1315"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1316"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1513</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1317"
+                      name="PreviousYearInvoiced01"
+                      lineageId="1317"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1318"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">898</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1319"
+                      name="PreviousYearInvoiced02"
+                      lineageId="1319"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1320"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">901</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1321"
+                      name="PreviousYearInvoiced03"
+                      lineageId="1321"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1322"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">904</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1323"
+                      name="PreviousYearInvoiced04"
+                      lineageId="1323"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1324"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">907</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1325"
+                      name="PreviousYearInvoiced05"
+                      lineageId="1325"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1326"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">910</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1327"
+                      name="PreviousYearInvoiced06"
+                      lineageId="1327"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1328"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">913</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1329"
+                      name="PreviousYearInvoiced07"
+                      lineageId="1329"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1330"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">916</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1331"
+                      name="PreviousYearInvoiced08"
+                      lineageId="1331"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1332"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">919</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1333"
+                      name="PreviousYearInvoiced09"
+                      lineageId="1333"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1334"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">922</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1335"
+                      name="PreviousYearInvoiced10"
+                      lineageId="1335"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1336"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">925</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1337"
+                      name="PreviousYearInvoiced11"
+                      lineageId="1337"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1338"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">928</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1339"
+                      name="PreviousYearInvoiced12"
+                      lineageId="1339"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1340"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">931</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1341"
+                      name="ToShip01"
+                      lineageId="1341"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1342"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">934</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1343"
+                      name="ToShip02"
+                      lineageId="1343"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1344"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">937</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1345"
+                      name="ToShip03"
+                      lineageId="1345"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1346"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">940</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1347"
+                      name="ToShip04"
+                      lineageId="1347"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1348"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">943</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1349"
+                      name="ToShip05"
+                      lineageId="1349"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1350"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">946</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1351"
+                      name="ToShip06"
+                      lineageId="1351"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1352"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">949</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1353"
+                      name="ToShip07"
+                      lineageId="1353"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1354"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">952</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1355"
+                      name="ToShip08"
+                      lineageId="1355"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1356"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">955</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1357"
+                      name="ToShip09"
+                      lineageId="1357"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1358"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">958</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1359"
+                      name="ToShip10"
+                      lineageId="1359"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1360"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">961</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1361"
+                      name="ToShip11"
+                      lineageId="1361"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1362"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">964</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1363"
+                      name="ToShip12"
+                      lineageId="1363"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1364"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">967</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1365"
+                      name="Budget01"
+                      lineageId="1365"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1366"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">970</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1367"
+                      name="Budget02"
+                      lineageId="1367"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1368"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">973</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1369"
+                      name="Budget03"
+                      lineageId="1369"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1370"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">976</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1371"
+                      name="Budget04"
+                      lineageId="1371"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1372"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">979</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1373"
+                      name="Budget05"
+                      lineageId="1373"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1374"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">982</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1375"
+                      name="Budget06"
+                      lineageId="1375"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1376"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">985</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1377"
+                      name="Budget07"
+                      lineageId="1377"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1378"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">988</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1379"
+                      name="Budget08"
+                      lineageId="1379"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1380"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">991</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1381"
+                      name="Budget09"
+                      lineageId="1381"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1382"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">994</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1383"
+                      name="Budget10"
+                      lineageId="1383"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1384"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">997</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1385"
+                      name="Budget11"
+                      lineageId="1385"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1386"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1000</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1387"
+                      name="Budget12"
+                      lineageId="1387"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1388"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1003</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1389"
                       name="CermCustomerRecordID"
-                      lineageId="734"
+                      lineageId="1389"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="735"
+                          id="1390"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">422</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="736"
+                      id="1391"
                       name="AccountIdFromClientTable"
-                      lineageId="736"
+                      lineageId="1391"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="737"
+                          id="1392"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">513</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="738"
-                      name="ConcatenatedPK"
-                      lineageId="738"
-                      length="152"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="739"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">435</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="740"
-                      name="RecTypeId"
-                      lineageId="740"
-                      length="18"
-                      dataType="wstr">
-                      <properties>
-                        <property
-                          id="741"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">438</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="742"
+                      id="1393"
                       name="Size_converted"
-                      lineageId="742"
+                      lineageId="1393"
                       length="50"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="743"
+                          id="1394"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">817</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="744"
-                      name="Brand"
-                      lineageId="744"
-                      length="255"
+                      id="1395"
+                      name="Year_String"
+                      lineageId="1395"
+                      length="50"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="745"
+                          id="1396"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">390</property>
+                          containsID="true">1211</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1397"
+                      name="ConcatenatedPK"
+                      lineageId="1397"
+                      length="152"
+                      dataType="wstr">
+                      <properties>
+                        <property
+                          id="1398"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">435</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1399"
+                      name="RecTypeId"
+                      lineageId="1399"
+                      length="18"
+                      dataType="wstr">
+                      <properties>
+                        <property
+                          id="1400"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">438</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1401"
+                      name="Month01"
+                      lineageId="1401"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1402"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1491</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1403"
+                      name="Month10"
+                      lineageId="1403"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1404"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1509</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1405"
+                      name="Month11"
+                      lineageId="1405"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1406"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1511</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1407"
+                      name="Month12"
+                      lineageId="1407"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1408"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1513</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1409"
+                      name="Month02"
+                      lineageId="1409"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1410"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1493</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1411"
+                      name="Month03"
+                      lineageId="1411"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1412"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1495</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1413"
+                      name="Month04"
+                      lineageId="1413"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1414"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1497</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1415"
+                      name="Month05"
+                      lineageId="1415"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1416"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1499</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1417"
+                      name="Month06"
+                      lineageId="1417"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1418"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1501</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1419"
+                      name="Month07"
+                      lineageId="1419"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1420"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1503</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1421"
+                      name="Month08"
+                      lineageId="1421"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1422"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1505</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1423"
+                      name="Month09"
+                      lineageId="1423"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="1424"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1507</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2025,7 +2650,7 @@ where [refTable].[CustomerId] = ?</property>
                   id="378"
                   name="OpenRowset"
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Invoiced]</property>
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[Outbound]</property>
                 <property
                   id="379"
                   name="OpenRowsetVariable"
@@ -2079,9 +2704,9 @@ where [refTable].[CustomerId] = ?</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      id="389"
+                      id="1481"
                       name="BrandId"
-                      lineageId="389"
+                      lineageId="1481"
                       length="6"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -2089,9 +2714,9 @@ where [refTable].[CustomerId] = ?</property>
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="393" />
                     <outputColumn
-                      id="391"
+                      id="1483"
                       name="Size"
-                      lineageId="391"
+                      lineageId="1483"
                       length="20"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -2099,9 +2724,9 @@ where [refTable].[CustomerId] = ?</property>
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="395" />
                     <outputColumn
-                      id="463"
+                      id="1485"
                       name="AccountId"
-                      lineageId="463"
+                      lineageId="1485"
                       length="18"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -2109,132 +2734,456 @@ where [refTable].[CustomerId] = ?</property>
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="462" />
                     <outputColumn
-                      id="466"
+                      id="1487"
                       name="Year"
-                      lineageId="466"
+                      lineageId="1487"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="465" />
                     <outputColumn
-                      id="469"
-                      name="Month01"
-                      lineageId="469"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="468" />
-                    <outputColumn
-                      id="472"
-                      name="Month02"
-                      lineageId="472"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="471" />
-                    <outputColumn
-                      id="475"
-                      name="Month03"
-                      lineageId="475"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="474" />
-                    <outputColumn
-                      id="478"
-                      name="Month04"
-                      lineageId="478"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="477" />
-                    <outputColumn
-                      id="481"
-                      name="Month05"
-                      lineageId="481"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="480" />
-                    <outputColumn
-                      id="484"
-                      name="Month06"
-                      lineageId="484"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="483" />
-                    <outputColumn
-                      id="487"
-                      name="Month07"
-                      lineageId="487"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="486" />
-                    <outputColumn
-                      id="490"
-                      name="Month08"
-                      lineageId="490"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="489" />
-                    <outputColumn
-                      id="493"
-                      name="Month09"
-                      lineageId="493"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="492" />
-                    <outputColumn
-                      id="496"
-                      name="Month10"
-                      lineageId="496"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="495" />
-                    <outputColumn
-                      id="499"
-                      name="Month11"
-                      lineageId="499"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="498" />
-                    <outputColumn
-                      id="502"
-                      name="Month12"
-                      lineageId="502"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      truncationRowDisposition="FailComponent"
-                      externalMetadataColumnId="501" />
-                    <outputColumn
-                      id="505"
+                      id="1489"
                       name="ForecastId"
-                      lineageId="505"
+                      lineageId="1489"
                       length="18"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="504" />
+                    <outputColumn
+                      id="1491"
+                      name="Invoiced01"
+                      lineageId="1491"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="861" />
+                    <outputColumn
+                      id="1493"
+                      name="Invoiced02"
+                      lineageId="1493"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="864" />
+                    <outputColumn
+                      id="1495"
+                      name="Invoiced03"
+                      lineageId="1495"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="867" />
+                    <outputColumn
+                      id="1497"
+                      name="Invoiced04"
+                      lineageId="1497"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="870" />
+                    <outputColumn
+                      id="1499"
+                      name="Invoiced05"
+                      lineageId="1499"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="873" />
+                    <outputColumn
+                      id="1501"
+                      name="Invoiced06"
+                      lineageId="1501"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="876" />
+                    <outputColumn
+                      id="1503"
+                      name="Invoiced07"
+                      lineageId="1503"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="879" />
+                    <outputColumn
+                      id="1505"
+                      name="Invoiced08"
+                      lineageId="1505"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="882" />
+                    <outputColumn
+                      id="1507"
+                      name="Invoiced09"
+                      lineageId="1507"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="885" />
+                    <outputColumn
+                      id="1509"
+                      name="Invoiced10"
+                      lineageId="1509"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="888" />
+                    <outputColumn
+                      id="1511"
+                      name="Invoiced11"
+                      lineageId="1511"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="891" />
+                    <outputColumn
+                      id="1513"
+                      name="Invoiced12"
+                      lineageId="1513"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="894" />
+                    <outputColumn
+                      id="1515"
+                      name="PreviousYearInvoiced01"
+                      lineageId="1515"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="897" />
+                    <outputColumn
+                      id="1517"
+                      name="PreviousYearInvoiced02"
+                      lineageId="1517"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="900" />
+                    <outputColumn
+                      id="1519"
+                      name="PreviousYearInvoiced03"
+                      lineageId="1519"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="903" />
+                    <outputColumn
+                      id="1521"
+                      name="PreviousYearInvoiced04"
+                      lineageId="1521"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="906" />
+                    <outputColumn
+                      id="1523"
+                      name="PreviousYearInvoiced05"
+                      lineageId="1523"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="909" />
+                    <outputColumn
+                      id="1525"
+                      name="PreviousYearInvoiced06"
+                      lineageId="1525"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="912" />
+                    <outputColumn
+                      id="1527"
+                      name="PreviousYearInvoiced07"
+                      lineageId="1527"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="915" />
+                    <outputColumn
+                      id="1529"
+                      name="PreviousYearInvoiced08"
+                      lineageId="1529"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="918" />
+                    <outputColumn
+                      id="1531"
+                      name="PreviousYearInvoiced09"
+                      lineageId="1531"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="921" />
+                    <outputColumn
+                      id="1533"
+                      name="PreviousYearInvoiced10"
+                      lineageId="1533"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="924" />
+                    <outputColumn
+                      id="1535"
+                      name="PreviousYearInvoiced11"
+                      lineageId="1535"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="927" />
+                    <outputColumn
+                      id="1537"
+                      name="PreviousYearInvoiced12"
+                      lineageId="1537"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="930" />
+                    <outputColumn
+                      id="1539"
+                      name="ToShip01"
+                      lineageId="1539"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="933" />
+                    <outputColumn
+                      id="1541"
+                      name="ToShip02"
+                      lineageId="1541"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="936" />
+                    <outputColumn
+                      id="1543"
+                      name="ToShip03"
+                      lineageId="1543"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="939" />
+                    <outputColumn
+                      id="1545"
+                      name="ToShip04"
+                      lineageId="1545"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="942" />
+                    <outputColumn
+                      id="1547"
+                      name="ToShip05"
+                      lineageId="1547"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="945" />
+                    <outputColumn
+                      id="1549"
+                      name="ToShip06"
+                      lineageId="1549"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="948" />
+                    <outputColumn
+                      id="1551"
+                      name="ToShip07"
+                      lineageId="1551"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="951" />
+                    <outputColumn
+                      id="1553"
+                      name="ToShip08"
+                      lineageId="1553"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="954" />
+                    <outputColumn
+                      id="1555"
+                      name="ToShip09"
+                      lineageId="1555"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="957" />
+                    <outputColumn
+                      id="1557"
+                      name="ToShip10"
+                      lineageId="1557"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="960" />
+                    <outputColumn
+                      id="1559"
+                      name="ToShip11"
+                      lineageId="1559"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="963" />
+                    <outputColumn
+                      id="1561"
+                      name="ToShip12"
+                      lineageId="1561"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="966" />
+                    <outputColumn
+                      id="1563"
+                      name="Budget01"
+                      lineageId="1563"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="969" />
+                    <outputColumn
+                      id="1565"
+                      name="Budget02"
+                      lineageId="1565"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="972" />
+                    <outputColumn
+                      id="1567"
+                      name="Budget03"
+                      lineageId="1567"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="975" />
+                    <outputColumn
+                      id="1569"
+                      name="Budget04"
+                      lineageId="1569"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="978" />
+                    <outputColumn
+                      id="1571"
+                      name="Budget05"
+                      lineageId="1571"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="981" />
+                    <outputColumn
+                      id="1573"
+                      name="Budget06"
+                      lineageId="1573"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="984" />
+                    <outputColumn
+                      id="1575"
+                      name="Budget07"
+                      lineageId="1575"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="987" />
+                    <outputColumn
+                      id="1577"
+                      name="Budget08"
+                      lineageId="1577"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="990" />
+                    <outputColumn
+                      id="1579"
+                      name="Budget09"
+                      lineageId="1579"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="993" />
+                    <outputColumn
+                      id="1581"
+                      name="Budget10"
+                      lineageId="1581"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="996" />
+                    <outputColumn
+                      id="1583"
+                      name="Budget11"
+                      lineageId="1583"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="999" />
+                    <outputColumn
+                      id="1585"
+                      name="Budget12"
+                      lineageId="1585"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1002" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2258,58 +3207,202 @@ where [refTable].[CustomerId] = ?</property>
                       name="Year"
                       dataType="i4" />
                     <externalMetadataColumn
-                      id="468"
-                      name="Month01"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="471"
-                      name="Month02"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="474"
-                      name="Month03"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="477"
-                      name="Month04"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="480"
-                      name="Month05"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="483"
-                      name="Month06"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="486"
-                      name="Month07"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="489"
-                      name="Month08"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="492"
-                      name="Month09"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="495"
-                      name="Month10"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="498"
-                      name="Month11"
-                      dataType="i4" />
-                    <externalMetadataColumn
-                      id="501"
-                      name="Month12"
-                      dataType="i4" />
-                    <externalMetadataColumn
                       id="504"
                       name="ForecastId"
                       dataType="wstr"
                       length="18" />
+                    <externalMetadataColumn
+                      id="861"
+                      name="Invoiced01"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="864"
+                      name="Invoiced02"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="867"
+                      name="Invoiced03"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="870"
+                      name="Invoiced04"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="873"
+                      name="Invoiced05"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="876"
+                      name="Invoiced06"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="879"
+                      name="Invoiced07"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="882"
+                      name="Invoiced08"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="885"
+                      name="Invoiced09"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="888"
+                      name="Invoiced10"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="891"
+                      name="Invoiced11"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="894"
+                      name="Invoiced12"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="897"
+                      name="PreviousYearInvoiced01"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="900"
+                      name="PreviousYearInvoiced02"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="903"
+                      name="PreviousYearInvoiced03"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="906"
+                      name="PreviousYearInvoiced04"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="909"
+                      name="PreviousYearInvoiced05"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="912"
+                      name="PreviousYearInvoiced06"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="915"
+                      name="PreviousYearInvoiced07"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="918"
+                      name="PreviousYearInvoiced08"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="921"
+                      name="PreviousYearInvoiced09"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="924"
+                      name="PreviousYearInvoiced10"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="927"
+                      name="PreviousYearInvoiced11"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="930"
+                      name="PreviousYearInvoiced12"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="933"
+                      name="ToShip01"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="936"
+                      name="ToShip02"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="939"
+                      name="ToShip03"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="942"
+                      name="ToShip04"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="945"
+                      name="ToShip05"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="948"
+                      name="ToShip06"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="951"
+                      name="ToShip07"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="954"
+                      name="ToShip08"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="957"
+                      name="ToShip09"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="960"
+                      name="ToShip10"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="963"
+                      name="ToShip11"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="966"
+                      name="ToShip12"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="969"
+                      name="Budget01"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="972"
+                      name="Budget02"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="975"
+                      name="Budget03"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="978"
+                      name="Budget04"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="981"
+                      name="Budget05"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="984"
+                      name="Budget06"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="987"
+                      name="Budget07"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="990"
+                      name="Budget08"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="993"
+                      name="Budget09"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="996"
+                      name="Budget10"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="999"
+                      name="Budget11"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1002"
+                      name="Budget12"
+                      dataType="i4" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2318,94 +3411,11 @@ where [refTable].[CustomerId] = ?</property>
                   isErrorOut="true">
                   <outputColumns>
                     <outputColumn
-                      id="464"
-                      name="AccountId"
-                      lineageId="464"
-                      length="18"
-                      dataType="wstr" />
-                    <outputColumn
-                      id="398"
-                      name="BrandId"
-                      lineageId="398"
-                      length="6"
-                      dataType="wstr" />
-                    <outputColumn
                       id="400"
                       name="ErrorCode"
                       lineageId="400"
                       dataType="i4"
                       specialFlags="1" />
-                    <outputColumn
-                      id="467"
-                      name="Year"
-                      lineageId="467"
-                      dataType="i4" />
-                    <outputColumn
-                      id="470"
-                      name="Month01"
-                      lineageId="470"
-                      dataType="i4" />
-                    <outputColumn
-                      id="473"
-                      name="Month02"
-                      lineageId="473"
-                      dataType="i4" />
-                    <outputColumn
-                      id="476"
-                      name="Month03"
-                      lineageId="476"
-                      dataType="i4" />
-                    <outputColumn
-                      id="479"
-                      name="Month04"
-                      lineageId="479"
-                      dataType="i4" />
-                    <outputColumn
-                      id="482"
-                      name="Month05"
-                      lineageId="482"
-                      dataType="i4" />
-                    <outputColumn
-                      id="485"
-                      name="Month06"
-                      lineageId="485"
-                      dataType="i4" />
-                    <outputColumn
-                      id="488"
-                      name="Month07"
-                      lineageId="488"
-                      dataType="i4" />
-                    <outputColumn
-                      id="491"
-                      name="Month08"
-                      lineageId="491"
-                      dataType="i4" />
-                    <outputColumn
-                      id="494"
-                      name="Month09"
-                      lineageId="494"
-                      dataType="i4" />
-                    <outputColumn
-                      id="497"
-                      name="Month10"
-                      lineageId="497"
-                      dataType="i4" />
-                    <outputColumn
-                      id="500"
-                      name="Month11"
-                      lineageId="500"
-                      dataType="i4" />
-                    <outputColumn
-                      id="503"
-                      name="Month12"
-                      lineageId="503"
-                      dataType="i4" />
-                    <outputColumn
-                      id="506"
-                      name="ForecastId"
-                      lineageId="506"
-                      length="18"
-                      dataType="wstr" />
                     <outputColumn
                       id="401"
                       name="ErrorColumn"
@@ -2413,11 +3423,274 @@ where [refTable].[CustomerId] = ?</property>
                       dataType="i4"
                       specialFlags="2" />
                     <outputColumn
-                      id="402"
+                      id="1482"
+                      name="BrandId"
+                      lineageId="1482"
+                      length="6"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="1484"
                       name="Size"
-                      lineageId="402"
+                      lineageId="1484"
                       length="20"
                       dataType="wstr" />
+                    <outputColumn
+                      id="1486"
+                      name="AccountId"
+                      lineageId="1486"
+                      length="18"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="1488"
+                      name="Year"
+                      lineageId="1488"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1490"
+                      name="ForecastId"
+                      lineageId="1490"
+                      length="18"
+                      dataType="wstr" />
+                    <outputColumn
+                      id="1492"
+                      name="Invoiced01"
+                      lineageId="1492"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1494"
+                      name="Invoiced02"
+                      lineageId="1494"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1496"
+                      name="Invoiced03"
+                      lineageId="1496"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1498"
+                      name="Invoiced04"
+                      lineageId="1498"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1500"
+                      name="Invoiced05"
+                      lineageId="1500"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1502"
+                      name="Invoiced06"
+                      lineageId="1502"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1504"
+                      name="Invoiced07"
+                      lineageId="1504"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1506"
+                      name="Invoiced08"
+                      lineageId="1506"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1508"
+                      name="Invoiced09"
+                      lineageId="1508"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1510"
+                      name="Invoiced10"
+                      lineageId="1510"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1512"
+                      name="Invoiced11"
+                      lineageId="1512"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1514"
+                      name="Invoiced12"
+                      lineageId="1514"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1516"
+                      name="PreviousYearInvoiced01"
+                      lineageId="1516"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1518"
+                      name="PreviousYearInvoiced02"
+                      lineageId="1518"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1520"
+                      name="PreviousYearInvoiced03"
+                      lineageId="1520"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1522"
+                      name="PreviousYearInvoiced04"
+                      lineageId="1522"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1524"
+                      name="PreviousYearInvoiced05"
+                      lineageId="1524"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1526"
+                      name="PreviousYearInvoiced06"
+                      lineageId="1526"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1528"
+                      name="PreviousYearInvoiced07"
+                      lineageId="1528"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1530"
+                      name="PreviousYearInvoiced08"
+                      lineageId="1530"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1532"
+                      name="PreviousYearInvoiced09"
+                      lineageId="1532"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1534"
+                      name="PreviousYearInvoiced10"
+                      lineageId="1534"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1536"
+                      name="PreviousYearInvoiced11"
+                      lineageId="1536"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1538"
+                      name="PreviousYearInvoiced12"
+                      lineageId="1538"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1540"
+                      name="ToShip01"
+                      lineageId="1540"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1542"
+                      name="ToShip02"
+                      lineageId="1542"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1544"
+                      name="ToShip03"
+                      lineageId="1544"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1546"
+                      name="ToShip04"
+                      lineageId="1546"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1548"
+                      name="ToShip05"
+                      lineageId="1548"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1550"
+                      name="ToShip06"
+                      lineageId="1550"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1552"
+                      name="ToShip07"
+                      lineageId="1552"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1554"
+                      name="ToShip08"
+                      lineageId="1554"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1556"
+                      name="ToShip09"
+                      lineageId="1556"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1558"
+                      name="ToShip10"
+                      lineageId="1558"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1560"
+                      name="ToShip11"
+                      lineageId="1560"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1562"
+                      name="ToShip12"
+                      lineageId="1562"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1564"
+                      name="Budget01"
+                      lineageId="1564"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1566"
+                      name="Budget02"
+                      lineageId="1566"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1568"
+                      name="Budget03"
+                      lineageId="1568"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1570"
+                      name="Budget04"
+                      lineageId="1570"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1572"
+                      name="Budget05"
+                      lineageId="1572"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1574"
+                      name="Budget06"
+                      lineageId="1574"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1576"
+                      name="Budget07"
+                      lineageId="1576"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1578"
+                      name="Budget08"
+                      lineageId="1578"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1580"
+                      name="Budget09"
+                      lineageId="1580"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1582"
+                      name="Budget10"
+                      lineageId="1582"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1584"
+                      name="Budget11"
+                      lineageId="1584"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1586"
+                      name="Budget12"
+                      lineageId="1586"
+                      dataType="i4" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2490,7 +3763,7 @@ where [refTable].[AccountId] = ?</property>
                   name="ParameterMap"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  containsID="true">#463;</property>
+                  containsID="true">#1485;</property>
                 <property
                   id="414"
                   name="DefaultCodePage"
@@ -2515,19 +3788,19 @@ where [refTable].[AccountId] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      id="510"
-                      lineageId="463"
+                      id="1587"
+                      lineageId="1485"
                       cachedName="AccountId"
                       cachedDataType="wstr"
                       cachedLength="18">
                       <properties>
                         <property
-                          id="511"
+                          id="1588"
                           name="JoinToReferenceColumn"
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins.">AccountId</property>
                         <property
-                          id="512"
+                          id="1589"
                           name="CopyFromReferenceColumn"
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied." />
@@ -2628,7 +3901,7 @@ where [refTable].[AccountId] = ?</property>
                   <inputColumns>
                     <inputColumn
                       id="430"
-                      lineageId="389"
+                      lineageId="1481"
                       cachedName="BrandId"
                       cachedDataType="wstr"
                       cachedLength="6" />
@@ -2671,7 +3944,7 @@ where [refTable].[AccountId] = ?</property>
                           name="Expression"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          containsID="true">(DT_WSTR,50)#422 + "|" + (DT_WSTR,50)#389 + "|" + #817</property>
+                          containsID="true">(DT_WSTR,50)#422 + "|" + (DT_WSTR,50)#1481 + "|" + #817</property>
                         <property
                           id="437"
                           name="FriendlyExpression"
@@ -2748,10 +4021,15 @@ where [refTable].[AccountId] = ?</property>
                   <inputColumns>
                     <inputColumn
                       id="814"
-                      lineageId="391"
+                      lineageId="1483"
                       cachedName="Size"
                       cachedDataType="wstr"
                       cachedLength="20" />
+                    <inputColumn
+                      id="1214"
+                      lineageId="1487"
+                      cachedName="Year"
+                      cachedDataType="i4" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2778,9 +4056,32 @@ where [refTable].[AccountId] = ?</property>
                           name="SourceInputColumnLineageID"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          containsID="true">391</property>
+                          containsID="true">1483</property>
                         <property
                           id="819"
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="1211"
+                      name="Year_String"
+                      lineageId="1211"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          id="1212"
+                          name="SourceInputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          containsID="true">1487</property>
+                        <property
+                          id="1213"
                           name="FastParse"
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
@@ -2821,11 +4122,6 @@ where [refTable].[AccountId] = ?</property>
               startId="387"
               endId="417" />
             <path
-              id="699"
-              name="Derived Column Output"
-              startId="434"
-              endId="309" />
-            <path
               id="826"
               name="Lookup Match Output"
               startId="421"
@@ -2835,6 +4131,11 @@ where [refTable].[AccountId] = ?</property>
               name="Data Conversion Output"
               startId="816"
               endId="429" />
+            <path
+              id="1282"
+              name="Derived Column Output"
+              startId="434"
+              endId="309" />
           </paths>
           <ScriptProject
             Name="ST_b2b438a1b647418eb40d95b6f5e3cda9"
@@ -9442,7 +10743,7 @@ WHERE ForecastId = ?</property>
         <NodeLayout
           Size="163,42"
           Id="Package\Process Records"
-          TopLeft="420,126" />
+          TopLeft="420,127" />
         <NodeLayout
           Size="233,42"
           Id="Package\Refresh IDMap from Salesforce"
@@ -9465,7 +10766,7 @@ WHERE ForecastId = ?</property>
           TopLeft="804,327" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="370,147.5">
+          TopLeft="370,148">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9487,7 +10788,7 @@ WHERE ForecastId = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="583,146.5">
+          TopLeft="583,147">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9679,7 +10980,7 @@ WHERE ForecastId = ?</property>
           Text="needd"
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="62,60"
+          Size="62,40"
           Id="15529362-2fa1-4fbc-b934-96a543867847"
           TopLeft="5.5,5.5" />
       </GraphLayout>
@@ -9729,7 +11030,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9751,7 +11054,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9773,7 +11078,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9803,46 +11110,31 @@ WHERE ForecastId = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\CustomerBrandWithBrandDescription To Salesforce\247">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Client]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Invoice Push To Salesforce">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="161,42"
+          Id="812"
+          TopLeft="335,117" />
+        <NodeLayout
           Size="115,42"
           Id="403"
           TopLeft="354,28" />
         <NodeLayout
+          Size="322,42"
+          Id="295"
+          TopLeft="397,380" />
+        <NodeLayout
+          Size="158,42"
+          Id="428"
+          TopLeft="340,204" />
+        <NodeLayout
           Size="218,42"
           Id="376"
           TopLeft="39,25" />
-        <NodeLayout
-          Size="322,42"
-          Id="295"
-          TopLeft="267,326" />
         <EdgeLayout
           Id="459"
           TopLeft="257,47.5">
@@ -9865,36 +11157,20 @@ WHERE ForecastId = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="158,42"
-          Id="428"
-          TopLeft="340,204" />
         <EdgeLayout
-          Id="699"
-          TopLeft="419,246">
+          Id="827"
+          TopLeft="417.25,159">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9,80"
+              EndConnector="0,45"
               Start="0,0"
-              End="9,72.5">
+              End="0,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36"
-                    Point2="0,40"
-                    Point3="4,40" />
-                  <mssgle:LineSegment
-                    End="5,40" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5,40"
-                    Point2="9,40"
-                    Point3="9,44" />
-                  <mssgle:LineSegment
-                    End="9,72.5" />
+                    End="0,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9903,10 +11179,6 @@ WHERE ForecastId = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="812"
-          TopLeft="335,117" />
         <EdgeLayout
           Id="826"
           TopLeft="413.5,70">
@@ -9932,19 +11204,31 @@ WHERE ForecastId = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="827"
-          TopLeft="417.25,159">
+          Id="1282"
+          TopLeft="419,246">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45"
+              EndConnector="139,134"
               Start="0,0"
-              End="0,37.5">
+              End="139,126.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.5" />
+                    End="0,62" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62"
+                    Point2="0,66"
+                    Point3="4,66" />
+                  <mssgle:LineSegment
+                    End="135,66" />
+                  <mssgle:CubicBezierSegment
+                    Point1="135,66"
+                    Point2="139,66"
+                    Point3="139,70" />
+                  <mssgle:LineSegment
+                    End="139,126.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10036,7 +11320,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10142,7 +11428,7 @@ WHERE ForecastId = ?</property>
     design-time-name="Package\Refresh IDMap from Salesforce">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="215,42"
           Id="16"
@@ -10174,7 +11460,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10208,7 +11496,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10218,7 +11508,7 @@ WHERE ForecastId = ?</property>
     design-time-name="Package\Send Creates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="225,42"
           Id="52"
@@ -10246,25 +11536,19 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Send Creates\1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Send Updates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="227,42"
           Id="52"
@@ -10292,20 +11576,14 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Send Updates\1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Update Client Table">
     <LayoutInfo>
@@ -10526,7 +11804,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10584,7 +11864,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
