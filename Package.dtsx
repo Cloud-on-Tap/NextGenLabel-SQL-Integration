@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="169"
-  DTS:VersionGUID="{B65BC0AC-301D-4452-8198-07C52CCE83AD}">
+  DTS:VersionBuild="180"
+  DTS:VersionGUID="{EF42C40E-499B-4AAA-9834-22B97E085160}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB5J8u7h0mqZkObTSJI/+4WKITm1gtmwVIMLnSJu2zKHAAAAAAOgAAAAAIAACAAAABB7YnVwMCHNPBOEdCJnZ65x5V47JWbj+50agM3V+7LnCAAAAD64qySAsLfNCyMM96tolAjLul1HBXUFO0rtniFTfi5+EAAAABlRPFxi+86/Dxwv31HzJxnP3Q4O7+sz4fot/lndEYsZ8S9eOEjOX2rWd8Q1wgrTgxAXULBVH+Hm8hddua5860+</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA9LI8XMrvIZsfXk8Y1I7F40qa14PSV1pmcN9/LbcF7BgAAAAAOgAAAAAIAACAAAADpG+iFq4Fhgn4v/z8DOXt+dbuemCP8WL9yzN+UfT2S2yAAAAAQzNxtL0jJG2AbnWhSNkA4rDCR9L3diDTBslHQE/9/80AAAAA+CmRXQRRK8WzgTNTZd25ursDMlfWC/hG7kQyLK+YHI8glJesBrnN9IPoPxKUTfdOmrDhRwMUlFJsJZKLYgKio</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/YkSNrNw0paCRvEb8m9xla+gV+bS5kag6M10CwDqaHgAAAAAOgAAAAAIAACAAAACl5x/1Fy5KOSDhdlonOrcxi0W1EkuzXGekCeeT9mEyXlAAAACr4OSMQUU+GChjXO2xr365Tfg5rZ/7Y3TaEvdnRD+vmwqp6uh7e8z+nSPXXCn47GlYQU7P+E0bKScfDA0tZD+iCggU5q67s8YSg6In+blwBkAAAABaEJOZGkwz7s8KgbadoXNRgYu190sFEJXupTG9qckQyVF5YYheVpd4Akv8EYvNg4Rgo2/0fGvZfry4afEn63sq</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA+l7cqSvC1ICe+jzg6W9DHSmdCq1estySAJvYkM/hRsAAAAAAOgAAAAAIAACAAAADXQQytOY4h+kZP1kGhS1i9FO52iXgSIMnLGSD3Ckm4sFAAAACisbdejZ0MQL1j3w+6djwACpONbaJbOlORIsP7ub5oxOD1KMFl4OAnA4yazDykPiUiIsFFdo0WKUKjl988Xzsi2NEO8f5o2yXvztDhrScGoEAAAADTZt+bTEfz2imGXZqCOjR6Nrg759vDc8YnSbi1zj9mMgRtw0wesbS6GV7lWXO+5rpyI7TIjIVnpquRVT6v2MlQ</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1441,6 +1441,372 @@ where [refTable].[CustomerId] = ?</property>
                       cachedName="Year_String"
                       cachedDataType="wstr"
                       cachedLength="50" />
+                    <inputColumn
+                      id="2498"
+                      lineageId="1569"
+                      externalMetadataColumnId="2395"
+                      cachedName="Budget04"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2499"
+                      lineageId="1600"
+                      externalMetadataColumnId="2399"
+                      cachedName="PreviousForecast04"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2500"
+                      lineageId="1521"
+                      externalMetadataColumnId="2400"
+                      cachedName="PreviousYearInvoiced04"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2501"
+                      lineageId="1545"
+                      externalMetadataColumnId="2401"
+                      cachedName="ToShip04"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2502"
+                      lineageId="1577"
+                      externalMetadataColumnId="2403"
+                      cachedName="Budget08"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2503"
+                      lineageId="1612"
+                      externalMetadataColumnId="2407"
+                      cachedName="PreviousForecast08"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2504"
+                      lineageId="1529"
+                      externalMetadataColumnId="2408"
+                      cachedName="PreviousYearInvoiced08"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2505"
+                      lineageId="1553"
+                      externalMetadataColumnId="2409"
+                      cachedName="ToShip08"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2506"
+                      lineageId="1585"
+                      externalMetadataColumnId="2411"
+                      cachedName="Budget12"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2507"
+                      lineageId="1624"
+                      externalMetadataColumnId="2415"
+                      cachedName="PreviousForecast12"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2508"
+                      lineageId="1537"
+                      externalMetadataColumnId="2416"
+                      cachedName="PreviousYearInvoiced12"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2509"
+                      lineageId="1561"
+                      externalMetadataColumnId="2417"
+                      cachedName="ToShip12"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2510"
+                      lineageId="1565"
+                      externalMetadataColumnId="2420"
+                      cachedName="Budget02"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2511"
+                      lineageId="1594"
+                      externalMetadataColumnId="2424"
+                      cachedName="PreviousForecast02"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2512"
+                      lineageId="1517"
+                      externalMetadataColumnId="2425"
+                      cachedName="PreviousYearInvoiced02"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2513"
+                      lineageId="1541"
+                      externalMetadataColumnId="2426"
+                      cachedName="ToShip02"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2514"
+                      lineageId="1563"
+                      externalMetadataColumnId="2432"
+                      cachedName="Budget01"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2515"
+                      lineageId="1591"
+                      externalMetadataColumnId="2436"
+                      cachedName="PreviousForecast01"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2516"
+                      lineageId="1515"
+                      externalMetadataColumnId="2437"
+                      cachedName="PreviousYearInvoiced01"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2517"
+                      lineageId="1539"
+                      externalMetadataColumnId="2438"
+                      cachedName="ToShip01"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2518"
+                      lineageId="1575"
+                      externalMetadataColumnId="2440"
+                      cachedName="Budget07"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2519"
+                      lineageId="1609"
+                      externalMetadataColumnId="2444"
+                      cachedName="PreviousForecast07"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2520"
+                      lineageId="1527"
+                      externalMetadataColumnId="2445"
+                      cachedName="PreviousYearInvoiced07"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2521"
+                      lineageId="1551"
+                      externalMetadataColumnId="2446"
+                      cachedName="ToShip07"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2522"
+                      lineageId="1573"
+                      externalMetadataColumnId="2448"
+                      cachedName="Budget06"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2523"
+                      lineageId="1606"
+                      externalMetadataColumnId="2452"
+                      cachedName="PreviousForecast06"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2524"
+                      lineageId="1525"
+                      externalMetadataColumnId="2453"
+                      cachedName="PreviousYearInvoiced06"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2525"
+                      lineageId="1549"
+                      externalMetadataColumnId="2454"
+                      cachedName="ToShip06"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2526"
+                      lineageId="1567"
+                      externalMetadataColumnId="2456"
+                      cachedName="Budget03"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2527"
+                      lineageId="1597"
+                      externalMetadataColumnId="2460"
+                      cachedName="PreviousForecast03"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2528"
+                      lineageId="1519"
+                      externalMetadataColumnId="2461"
+                      cachedName="PreviousYearInvoiced03"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2529"
+                      lineageId="1543"
+                      externalMetadataColumnId="2462"
+                      cachedName="ToShip03"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2530"
+                      lineageId="1571"
+                      externalMetadataColumnId="2464"
+                      cachedName="Budget05"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2531"
+                      lineageId="1603"
+                      externalMetadataColumnId="2468"
+                      cachedName="PreviousForecast05"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2532"
+                      lineageId="1523"
+                      externalMetadataColumnId="2469"
+                      cachedName="PreviousYearInvoiced05"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2533"
+                      lineageId="1547"
+                      externalMetadataColumnId="2470"
+                      cachedName="ToShip05"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2534"
+                      lineageId="1583"
+                      externalMetadataColumnId="2472"
+                      cachedName="Budget11"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2535"
+                      lineageId="1621"
+                      externalMetadataColumnId="2476"
+                      cachedName="PreviousForecast11"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2536"
+                      lineageId="1535"
+                      externalMetadataColumnId="2477"
+                      cachedName="PreviousYearInvoiced11"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2537"
+                      lineageId="1559"
+                      externalMetadataColumnId="2478"
+                      cachedName="ToShip11"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2538"
+                      lineageId="1581"
+                      externalMetadataColumnId="2480"
+                      cachedName="Budget10"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2539"
+                      lineageId="1618"
+                      externalMetadataColumnId="2484"
+                      cachedName="PreviousForecast10"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2540"
+                      lineageId="1533"
+                      externalMetadataColumnId="2485"
+                      cachedName="PreviousYearInvoiced10"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2541"
+                      lineageId="1557"
+                      externalMetadataColumnId="2486"
+                      cachedName="ToShip10"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2542"
+                      lineageId="1579"
+                      externalMetadataColumnId="2488"
+                      cachedName="Budget09"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2543"
+                      lineageId="1615"
+                      externalMetadataColumnId="2492"
+                      cachedName="PreviousForecast09"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2544"
+                      lineageId="1531"
+                      externalMetadataColumnId="2493"
+                      cachedName="PreviousYearInvoiced09"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2545"
+                      lineageId="1555"
+                      externalMetadataColumnId="2494"
+                      cachedName="ToShip09"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      id="2615"
+                      lineageId="2612"
+                      externalMetadataColumnId="2495"
+                      cachedName="Trigger"
+                      cachedDataType="bool" />
+                    <inputColumn
+                      id="2796"
+                      lineageId="2785"
+                      externalMetadataColumnId="2491"
+                      cachedName="PreviousForecastComment09"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2797"
+                      lineageId="2788"
+                      externalMetadataColumnId="2483"
+                      cachedName="PreviousForecastComment10"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2798"
+                      lineageId="2791"
+                      externalMetadataColumnId="2475"
+                      cachedName="PreviousForecastComment11"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2799"
+                      lineageId="2773"
+                      externalMetadataColumnId="2467"
+                      cachedName="PreviousForecastComment05"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2800"
+                      lineageId="2767"
+                      externalMetadataColumnId="2459"
+                      cachedName="PreviousForecastComment03"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2801"
+                      lineageId="2776"
+                      externalMetadataColumnId="2451"
+                      cachedName="PreviousForecastComment06"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2802"
+                      lineageId="2779"
+                      externalMetadataColumnId="2443"
+                      cachedName="PreviousForecastComment07"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2803"
+                      lineageId="2761"
+                      externalMetadataColumnId="2435"
+                      cachedName="PreviousForecastComment01"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2804"
+                      lineageId="2764"
+                      externalMetadataColumnId="2423"
+                      cachedName="PreviousForecastComment02"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2805"
+                      lineageId="2794"
+                      externalMetadataColumnId="2414"
+                      cachedName="PreviousForecastComment12"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2806"
+                      lineageId="2782"
+                      externalMetadataColumnId="2405"
+                      cachedName="PreviousForecastComment08"
+                      cachedDataType="nText" />
+                    <inputColumn
+                      id="2807"
+                      lineageId="2770"
+                      externalMetadataColumnId="2398"
+                      cachedName="PreviousForecastComment04"
+                      cachedDataType="nText" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1652,6 +2018,547 @@ where [refTable].[CustomerId] = ?</property>
                       name="Name"
                       dataType="wstr"
                       length="80" />
+                    <externalMetadataColumn
+                      id="2394"
+                      name="April_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2395"
+                      name="April_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2396"
+                      name="April_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2397"
+                      name="April_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2398"
+                      name="April_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2399"
+                      name="April_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2400"
+                      name="April_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2401"
+                      name="April_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2402"
+                      name="August_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2403"
+                      name="August_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2404"
+                      name="August_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2405"
+                      name="August_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2406"
+                      name="August_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2407"
+                      name="August_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2408"
+                      name="August_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2409"
+                      name="August_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2410"
+                      name="December_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2411"
+                      name="December_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2412"
+                      name="December_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2413"
+                      name="December_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2414"
+                      name="December_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2415"
+                      name="December_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2416"
+                      name="December_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2417"
+                      name="December_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2418"
+                      name="Feb__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2419"
+                      name="February_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2420"
+                      name="February_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2421"
+                      name="February_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2422"
+                      name="February_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2423"
+                      name="February_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2424"
+                      name="February_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2425"
+                      name="February_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2426"
+                      name="February_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2427"
+                      name="Forecast__c"
+                      dataType="wstr"
+                      length="18">
+                      <properties>
+                        <property
+                          id="2428"
+                          name="RelationshipName"
+                          dataType="System.String"
+                          description="Specifies relationship name.">Forecast__r</property>
+                        <property
+                          id="2429"
+                          name="ReferenceType"
+                          dataType="System.String"
+                          description="Specifies referenced object type.">Forecast__c</property>
+                        <property
+                          id="2430"
+                          name="ExternalId"
+                          dataType="System.String"
+                          description="Specifies external id field for update. Optional."></property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      id="2431"
+                      name="January_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2432"
+                      name="January_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2433"
+                      name="January_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2434"
+                      name="January_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2435"
+                      name="January_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2436"
+                      name="January_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2437"
+                      name="January_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2438"
+                      name="January_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2439"
+                      name="July_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2440"
+                      name="July_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2441"
+                      name="July_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2442"
+                      name="July_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2443"
+                      name="July_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2444"
+                      name="July_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2445"
+                      name="July_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2446"
+                      name="July_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2447"
+                      name="June_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2448"
+                      name="June_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2449"
+                      name="June_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2450"
+                      name="June_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2451"
+                      name="June_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2452"
+                      name="June_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2453"
+                      name="June_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2454"
+                      name="June_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2455"
+                      name="March_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2456"
+                      name="March_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2457"
+                      name="March_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2458"
+                      name="March_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2459"
+                      name="March_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2460"
+                      name="March_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2461"
+                      name="March_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2462"
+                      name="March_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2463"
+                      name="May_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2464"
+                      name="May_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2465"
+                      name="May_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2466"
+                      name="May_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2467"
+                      name="May_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2468"
+                      name="May_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2469"
+                      name="May_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2470"
+                      name="May_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2471"
+                      name="November_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2472"
+                      name="November_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2473"
+                      name="November_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2474"
+                      name="November_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2475"
+                      name="November_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2476"
+                      name="November_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2477"
+                      name="November_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2478"
+                      name="November_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2479"
+                      name="October_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2480"
+                      name="October_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2481"
+                      name="October_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2482"
+                      name="October_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2483"
+                      name="October_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2484"
+                      name="October_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2485"
+                      name="October_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2486"
+                      name="October_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2487"
+                      name="September_Actual__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2488"
+                      name="September_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2489"
+                      name="September_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2490"
+                      name="September_Forecast_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2491"
+                      name="September_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2492"
+                      name="September_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2493"
+                      name="September_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2494"
+                      name="September_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2495"
+                      name="unProcessed__c"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      id="2496"
+                      name="Year2__c"
+                      dataType="wstr"
+                      length="4" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1695,936 +2602,936 @@ where [refTable].[CustomerId] = ?</property>
                       length="18"
                       dataType="wstr" />
                     <outputColumn
-                      id="1283"
+                      id="2252"
                       name="BrandId"
-                      lineageId="1283"
+                      lineageId="2252"
                       length="6"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1284"
+                          id="2253"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1481</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1285"
+                      id="2254"
                       name="Size"
-                      lineageId="1285"
+                      lineageId="2254"
                       length="20"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1286"
+                          id="2255"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1483</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1287"
+                      id="2256"
                       name="AccountId"
-                      lineageId="1287"
+                      lineageId="2256"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1288"
+                          id="2257"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">463</property>
+                          containsID="true">1485</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1289"
+                      id="2258"
                       name="Year"
-                      lineageId="1289"
+                      lineageId="2258"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1290"
+                          id="2259"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">466</property>
+                          containsID="true">1487</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1291"
+                      id="2260"
                       name="ForecastId"
-                      lineageId="1291"
+                      lineageId="2260"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1292"
+                          id="2261"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">505</property>
+                          containsID="true">1489</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1293"
+                      id="2262"
                       name="Invoiced01"
-                      lineageId="1293"
+                      lineageId="2262"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1294"
+                          id="2263"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1491</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1295"
+                      id="2264"
                       name="Invoiced02"
-                      lineageId="1295"
+                      lineageId="2264"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1296"
+                          id="2265"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1493</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1297"
+                      id="2266"
                       name="Invoiced03"
-                      lineageId="1297"
+                      lineageId="2266"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1298"
+                          id="2267"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1495</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1299"
+                      id="2268"
                       name="Invoiced04"
-                      lineageId="1299"
+                      lineageId="2268"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1300"
+                          id="2269"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1497</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1301"
+                      id="2270"
                       name="Invoiced05"
-                      lineageId="1301"
+                      lineageId="2270"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1302"
+                          id="2271"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1499</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1303"
+                      id="2272"
                       name="Invoiced06"
-                      lineageId="1303"
+                      lineageId="2272"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1304"
+                          id="2273"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1501</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1305"
+                      id="2274"
                       name="Invoiced07"
-                      lineageId="1305"
+                      lineageId="2274"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1306"
+                          id="2275"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1503</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1307"
+                      id="2276"
                       name="Invoiced08"
-                      lineageId="1307"
+                      lineageId="2276"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1308"
+                          id="2277"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1505</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1309"
+                      id="2278"
                       name="Invoiced09"
-                      lineageId="1309"
+                      lineageId="2278"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1310"
+                          id="2279"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1507</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1311"
+                      id="2280"
                       name="Invoiced10"
-                      lineageId="1311"
+                      lineageId="2280"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1312"
+                          id="2281"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1509</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1313"
+                      id="2282"
                       name="Invoiced11"
-                      lineageId="1313"
+                      lineageId="2282"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1314"
+                          id="2283"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1511</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1315"
+                      id="2284"
                       name="Invoiced12"
-                      lineageId="1315"
+                      lineageId="2284"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1316"
+                          id="2285"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1513</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1317"
+                      id="2286"
                       name="PreviousYearInvoiced01"
-                      lineageId="1317"
+                      lineageId="2286"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1318"
+                          id="2287"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">898</property>
+                          containsID="true">1515</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1319"
+                      id="2288"
                       name="PreviousYearInvoiced02"
-                      lineageId="1319"
+                      lineageId="2288"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1320"
+                          id="2289"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">901</property>
+                          containsID="true">1517</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1321"
+                      id="2290"
                       name="PreviousYearInvoiced03"
-                      lineageId="1321"
+                      lineageId="2290"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1322"
+                          id="2291"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">904</property>
+                          containsID="true">1519</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1323"
+                      id="2292"
                       name="PreviousYearInvoiced04"
-                      lineageId="1323"
+                      lineageId="2292"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1324"
+                          id="2293"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">907</property>
+                          containsID="true">1521</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1325"
+                      id="2294"
                       name="PreviousYearInvoiced05"
-                      lineageId="1325"
+                      lineageId="2294"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1326"
+                          id="2295"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">910</property>
+                          containsID="true">1523</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1327"
+                      id="2296"
                       name="PreviousYearInvoiced06"
-                      lineageId="1327"
+                      lineageId="2296"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1328"
+                          id="2297"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">913</property>
+                          containsID="true">1525</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1329"
+                      id="2298"
                       name="PreviousYearInvoiced07"
-                      lineageId="1329"
+                      lineageId="2298"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1330"
+                          id="2299"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">916</property>
+                          containsID="true">1527</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1331"
+                      id="2300"
                       name="PreviousYearInvoiced08"
-                      lineageId="1331"
+                      lineageId="2300"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1332"
+                          id="2301"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">919</property>
+                          containsID="true">1529</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1333"
+                      id="2302"
                       name="PreviousYearInvoiced09"
-                      lineageId="1333"
+                      lineageId="2302"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1334"
+                          id="2303"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">922</property>
+                          containsID="true">1531</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1335"
+                      id="2304"
                       name="PreviousYearInvoiced10"
-                      lineageId="1335"
+                      lineageId="2304"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1336"
+                          id="2305"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">925</property>
+                          containsID="true">1533</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1337"
+                      id="2306"
                       name="PreviousYearInvoiced11"
-                      lineageId="1337"
+                      lineageId="2306"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1338"
+                          id="2307"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">928</property>
+                          containsID="true">1535</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1339"
+                      id="2308"
                       name="PreviousYearInvoiced12"
-                      lineageId="1339"
+                      lineageId="2308"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1340"
+                          id="2309"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">931</property>
+                          containsID="true">1537</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1341"
+                      id="2310"
                       name="ToShip01"
-                      lineageId="1341"
+                      lineageId="2310"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1342"
+                          id="2311"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">934</property>
+                          containsID="true">1539</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1343"
+                      id="2312"
                       name="ToShip02"
-                      lineageId="1343"
+                      lineageId="2312"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1344"
+                          id="2313"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">937</property>
+                          containsID="true">1541</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1345"
+                      id="2314"
                       name="ToShip03"
-                      lineageId="1345"
+                      lineageId="2314"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1346"
+                          id="2315"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">940</property>
+                          containsID="true">1543</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1347"
+                      id="2316"
                       name="ToShip04"
-                      lineageId="1347"
+                      lineageId="2316"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1348"
+                          id="2317"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">943</property>
+                          containsID="true">1545</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1349"
+                      id="2318"
                       name="ToShip05"
-                      lineageId="1349"
+                      lineageId="2318"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1350"
+                          id="2319"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">946</property>
+                          containsID="true">1547</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1351"
+                      id="2320"
                       name="ToShip06"
-                      lineageId="1351"
+                      lineageId="2320"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1352"
+                          id="2321"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">949</property>
+                          containsID="true">1549</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1353"
+                      id="2322"
                       name="ToShip07"
-                      lineageId="1353"
+                      lineageId="2322"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1354"
+                          id="2323"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">952</property>
+                          containsID="true">1551</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1355"
+                      id="2324"
                       name="ToShip08"
-                      lineageId="1355"
+                      lineageId="2324"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1356"
+                          id="2325"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">955</property>
+                          containsID="true">1553</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1357"
+                      id="2326"
                       name="ToShip09"
-                      lineageId="1357"
+                      lineageId="2326"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1358"
+                          id="2327"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">958</property>
+                          containsID="true">1555</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1359"
+                      id="2328"
                       name="ToShip10"
-                      lineageId="1359"
+                      lineageId="2328"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1360"
+                          id="2329"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">961</property>
+                          containsID="true">1557</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1361"
+                      id="2330"
                       name="ToShip11"
-                      lineageId="1361"
+                      lineageId="2330"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1362"
+                          id="2331"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">964</property>
+                          containsID="true">1559</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1363"
+                      id="2332"
                       name="ToShip12"
-                      lineageId="1363"
+                      lineageId="2332"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1364"
+                          id="2333"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">967</property>
+                          containsID="true">1561</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1365"
+                      id="2334"
                       name="Budget01"
-                      lineageId="1365"
+                      lineageId="2334"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1366"
+                          id="2335"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">970</property>
+                          containsID="true">1563</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1367"
+                      id="2336"
                       name="Budget02"
-                      lineageId="1367"
+                      lineageId="2336"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1368"
+                          id="2337"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">973</property>
+                          containsID="true">1565</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1369"
+                      id="2338"
                       name="Budget03"
-                      lineageId="1369"
+                      lineageId="2338"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1370"
+                          id="2339"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">976</property>
+                          containsID="true">1567</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1371"
+                      id="2340"
                       name="Budget04"
-                      lineageId="1371"
+                      lineageId="2340"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1372"
+                          id="2341"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">979</property>
+                          containsID="true">1569</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1373"
+                      id="2342"
                       name="Budget05"
-                      lineageId="1373"
+                      lineageId="2342"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1374"
+                          id="2343"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">982</property>
+                          containsID="true">1571</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1375"
+                      id="2344"
                       name="Budget06"
-                      lineageId="1375"
+                      lineageId="2344"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1376"
+                          id="2345"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">985</property>
+                          containsID="true">1573</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1377"
+                      id="2346"
                       name="Budget07"
-                      lineageId="1377"
+                      lineageId="2346"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1378"
+                          id="2347"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">988</property>
+                          containsID="true">1575</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1379"
+                      id="2348"
                       name="Budget08"
-                      lineageId="1379"
+                      lineageId="2348"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1380"
+                          id="2349"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">991</property>
+                          containsID="true">1577</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1381"
+                      id="2350"
                       name="Budget09"
-                      lineageId="1381"
+                      lineageId="2350"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1382"
+                          id="2351"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">994</property>
+                          containsID="true">1579</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1383"
+                      id="2352"
                       name="Budget10"
-                      lineageId="1383"
+                      lineageId="2352"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1384"
+                          id="2353"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">997</property>
+                          containsID="true">1581</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1385"
+                      id="2354"
                       name="Budget11"
-                      lineageId="1385"
+                      lineageId="2354"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1386"
+                          id="2355"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">1000</property>
+                          containsID="true">1583</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1387"
+                      id="2356"
                       name="Budget12"
-                      lineageId="1387"
+                      lineageId="2356"
                       dataType="i4">
                       <properties>
                         <property
-                          id="1388"
+                          id="2357"
                           name="InputColumnId"
                           dataType="System.Int32"
-                          containsID="true">1003</property>
+                          containsID="true">1585</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1389"
+                      id="2358"
+                      name="PreviousForecast01"
+                      lineageId="2358"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2359"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1591</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2360"
+                      name="PreviousForecast02"
+                      lineageId="2360"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2361"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1594</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2362"
+                      name="PreviousForecast03"
+                      lineageId="2362"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2363"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1597</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2364"
+                      name="PreviousForecast04"
+                      lineageId="2364"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2365"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1600</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2366"
+                      name="PreviousForecast05"
+                      lineageId="2366"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2367"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1603</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2368"
+                      name="PreviousForecast06"
+                      lineageId="2368"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2369"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1606</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2370"
+                      name="PreviousForecast07"
+                      lineageId="2370"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2371"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1609</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2372"
+                      name="PreviousForecast08"
+                      lineageId="2372"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2373"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1612</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2374"
+                      name="PreviousForecast09"
+                      lineageId="2374"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2375"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1615</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2376"
+                      name="PreviousForecast10"
+                      lineageId="2376"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2377"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1618</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2378"
+                      name="PreviousForecast11"
+                      lineageId="2378"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2379"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1621</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2380"
+                      name="PreviousForecast12"
+                      lineageId="2380"
+                      dataType="i4">
+                      <properties>
+                        <property
+                          id="2381"
+                          name="InputColumnId"
+                          dataType="System.Int32"
+                          containsID="true">1624</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2382"
                       name="CermCustomerRecordID"
-                      lineageId="1389"
+                      lineageId="2382"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1390"
+                          id="2383"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">422</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1391"
+                      id="2384"
                       name="AccountIdFromClientTable"
-                      lineageId="1391"
+                      lineageId="2384"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1392"
+                          id="2385"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">513</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1393"
+                      id="2386"
                       name="Size_converted"
-                      lineageId="1393"
+                      lineageId="2386"
                       length="50"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1394"
+                          id="2387"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">817</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1395"
+                      id="2388"
                       name="Year_String"
-                      lineageId="1395"
+                      lineageId="2388"
                       length="50"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1396"
+                          id="2389"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">1211</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1397"
+                      id="2390"
                       name="ConcatenatedPK"
-                      lineageId="1397"
+                      lineageId="2390"
                       length="152"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1398"
+                          id="2391"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">435</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      id="1399"
+                      id="2392"
                       name="RecTypeId"
-                      lineageId="1399"
+                      lineageId="2392"
                       length="18"
                       dataType="wstr">
                       <properties>
                         <property
-                          id="1400"
+                          id="2393"
                           name="InputColumnId"
                           dataType="System.Int32"
                           containsID="true">438</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1401"
-                      name="Month01"
-                      lineageId="1401"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1402"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1491</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1403"
-                      name="Month10"
-                      lineageId="1403"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1404"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1509</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1405"
-                      name="Month11"
-                      lineageId="1405"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1406"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1511</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1407"
-                      name="Month12"
-                      lineageId="1407"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1408"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1513</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1409"
-                      name="Month02"
-                      lineageId="1409"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1410"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1493</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1411"
-                      name="Month03"
-                      lineageId="1411"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1412"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1495</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1413"
-                      name="Month04"
-                      lineageId="1413"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1414"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1497</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1415"
-                      name="Month05"
-                      lineageId="1415"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1416"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1499</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1417"
-                      name="Month06"
-                      lineageId="1417"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1418"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1501</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1419"
-                      name="Month07"
-                      lineageId="1419"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1420"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1503</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1421"
-                      name="Month08"
-                      lineageId="1421"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1422"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1505</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      id="1423"
-                      name="Month09"
-                      lineageId="1423"
-                      dataType="i4">
-                      <properties>
-                        <property
-                          id="1424"
-                          name="InputColumnId"
-                          dataType="System.Int32"
-                          containsID="true">1507</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3184,6 +4091,222 @@ where [refTable].[CustomerId] = ?</property>
                       errorRowDisposition="FailComponent"
                       truncationRowDisposition="FailComponent"
                       externalMetadataColumnId="1002" />
+                    <outputColumn
+                      id="1591"
+                      name="PreviousForecast01"
+                      lineageId="1591"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1590" />
+                    <outputColumn
+                      id="1594"
+                      name="PreviousForecast02"
+                      lineageId="1594"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1593" />
+                    <outputColumn
+                      id="1597"
+                      name="PreviousForecast03"
+                      lineageId="1597"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1596" />
+                    <outputColumn
+                      id="1600"
+                      name="PreviousForecast04"
+                      lineageId="1600"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1599" />
+                    <outputColumn
+                      id="1603"
+                      name="PreviousForecast05"
+                      lineageId="1603"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1602" />
+                    <outputColumn
+                      id="1606"
+                      name="PreviousForecast06"
+                      lineageId="1606"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1605" />
+                    <outputColumn
+                      id="1609"
+                      name="PreviousForecast07"
+                      lineageId="1609"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1608" />
+                    <outputColumn
+                      id="1612"
+                      name="PreviousForecast08"
+                      lineageId="1612"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1611" />
+                    <outputColumn
+                      id="1615"
+                      name="PreviousForecast09"
+                      lineageId="1615"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1614" />
+                    <outputColumn
+                      id="1618"
+                      name="PreviousForecast10"
+                      lineageId="1618"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1617" />
+                    <outputColumn
+                      id="1621"
+                      name="PreviousForecast11"
+                      lineageId="1621"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1620" />
+                    <outputColumn
+                      id="1624"
+                      name="PreviousForecast12"
+                      lineageId="1624"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="1623" />
+                    <outputColumn
+                      id="2761"
+                      name="PreviousForecastComment01"
+                      lineageId="2761"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2760" />
+                    <outputColumn
+                      id="2764"
+                      name="PreviousForecastComment02"
+                      lineageId="2764"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2763" />
+                    <outputColumn
+                      id="2767"
+                      name="PreviousForecastComment03"
+                      lineageId="2767"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2766" />
+                    <outputColumn
+                      id="2770"
+                      name="PreviousForecastComment04"
+                      lineageId="2770"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2769" />
+                    <outputColumn
+                      id="2773"
+                      name="PreviousForecastComment05"
+                      lineageId="2773"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2772" />
+                    <outputColumn
+                      id="2776"
+                      name="PreviousForecastComment06"
+                      lineageId="2776"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2775" />
+                    <outputColumn
+                      id="2779"
+                      name="PreviousForecastComment07"
+                      lineageId="2779"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2778" />
+                    <outputColumn
+                      id="2782"
+                      name="PreviousForecastComment08"
+                      lineageId="2782"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2781" />
+                    <outputColumn
+                      id="2785"
+                      name="PreviousForecastComment09"
+                      lineageId="2785"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2784" />
+                    <outputColumn
+                      id="2788"
+                      name="PreviousForecastComment10"
+                      lineageId="2788"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2787" />
+                    <outputColumn
+                      id="2791"
+                      name="PreviousForecastComment11"
+                      lineageId="2791"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2790" />
+                    <outputColumn
+                      id="2794"
+                      name="PreviousForecastComment12"
+                      lineageId="2794"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="2793" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3403,6 +4526,102 @@ where [refTable].[CustomerId] = ?</property>
                       id="1002"
                       name="Budget12"
                       dataType="i4" />
+                    <externalMetadataColumn
+                      id="1590"
+                      name="PreviousForecast01"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1593"
+                      name="PreviousForecast02"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1596"
+                      name="PreviousForecast03"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1599"
+                      name="PreviousForecast04"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1602"
+                      name="PreviousForecast05"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1605"
+                      name="PreviousForecast06"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1608"
+                      name="PreviousForecast07"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1611"
+                      name="PreviousForecast08"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1614"
+                      name="PreviousForecast09"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1617"
+                      name="PreviousForecast10"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1620"
+                      name="PreviousForecast11"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="1623"
+                      name="PreviousForecast12"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      id="2760"
+                      name="PreviousForecastComment01"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2763"
+                      name="PreviousForecastComment02"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2766"
+                      name="PreviousForecastComment03"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2769"
+                      name="PreviousForecastComment04"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2772"
+                      name="PreviousForecastComment05"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2775"
+                      name="PreviousForecastComment06"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2778"
+                      name="PreviousForecastComment07"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2781"
+                      name="PreviousForecastComment08"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2784"
+                      name="PreviousForecastComment09"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2787"
+                      name="PreviousForecastComment10"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2790"
+                      name="PreviousForecastComment11"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2793"
+                      name="PreviousForecastComment12"
+                      dataType="nText" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3676,6 +4895,126 @@ where [refTable].[CustomerId] = ?</property>
                       name="Budget09"
                       lineageId="1580"
                       dataType="i4" />
+                    <outputColumn
+                      id="1592"
+                      name="PreviousForecast01"
+                      lineageId="1592"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1595"
+                      name="PreviousForecast02"
+                      lineageId="1595"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1598"
+                      name="PreviousForecast03"
+                      lineageId="1598"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1601"
+                      name="PreviousForecast04"
+                      lineageId="1601"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1604"
+                      name="PreviousForecast05"
+                      lineageId="1604"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1607"
+                      name="PreviousForecast06"
+                      lineageId="1607"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1610"
+                      name="PreviousForecast07"
+                      lineageId="1610"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1613"
+                      name="PreviousForecast08"
+                      lineageId="1613"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1616"
+                      name="PreviousForecast09"
+                      lineageId="1616"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1619"
+                      name="PreviousForecast10"
+                      lineageId="1619"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1622"
+                      name="PreviousForecast11"
+                      lineageId="1622"
+                      dataType="i4" />
+                    <outputColumn
+                      id="1625"
+                      name="PreviousForecast12"
+                      lineageId="1625"
+                      dataType="i4" />
+                    <outputColumn
+                      id="2762"
+                      name="PreviousForecastComment01"
+                      lineageId="2762"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2765"
+                      name="PreviousForecastComment02"
+                      lineageId="2765"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2768"
+                      name="PreviousForecastComment03"
+                      lineageId="2768"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2771"
+                      name="PreviousForecastComment04"
+                      lineageId="2771"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2774"
+                      name="PreviousForecastComment05"
+                      lineageId="2774"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2777"
+                      name="PreviousForecastComment06"
+                      lineageId="2777"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2780"
+                      name="PreviousForecastComment07"
+                      lineageId="2780"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2783"
+                      name="PreviousForecastComment08"
+                      lineageId="2783"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2786"
+                      name="PreviousForecastComment09"
+                      lineageId="2786"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2789"
+                      name="PreviousForecastComment10"
+                      lineageId="2789"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2792"
+                      name="PreviousForecastComment11"
+                      lineageId="2792"
+                      dataType="nText" />
+                    <outputColumn
+                      id="2795"
+                      name="PreviousForecastComment12"
+                      lineageId="2795"
+                      dataType="nText" />
                     <outputColumn
                       id="1582"
                       name="Budget10"
@@ -3977,6 +5316,30 @@ where [refTable].[AccountId] = ?</property>
                           description="Derived Column Friendly Expression"
                           containsID="true"
                           expressionType="Notify">"012cx000001eroDAAQ"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      id="2612"
+                      name="Trigger"
+                      lineageId="2612"
+                      dataType="bool"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          id="2613"
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true"> TRUE </property>
+                        <property
+                          id="2614"
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify"> TRUE </property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -6027,7 +7390,7 @@ where [refTable].[DatabaseID] = ?</property>
                   name="AccessMode"
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">2</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   id="10"
                   name="ParameterMapping"
@@ -6893,7 +8256,7 @@ where [refTable].[DatabaseID] = ?</property>
                   name="AccessMode"
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
-                  typeConverter="AccessMode">2</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   id="10"
                   name="ParameterMapping"
@@ -8893,6 +10256,483 @@ WHERE        (CustomerId = ?)</property>
                       length="255"
                       dataType="wstr"
                       externalMetadataColumnId="2566" />
+                    <outputColumn
+                      id="2805"
+                      name="April_Budget__c"
+                      lineageId="2805"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2804" />
+                    <outputColumn
+                      id="2807"
+                      name="April_PM_Comments__c"
+                      lineageId="2807"
+                      dataType="nText"
+                      externalMetadataColumnId="2806" />
+                    <outputColumn
+                      id="2809"
+                      name="April_PM_Forecast__c"
+                      lineageId="2809"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2808" />
+                    <outputColumn
+                      id="2811"
+                      name="April_PY_Actual__c"
+                      lineageId="2811"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2810" />
+                    <outputColumn
+                      id="2813"
+                      name="April_To_Ship__c"
+                      lineageId="2813"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2812" />
+                    <outputColumn
+                      id="2815"
+                      name="August_Budget__c"
+                      lineageId="2815"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2814" />
+                    <outputColumn
+                      id="2817"
+                      name="August_PM_Comments__c"
+                      lineageId="2817"
+                      dataType="nText"
+                      externalMetadataColumnId="2816" />
+                    <outputColumn
+                      id="2819"
+                      name="August_PM_Forecast__c"
+                      lineageId="2819"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2818" />
+                    <outputColumn
+                      id="2821"
+                      name="August_PY_Actual__c"
+                      lineageId="2821"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2820" />
+                    <outputColumn
+                      id="2823"
+                      name="August_To_Ship__c"
+                      lineageId="2823"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2822" />
+                    <outputColumn
+                      id="2825"
+                      name="December_Budget__c"
+                      lineageId="2825"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2824" />
+                    <outputColumn
+                      id="2827"
+                      name="December_PM_Comments__c"
+                      lineageId="2827"
+                      dataType="nText"
+                      externalMetadataColumnId="2826" />
+                    <outputColumn
+                      id="2829"
+                      name="December_PM_Forecast__c"
+                      lineageId="2829"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2828" />
+                    <outputColumn
+                      id="2831"
+                      name="December_PY_Actual__c"
+                      lineageId="2831"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2830" />
+                    <outputColumn
+                      id="2833"
+                      name="December_To_Ship__c"
+                      lineageId="2833"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2832" />
+                    <outputColumn
+                      id="2835"
+                      name="February_Budget__c"
+                      lineageId="2835"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2834" />
+                    <outputColumn
+                      id="2837"
+                      name="February_Forecast__c"
+                      lineageId="2837"
+                      precision="18"
+                      dataType="numeric"
+                      externalMetadataColumnId="2836" />
+                    <outputColumn
+                      id="2839"
+                      name="February_PM_Comments__c"
+                      lineageId="2839"
+                      dataType="nText"
+                      externalMetadataColumnId="2838" />
+                    <outputColumn
+                      id="2841"
+                      name="February_PM_Forecast__c"
+                      lineageId="2841"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2840" />
+                    <outputColumn
+                      id="2843"
+                      name="February_PY_Actual__c"
+                      lineageId="2843"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2842" />
+                    <outputColumn
+                      id="2845"
+                      name="February_To_Ship__c"
+                      lineageId="2845"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2844" />
+                    <outputColumn
+                      id="2847"
+                      name="January_Budget__c"
+                      lineageId="2847"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2846" />
+                    <outputColumn
+                      id="2849"
+                      name="January_PM_Comments__c"
+                      lineageId="2849"
+                      dataType="nText"
+                      externalMetadataColumnId="2848" />
+                    <outputColumn
+                      id="2851"
+                      name="January_PM_Forecast__c"
+                      lineageId="2851"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2850" />
+                    <outputColumn
+                      id="2853"
+                      name="January_PY_Actual__c"
+                      lineageId="2853"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2852" />
+                    <outputColumn
+                      id="2855"
+                      name="January_To_Ship__c"
+                      lineageId="2855"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2854" />
+                    <outputColumn
+                      id="2857"
+                      name="July_Budget__c"
+                      lineageId="2857"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2856" />
+                    <outputColumn
+                      id="2859"
+                      name="July_PM_Comments__c"
+                      lineageId="2859"
+                      dataType="nText"
+                      externalMetadataColumnId="2858" />
+                    <outputColumn
+                      id="2861"
+                      name="July_PM_Forecast__c"
+                      lineageId="2861"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2860" />
+                    <outputColumn
+                      id="2863"
+                      name="July_PY_Actual__c"
+                      lineageId="2863"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2862" />
+                    <outputColumn
+                      id="2865"
+                      name="July_To_Ship__c"
+                      lineageId="2865"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2864" />
+                    <outputColumn
+                      id="2867"
+                      name="June_Budget__c"
+                      lineageId="2867"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2866" />
+                    <outputColumn
+                      id="2869"
+                      name="June_PM_Comments__c"
+                      lineageId="2869"
+                      dataType="nText"
+                      externalMetadataColumnId="2868" />
+                    <outputColumn
+                      id="2871"
+                      name="June_PM_Forecast__c"
+                      lineageId="2871"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2870" />
+                    <outputColumn
+                      id="2873"
+                      name="June_PY_Actual__c"
+                      lineageId="2873"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2872" />
+                    <outputColumn
+                      id="2875"
+                      name="June_To_Ship__c"
+                      lineageId="2875"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2874" />
+                    <outputColumn
+                      id="2877"
+                      name="March_Budget__c"
+                      lineageId="2877"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2876" />
+                    <outputColumn
+                      id="2879"
+                      name="March_PM_Comments__c"
+                      lineageId="2879"
+                      dataType="nText"
+                      externalMetadataColumnId="2878" />
+                    <outputColumn
+                      id="2881"
+                      name="March_PM_Forecast__c"
+                      lineageId="2881"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2880" />
+                    <outputColumn
+                      id="2883"
+                      name="March_PY_Actual__c"
+                      lineageId="2883"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2882" />
+                    <outputColumn
+                      id="2885"
+                      name="March_To_Ship__c"
+                      lineageId="2885"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2884" />
+                    <outputColumn
+                      id="2887"
+                      name="May_Budget__c"
+                      lineageId="2887"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2886" />
+                    <outputColumn
+                      id="2889"
+                      name="May_PM_Comments__c"
+                      lineageId="2889"
+                      dataType="nText"
+                      externalMetadataColumnId="2888" />
+                    <outputColumn
+                      id="2891"
+                      name="May_PM_Forecast__c"
+                      lineageId="2891"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2890" />
+                    <outputColumn
+                      id="2893"
+                      name="May_PY_Actual__c"
+                      lineageId="2893"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2892" />
+                    <outputColumn
+                      id="2895"
+                      name="May_To_Ship__c"
+                      lineageId="2895"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2894" />
+                    <outputColumn
+                      id="2897"
+                      name="November_Budget__c"
+                      lineageId="2897"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2896" />
+                    <outputColumn
+                      id="2899"
+                      name="November_PM_Comments__c"
+                      lineageId="2899"
+                      dataType="nText"
+                      externalMetadataColumnId="2898" />
+                    <outputColumn
+                      id="2901"
+                      name="November_PM_Forecast__c"
+                      lineageId="2901"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2900" />
+                    <outputColumn
+                      id="2903"
+                      name="November_PY_Actual__c"
+                      lineageId="2903"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2902" />
+                    <outputColumn
+                      id="2905"
+                      name="November_To_Ship__c"
+                      lineageId="2905"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2904" />
+                    <outputColumn
+                      id="2907"
+                      name="October_Budget__c"
+                      lineageId="2907"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2906" />
+                    <outputColumn
+                      id="2909"
+                      name="October_PM_Comments__c"
+                      lineageId="2909"
+                      dataType="nText"
+                      externalMetadataColumnId="2908" />
+                    <outputColumn
+                      id="2911"
+                      name="October_PM_Forecast__c"
+                      lineageId="2911"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2910" />
+                    <outputColumn
+                      id="2913"
+                      name="October_PY_Actual__c"
+                      lineageId="2913"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2912" />
+                    <outputColumn
+                      id="2915"
+                      name="October_To_Ship__c"
+                      lineageId="2915"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2914" />
+                    <outputColumn
+                      id="2917"
+                      name="September_Budget__c"
+                      lineageId="2917"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2916" />
+                    <outputColumn
+                      id="2919"
+                      name="September_PM_Comments__c"
+                      lineageId="2919"
+                      dataType="nText"
+                      externalMetadataColumnId="2918" />
+                    <outputColumn
+                      id="2921"
+                      name="September_PM_Forecast__c"
+                      lineageId="2921"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2920" />
+                    <outputColumn
+                      id="2923"
+                      name="September_PY_Actual__c"
+                      lineageId="2923"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2922" />
+                    <outputColumn
+                      id="2925"
+                      name="September_To_Ship__c"
+                      lineageId="2925"
+                      precision="16"
+                      scale="2"
+                      dataType="numeric"
+                      externalMetadataColumnId="2924" />
+                    <outputColumn
+                      id="2927"
+                      name="Year2__c"
+                      lineageId="2927"
+                      length="4"
+                      dataType="wstr"
+                      externalMetadataColumnId="2926" />
+                    <outputColumn
+                      id="2929"
+                      name="Year2Formula__c"
+                      lineageId="2929"
+                      length="1300"
+                      dataType="wstr"
+                      externalMetadataColumnId="2928" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8936,11 +10776,6 @@ WHERE        (CustomerId = ?)</property>
                       id="42"
                       name="August_Forecast_Comments__c"
                       dataType="nText" />
-                    <externalMetadataColumn
-                      id="44"
-                      name="Budget__c"
-                      dataType="wstr"
-                      length="18" />
                     <externalMetadataColumn
                       id="64"
                       name="CreatedById"
@@ -9225,6 +11060,357 @@ WHERE        (CustomerId = ?)</property>
                       name="Year__c"
                       dataType="wstr"
                       length="255" />
+                    <externalMetadataColumn
+                      id="2804"
+                      name="April_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2806"
+                      name="April_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2808"
+                      name="April_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2810"
+                      name="April_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2812"
+                      name="April_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2814"
+                      name="August_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2816"
+                      name="August_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2818"
+                      name="August_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2820"
+                      name="August_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2822"
+                      name="August_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2824"
+                      name="December_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2826"
+                      name="December_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2828"
+                      name="December_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2830"
+                      name="December_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2832"
+                      name="December_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2834"
+                      name="February_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2836"
+                      name="February_Forecast__c"
+                      dataType="numeric"
+                      precision="18" />
+                    <externalMetadataColumn
+                      id="2838"
+                      name="February_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2840"
+                      name="February_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2842"
+                      name="February_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2844"
+                      name="February_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2846"
+                      name="January_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2848"
+                      name="January_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2850"
+                      name="January_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2852"
+                      name="January_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2854"
+                      name="January_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2856"
+                      name="July_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2858"
+                      name="July_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2860"
+                      name="July_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2862"
+                      name="July_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2864"
+                      name="July_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2866"
+                      name="June_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2868"
+                      name="June_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2870"
+                      name="June_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2872"
+                      name="June_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2874"
+                      name="June_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2876"
+                      name="March_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2878"
+                      name="March_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2880"
+                      name="March_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2882"
+                      name="March_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2884"
+                      name="March_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2886"
+                      name="May_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2888"
+                      name="May_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2890"
+                      name="May_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2892"
+                      name="May_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2894"
+                      name="May_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2896"
+                      name="November_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2898"
+                      name="November_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2900"
+                      name="November_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2902"
+                      name="November_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2904"
+                      name="November_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2906"
+                      name="October_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2908"
+                      name="October_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2910"
+                      name="October_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2912"
+                      name="October_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2914"
+                      name="October_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2916"
+                      name="September_Budget__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2918"
+                      name="September_PM_Comments__c"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      id="2920"
+                      name="September_PM_Forecast__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2922"
+                      name="September_PY_Actual__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2924"
+                      name="September_To_Ship__c"
+                      dataType="numeric"
+                      precision="16"
+                      scale="2" />
+                    <externalMetadataColumn
+                      id="2926"
+                      name="Year2__c"
+                      dataType="wstr"
+                      length="4" />
+                    <externalMetadataColumn
+                      id="2928"
+                      name="Year2Formula__c"
+                      dataType="wstr"
+                      length="1300" />
                   </externalMetadataColumns>
                 </output>
               </outputs>
@@ -10763,7 +12949,7 @@ WHERE ForecastId = ?</property>
         <NodeLayout
           Size="191,42"
           Id="Package\Update Forecast Table"
-          TopLeft="804,327" />
+          TopLeft="803,326" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="370,148">
@@ -10892,26 +13078,26 @@ WHERE ForecastId = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-35.5,57"
+              EndConnector="-36.5,56"
               Start="0,0"
-              End="-35.5,49.5">
+              End="-36.5,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5" />
+                    End="0,24" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.5"
-                    Point2="0,28.5"
-                    Point3="-4,28.5" />
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="-4,28" />
                   <mssgle:LineSegment
-                    End="-31.5,28.5" />
+                    End="-32.5,28" />
                   <mssgle:CubicBezierSegment
-                    Point1="-31.5,28.5"
-                    Point2="-35.5,28.5"
-                    Point3="-35.5,32.5" />
+                    Point1="-32.5,28"
+                    Point2="-36.5,28"
+                    Point3="-36.5,32" />
                   <mssgle:LineSegment
-                    End="-35.5,49.5" />
+                    End="-36.5,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10922,30 +13108,30 @@ WHERE ForecastId = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="899.5,369">
+          TopLeft="898.5,368">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="39,69"
+              EndConnector="40,70"
               Start="0,0"
-              End="39,61.5">
+              End="40,62.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
+                    End="0,31" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.5"
-                    Point2="0,34.5"
-                    Point3="4,34.5" />
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="4,35" />
                   <mssgle:LineSegment
-                    End="35,34.5" />
+                    End="36,35" />
                   <mssgle:CubicBezierSegment
-                    Point1="35,34.5"
-                    Point2="39,34.5"
-                    Point3="39,38.5" />
+                    Point1="36,35"
+                    Point2="40,35"
+                    Point3="40,39" />
                   <mssgle:LineSegment
-                    End="39,61.5" />
+                    End="40,62.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11130,7 +13316,7 @@ WHERE ForecastId = ?</property>
         <NodeLayout
           Size="158,42"
           Id="428"
-          TopLeft="340,204" />
+          TopLeft="340,205" />
         <NodeLayout
           Size="218,42"
           Id="376"
@@ -11158,19 +13344,53 @@ WHERE ForecastId = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="1282"
+          TopLeft="419,247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="139,133"
+              Start="0,0"
+              End="139,125.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.5"
+                    Point2="0,66.5"
+                    Point3="4,66.5" />
+                  <mssgle:LineSegment
+                    End="135,66.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="135,66.5"
+                    Point2="139,66.5"
+                    Point3="139,70.5" />
+                  <mssgle:LineSegment
+                    End="139,125.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="827"
           TopLeft="417.25,159">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45"
+              EndConnector="0,46"
               Start="0,0"
-              End="0,37.5">
+              End="0,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.5" />
+                    End="0,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11203,40 +13423,6 @@ WHERE ForecastId = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="1282"
-          TopLeft="419,246">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="139,134"
-              Start="0,0"
-              End="139,126.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,62"
-                    Point2="0,66"
-                    Point3="4,66" />
-                  <mssgle:LineSegment
-                    End="135,66" />
-                  <mssgle:CubicBezierSegment
-                    Point1="135,66"
-                    Point2="139,66"
-                    Point3="139,70" />
-                  <mssgle:LineSegment
-                    End="139,126.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -11250,29 +13436,6 @@ WHERE ForecastId = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Invoice Push To Salesforce\403">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Client]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -11320,9 +13483,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11428,7 +13589,7 @@ WHERE ForecastId = ?</property>
     design-time-name="Package\Refresh IDMap from Salesforce">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="215,42"
           Id="16"
@@ -11460,9 +13621,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11496,9 +13655,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11508,7 +13665,7 @@ WHERE ForecastId = ?</property>
     design-time-name="Package\Send Creates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="225,42"
           Id="52"
@@ -11536,19 +13693,30 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Send Creates\1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Send Updates">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="227,42"
           Id="52"
@@ -11576,14 +13744,25 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Send Updates\1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Update Client Table">
     <LayoutInfo>
@@ -11815,9 +13994,9 @@ WHERE ForecastId = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-99.3333333333333,136"
+              EndConnector="-97.3333333333333,136"
               Start="0,0"
-              End="-99.3333333333333,128.5">
+              End="-97.3333333333333,128.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -11828,20 +14007,20 @@ WHERE ForecastId = ?</property>
                     Point2="0,55.2129514321295"
                     Point3="-4,55.2129514321295" />
                   <mssgle:LineSegment
-                    End="-95.3333333333333,55.2129514321295" />
+                    End="-93.3333333333333,55.2129514321295" />
                   <mssgle:CubicBezierSegment
-                    Point1="-95.3333333333333,55.2129514321295"
-                    Point2="-99.3333333333333,55.2129514321295"
-                    Point3="-99.3333333333333,59.2129514321295" />
+                    Point1="-93.3333333333333,55.2129514321295"
+                    Point2="-97.3333333333333,55.2129514321295"
+                    Point3="-97.3333333333333,59.2129514321295" />
                   <mssgle:LineSegment
-                    End="-99.3333333333333,128.5" />
+                    End="-97.3333333333333,128.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-120.280572916667,60.2129514321295,141.2278125,11.658203125"
+              BoundingBox="-119.280572916667,60.2129514321295,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
