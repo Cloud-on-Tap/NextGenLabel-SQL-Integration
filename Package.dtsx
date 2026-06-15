@@ -9,10 +9,12 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="17.0.1010.2"
   DTS:LocaleID="1033"
+  DTS:MaxErrorCount="25"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="202"
-  DTS:VersionGUID="{33C59216-EAA0-4D77-B14B-6C7B22BDBC8C}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="216"
+  DTS:VersionGUID="{71388CE9-576F-4C80-91AB-D7DE18DFE793}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,10 +28,16 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=192.168.0.18;User ID=SalesForceAdmin;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{7511E214-CB1F-4426-A00C-44F247A0E867}192.168.0.18.SalesForceAdmin;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAx5x8IEVRRDmYqk2SbSHEfDv97M5EhWs5EPBXHKzk+rAAAAAAOgAAAAAIAACAAAADc7/nE4wDInr401XG3lz8F4JvOY3xPmKntnt8Cxoc9FSAAAAAUz0mYB0zvXegOuXq6mrPLD6JB5HWgMlOR/aQoRNi5NkAAAABWPBFuC8cDFHaF1qBqk0TPmTyEjOC2WEleh88mFtdRwYCQIuX+zsO4jq593NMVjPYrcsmWKmc2WEQb4/W6ku11</DTS:Password>
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="5WK+QqIH2jw="
+            IV="Oax3f6wdjs7chnJGp0jRjw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>Oax3f6wdjs7chnJGp0jRj1G4335ygwCen3C0v7C/IEIzk3aF9F42UpDmgWIXlx4kpbVlHVqXnqK96DTtQJ/mfkYOuGL/SWfdavh0QJvO8NmRSd8cjTyVLjyHqD98VAhY2a5mKOCT47wJYIcU4ywtIUSBZTNa1i2V/rMh7Oem9T4Rcr4gPVc61E5fzWa6Itbv</CipherValue>
+            </CipherData>
+          </EncryptedData>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,9 +50,16 @@
         <ConnectionManager
           ConnectionString="ServerUser=cotadmin@nextgen.com;ServerTimeout=60;ServerUrl=https://login.salesforce.com/services/Soap/u/54.0;RetainSameConnection=True;OrganizationId=;PortalId=;AllowDuplicatesSave=False;AllowFieldTruncation=False;CommitAllOrNone=False;AssignmentRule=;ProxyHost=;ProxyPort=0;ProxyUser=;Retry=0;RetryPause=30;RetryError=;"
           ConnectByProxy="False">
-          <ServerPassword
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA1R6PUL/BUpl08Qt1uzx5hWACaRa7vMsMSZmuX/wfgtgAAAAAOgAAAAAIAACAAAAB9w5rzF1E/eymX05P1u1gvGGI+rS6xHTUFWKWCG3QW7VAAAAAEv4OZWvhm7N/tqAGrDwTxhyYpQscihpTuAnQrx5pL4qZmmokQmKgW2RBLqyzQVUQxmVAqhjvig0vF0kDfIRhpndxLDVIruHy13KDz1qRzWEAAAACRvdbsWCYwvRAa6b/y2HQ21vcLi8NiH13Xh1SIjkKkesNfh5KHWWJh8RhVrHJzEkWp2wValxPXDIkMqaclceu7</ServerPassword>
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="7YTpdhzbDko="
+            IV="oB1Cpt8Sn6KHxAfqSjnk4w==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>oB1Cpt8Sn6KHxAfqSjnk47FasuoFBe9K7CBH6XmFVSwBedpIddPS9Nm72eTLimCs16dNy+1ZHNTRbmmsdfh6OS/aDoUwYU5DzzLT+DVHNo57SWrkGO7eRwThX4CAwHuUeDpjzpmGUBz/V2SdOT2slC455d5DKwMW7VUVHhqLwdmPCRQ1/YwdDlOi4pzk1Gc6</CipherValue>
+            </CipherData>
+          </EncryptedData>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -381,6 +396,13 @@
                       externalMetadataColumnId="202"
                       cachedName="Size"
                       cachedDataType="nText" />
+                    <inputColumn
+                      id="754"
+                      lineageId="470"
+                      externalMetadataColumnId="178"
+                      cachedName="CermCustomerRecordID"
+                      cachedDataType="wstr"
+                      cachedLength="18" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7367,9 +7389,8 @@ where [refTable].[DatabaseID] = ?</property>
                   name="SqlCommand"
                   dataType="System.String"
                   description="The SQL command to be executed."
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
-  FROM [SalesForce].[dbo].[Temp_Create_Accounts]
-  WHERE NOT(LEN(State)&gt;2) AND Country != 'PR'</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select * From [dbo].[Temp_Create_Accounts]
+Where [Country] != 'PR'</property>
                 <property
                   id="6"
                   name="SqlCommandVariable"
@@ -8197,6 +8218,7 @@ where [refTable].[DatabaseID] = ?</property>
       DTS:DTSID="{98B8C45D-0476-498C-AA1A-25A67AB87667}"
       DTS:ExecutableType="CozyRoc.Pipeline"
       DTS:LocaleID="-1"
+      DTS:MaxErrorCount="25"
       DTS:ObjectName="Send Updates"
       DTS:TaskContact="Data Flow Task Plus;CozyRoc LLC; SSIS+; © 2006-2025 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0">
       <DTS:Variables />
@@ -8233,9 +8255,8 @@ where [refTable].[DatabaseID] = ?</property>
                   name="SqlCommand"
                   dataType="System.String"
                   description="The SQL command to be executed."
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
-  FROM [SalesForce].[dbo].[Temp_Update_Accounts]
-  WHERE NOT(LEN(State)&gt;2) AND Country != 'PR'</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select * From [dbo].[Temp_Update_Accounts]
+Where [Country] != 'PR'</property>
                 <property
                   id="6"
                   name="SqlCommandVariable"
@@ -13216,9 +13237,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13240,9 +13259,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13264,9 +13281,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13296,6 +13311,42 @@ WHERE ForecastId = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CustomerBrandWithBrandDescription To Salesforce\79">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CustomerBrandWithBrandDescription To Salesforce\247">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Client]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Invoice Push To Salesforce">
     <LayoutInfo>
@@ -13983,9 +14034,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14043,9 +14092,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
