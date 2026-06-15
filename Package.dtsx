@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="180"
-  DTS:VersionGUID="{EF42C40E-499B-4AAA-9834-22B97E085160}">
+  DTS:VersionBuild="202"
+  DTS:VersionGUID="{33C59216-EAA0-4D77-B14B-6C7B22BDBC8C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA9LI8XMrvIZsfXk8Y1I7F40qa14PSV1pmcN9/LbcF7BgAAAAAOgAAAAAIAACAAAADpG+iFq4Fhgn4v/z8DOXt+dbuemCP8WL9yzN+UfT2S2yAAAAAQzNxtL0jJG2AbnWhSNkA4rDCR9L3diDTBslHQE/9/80AAAAA+CmRXQRRK8WzgTNTZd25ursDMlfWC/hG7kQyLK+YHI8glJesBrnN9IPoPxKUTfdOmrDhRwMUlFJsJZKLYgKio</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAx5x8IEVRRDmYqk2SbSHEfDv97M5EhWs5EPBXHKzk+rAAAAAAOgAAAAAIAACAAAADc7/nE4wDInr401XG3lz8F4JvOY3xPmKntnt8Cxoc9FSAAAAAUz0mYB0zvXegOuXq6mrPLD6JB5HWgMlOR/aQoRNi5NkAAAABWPBFuC8cDFHaF1qBqk0TPmTyEjOC2WEleh88mFtdRwYCQIuX+zsO4jq593NMVjPYrcsmWKmc2WEQb4/W6ku11</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA+l7cqSvC1ICe+jzg6W9DHSmdCq1estySAJvYkM/hRsAAAAAAOgAAAAAIAACAAAADXQQytOY4h+kZP1kGhS1i9FO52iXgSIMnLGSD3Ckm4sFAAAACisbdejZ0MQL1j3w+6djwACpONbaJbOlORIsP7ub5oxOD1KMFl4OAnA4yazDykPiUiIsFFdo0WKUKjl988Xzsi2NEO8f5o2yXvztDhrScGoEAAAADTZt+bTEfz2imGXZqCOjR6Nrg759vDc8YnSbi1zj9mMgRtw0wesbS6GV7lWXO+5rpyI7TIjIVnpquRVT6v2MlQ</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApw2U1BQcVESMGBt/0/+pKgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA1R6PUL/BUpl08Qt1uzx5hWACaRa7vMsMSZmuX/wfgtgAAAAAOgAAAAAIAACAAAAB9w5rzF1E/eymX05P1u1gvGGI+rS6xHTUFWKWCG3QW7VAAAAAEv4OZWvhm7N/tqAGrDwTxhyYpQscihpTuAnQrx5pL4qZmmokQmKgW2RBLqyzQVUQxmVAqhjvig0vF0kDfIRhpndxLDVIruHy13KDz1qRzWEAAAACRvdbsWCYwvRAa6b/y2HQ21vcLi8NiH13Xh1SIjkKkesNfh5KHWWJh8RhVrHJzEkWp2wValxPXDIkMqaclceu7</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
