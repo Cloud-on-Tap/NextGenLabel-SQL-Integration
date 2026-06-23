@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-9HVLOIP</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="ZBxJTm4g8W4=" SSIS:IV="cxVmKpX/dfotu+LQLJ4h4w==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">MbrH3xaIGClYNI6bUmF/scPE4LA6Zg1LO++lfpek1RMevNB14p4EJBEwk/MN4Olu1XKvIdYqvZ5t+R4enp7aBsF0iyrVKvGpdiOA5w8vTNl0fnvqYUwqCpYai6UnFUHUk+PDTA2oDt71Nobrlz8ylgARg1goZ7zoCIK9S/SJGLAsfTelFv4zwSeLdMIzo0vc</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="zz/IqgHrwiY=" SSIS:IV="Y8PIkedpyFvk/8dDYK9Tag==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">eY18BoU0xPMMpY4czBdnutqTKiyoI+VpxpjnEnUov3Q5QUIoE97NvpqpzFWktn3zcmi0WiK8Zac/qafkD7z9Popeafe9Wl3ofBKdKEbXHYrouX9vmcDotvEuceFaXS2s7Y616TB8gX7Fq9bqz0+2y0d8mD4DZXBbdKiKxoRPphYeJfpc/RPI7A2TXa18VDNd</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">254</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">262</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{7BBB3946-7B16-4EF5-BD2E-605906B246E3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{BF811730-9CA1-4B35-AD05-8E0A07C19360}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -257,7 +257,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">3</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -302,7 +302,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">ServerUser=cotadmin@nextgen.com;ServerTimeout=60;ServerUrl=https://login.salesforce.com/services/Soap/u/54.0;RetainSameConnection=True;OrganizationId=;PortalId=;AllowDuplicatesSave=False;AllowFieldTruncation=False;CommitAllOrNone=False;AssignmentRule=;ProxyHost=;ProxyPort=0;ProxyUser=;Retry=0;RetryPause=30;RetryError=;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">AuthType=OAuth2CC;OAuthClientId=3MVG9kb26yEQGZW2oFvcjoa6HnMmE9MFTF44vUKIfqvVyaNoOQnX7UlW9J2rmyP7EcJ5Qgm0AQ.7AqK.NwNE_;;ServerTimeout=60;ServerUrl=https://nglabel.my.salesforce.com/services/Soap/u/54.0;RetainSameConnection=True;OrganizationId=;PortalId=;AllowDuplicatesSave=False;AllowFieldTruncation=False;CommitAllOrNone=False;AssignmentRule=;ProxyHost=;ProxyPort=0;ProxyUser=;Retry=0;RetryPause=30;RetryError=;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -333,8 +333,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">3MVG9kb26yEQGZW2oFvcjoa6HnMmE9MFTF44vUKIfqvVyaNoOQnX7UlW9J2rmyP7EcJ5Qgm0AQ.7AqK.NwNE_</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -532,7 +531,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">https://login.salesforce.com/services/Soap/u/54.0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">https://nglabel.my.salesforce.com/services/Soap/u/54.0</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

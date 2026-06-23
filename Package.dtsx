@@ -13,8 +13,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="258"
-  DTS:VersionGUID="{798F8361-0A64-4E8B-BD9C-16CF01AC4C7D}">
+  DTS:VersionBuild="262"
+  DTS:VersionGUID="{BF811730-9CA1-4B35-AD05-8E0A07C19360}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,12 +30,12 @@
           DTS:ConnectionString="Data Source=192.168.0.18;User ID=SalesForceAdmin;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{7511E214-CB1F-4426-A00C-44F247A0E867}192.168.0.18.SalesForceAdmin;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="TtO6orB2jfQ="
-            IV="SYtyPHOAqkFbIj8hTvIi6A==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="j1Z1pgZXJPQ="
+            IV="sOb1G6kseKNpkaJgPWFa/A==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>SYtyPHOAqkFbIj8hTvIi6K8De+nhPpxJ56ZA21ll5leVKrly/N+spdg3STBWgRHCKGyoRXPd8hwwZH2tkwyg0vQUVVCq04eIFVAgUjgwNJCs+0Ak+UfCnS7eUlgL3qHjikRvbPwq7uVyhQO48D8uOBYSmawXxpZh7Gklvh2SSeywr00U7pwQQMFqI8SEYlgx</CipherValue>
+              <CipherValue>sOb1G6kseKNpkaJgPWFa/GXpl8qdFaXSB87Znv0mwBAX0zyDkZkyd2PPUVyVFLuMurOeGL1Q7tVaCPM0GVlCCgJtFprJu17GjOd293WVog5nCkNNoWs7N+PP0nGue5/dQwIEs9C4ZJoCqhBmMvnz2MVNH4m7znZthuCmRve7AOpExWOW3M3ivi1PgtBS4zPs</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -48,16 +48,16 @@
       DTS:ObjectName="Salesforce Connection Manager 1">
       <DTS:ObjectData>
         <ConnectionManager
-          ConnectionString="ServerUser=cotadmin@nextgen.com;ServerTimeout=60;ServerUrl=https://login.salesforce.com/services/Soap/u/54.0;RetainSameConnection=True;OrganizationId=;PortalId=;AllowDuplicatesSave=False;AllowFieldTruncation=False;CommitAllOrNone=False;AssignmentRule=;ProxyHost=;ProxyPort=0;ProxyUser=;Retry=0;RetryPause=30;RetryError=;"
+          ConnectionString="AuthType=OAuth2CC;OAuthClientId=3MVG9kb26yEQGZW2oFvcjoa6HnMmE9MFTF44vUKIfqvVyaNoOQnX7UlW9J2rmyP7EcJ5Qgm0AQ.7AqK.NwNE_;;ServerTimeout=60;ServerUrl=https://nglabel.my.salesforce.com/services/Soap/u/54.0;RetainSameConnection=True;OrganizationId=;PortalId=;AllowDuplicatesSave=False;AllowFieldTruncation=False;CommitAllOrNone=False;AssignmentRule=;ProxyHost=;ProxyPort=0;ProxyUser=;Retry=0;RetryPause=30;RetryError=;"
           ConnectByProxy="False">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="up52a2zlHTo="
-            IV="3nNMx7nK1FQXn1DX7XbZaQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="okS9hRfldsk="
+            IV="c7u2c40tmNNXJoW/fBaZtw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>3nNMx7nK1FQXn1DX7XbZaVwNXjseB5r9+abvjZIiF/oPkQCyDgf2d8hzb35ZmROkDDiCcolqkBJ4C+DAn9Ko5E2P1gCQDiH+8kpv2VgxLpxnA+27EOLsyFZ+FPSms7RE24Avu0m2o89/b/BEoqzs2+WqtjhOJgFjcRnkZTt16uprEehLAu2lSkoz8B/BUoMA</CipherValue>
+              <CipherValue>c7u2c40tmNNXJoW/fBaZt7PgC7VcKCPE+PwboluyWpyBQjb7hsIOd5INwGD2+BAWRsfoHwAsoY7AQhkeA4+okCQY3O1MroDHgNjQVhE+q5LBr1X3PQFDizOmPNkWnENRIrT/Xn/I7b+pZOELiSwhdWCCbHFX0lmzmX6mnCLi1anESzDwgzbr6hE8UNXM+gQ3bQun7Pfoe9Z6BdsuAhxyYgRS7oli6RZBfFaurJh1jZw=</CipherValue>
             </CipherData>
           </EncryptedData>
         </ConnectionManager>
@@ -17138,6 +17138,14 @@ WHERE ForecastId = ?</property>
           Id="Package\Execute SQL Task"
           TopLeft="71.7424222845773,92.3636360020349" />
         <NodeLayout
+          Size="160,42"
+          Id="Package\Expression Task"
+          TopLeft="79.2727272727273,13.4545454545455" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Forecast Classification Cleanup"
+          TopLeft="255.181818181818,362" />
+        <NodeLayout
           Size="213,42"
           Id="Package\Invoice Push To Salesforce"
           TopLeft="636.818181818182,361.454545454545" />
@@ -17343,17 +17351,28 @@ WHERE ForecastId = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="needd"
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="62,40"
-          Id="15529362-2fa1-4fbc-b934-96a543867847"
-          TopLeft="42.5,28.5" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Expression Task"
-          TopLeft="79.2727272727273,13.4545454545455" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="489.181818181818,382.727272727273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.636363636364,0"
+              Start="0,0"
+              End="140.136363636364,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="140.136363636364,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
           TopLeft="156.757574778652,55.4545454545455">
@@ -17376,10 +17395,6 @@ WHERE ForecastId = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="234,42"
-          Id="Package\Forecast Classification Cleanup"
-          TopLeft="255.181818181818,362" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
           TopLeft="892.318181818182,303">
@@ -17414,28 +17429,13 @@ WHERE ForecastId = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="489.181818181818,382.727272727273">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="147.636363636364,0"
-              Start="0,0"
-              End="140.136363636364,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="140.136363636364,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <AnnotationLayout
+          Text="needd"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="62,40"
+          Id="15529362-2fa1-4fbc-b934-96a543867847"
+          TopLeft="42.5,28.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -17457,9 +17457,35 @@ WHERE ForecastId = ?</property>
           Id="247"
           TopLeft="304,88" />
         <NodeLayout
+          Size="161,42"
+          Id="687"
+          TopLeft="285,165" />
+        <NodeLayout
           Size="158,42"
           Id="528"
           TopLeft="291,248" />
+        <EdgeLayout
+          Id="1148"
+          TopLeft="373.5,290">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,123"
+              Start="0,0"
+              End="0,115.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,115.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="527"
           TopLeft="364,53">
@@ -17482,10 +17508,6 @@ WHERE ForecastId = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="687"
-          TopLeft="285,165" />
         <EdgeLayout
           Id="701"
           TopLeft="367.75,207">
@@ -17532,26 +17554,72 @@ WHERE ForecastId = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Forecast Classification Cleanup">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="189,42"
+          Id="20"
+          TopLeft="450,284" />
+        <NodeLayout
+          Size="158,42"
+          Id="198"
+          TopLeft="469,190" />
+        <NodeLayout
+          Size="169,42"
+          Id="1"
+          TopLeft="468,51" />
         <EdgeLayout
-          Id="1148"
-          TopLeft="373.5,290">
+          Id="205"
+          TopLeft="546.25,232">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,123"
+              EndConnector="0,52"
               Start="0,0"
-              End="0,115.5">
+              End="0,44.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,115.5" />
+                    End="0,44.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="204"
+          TopLeft="550.25,93">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,97"
+              Start="0,0"
+              End="0,89.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -18057,7 +18125,9 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18177,10 +18247,6 @@ WHERE ForecastId = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="115,42"
-          Id="1120"
-          TopLeft="205,191" />
-        <NodeLayout
           Size="191,42"
           Id="1145"
           TopLeft="313,436" />
@@ -18192,6 +18258,10 @@ WHERE ForecastId = ?</property>
           Size="169,42"
           Id="1"
           TopLeft="178,25" />
+        <NodeLayout
+          Size="115,42"
+          Id="1120"
+          TopLeft="205,191" />
         <EdgeLayout
           Id="3331"
           TopLeft="280.333333333333,233">
@@ -18229,6 +18299,30 @@ WHERE ForecastId = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="4297"
+          TopLeft="262.5,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,124"
+              Start="0,0"
+              End="0,116.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,116.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="3332"
           TopLeft="244.666666666667,233">
           <EdgeLayout.Curve>
@@ -18262,128 +18356,6 @@ WHERE ForecastId = ?</property>
             <mssgm:EdgeLabel
               BoundingBox="-112.639720052083,88.2795883361921,111.6127734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="4297"
-          TopLeft="262.5,67">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,124"
-              Start="0,0"
-              End="0,116.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,116.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Update DB Forecast Table\1120">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Forecast]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Update DB Forecast Table\270">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Forecast Classification Cleanup">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="169,42"
-          Id="1"
-          TopLeft="468,51" />
-        <NodeLayout
-          Size="189,42"
-          Id="20"
-          TopLeft="450,284" />
-        <NodeLayout
-          Size="158,42"
-          Id="198"
-          TopLeft="469,190" />
-        <EdgeLayout
-          Id="204"
-          TopLeft="550.25,93">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,97"
-              Start="0,0"
-              End="0,89.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,89.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="205"
-          TopLeft="546.25,232">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
