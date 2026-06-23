@@ -13,8 +13,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="262"
-  DTS:VersionGUID="{BF811730-9CA1-4B35-AD05-8E0A07C19360}">
+  DTS:VersionBuild="273"
+  DTS:VersionGUID="{FB04DFA7-1B08-4502-B4F7-CDCBC55F9893}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,12 +30,12 @@
           DTS:ConnectionString="Data Source=192.168.0.18;User ID=SalesForceAdmin;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{7511E214-CB1F-4426-A00C-44F247A0E867}192.168.0.18.SalesForceAdmin;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="j1Z1pgZXJPQ="
-            IV="sOb1G6kseKNpkaJgPWFa/A==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="foQaxvFWDbs="
+            IV="q31+OniA4ryRRDHdsFyfeA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>sOb1G6kseKNpkaJgPWFa/GXpl8qdFaXSB87Znv0mwBAX0zyDkZkyd2PPUVyVFLuMurOeGL1Q7tVaCPM0GVlCCgJtFprJu17GjOd293WVog5nCkNNoWs7N+PP0nGue5/dQwIEs9C4ZJoCqhBmMvnz2MVNH4m7znZthuCmRve7AOpExWOW3M3ivi1PgtBS4zPs</CipherValue>
+              <CipherValue>q31+OniA4ryRRDHdsFyfeG8H/FQqkz8ZUGGc6CwdrTgY0WtqhZwy1wTK48sU6KeIVLHCTfsXgKCT63vDzPF/T3FmC5RKg0dRmdVIhY2iycRtOrcnk7FBucqqQiWhibHmLVCZGXKjaEZAkW6rMn9c40vHMagKqCT9rYtyuoDVOqgrXO9XwNHe1UnlfoVM4uPU</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -52,12 +52,12 @@
           ConnectByProxy="False">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="okS9hRfldsk="
-            IV="c7u2c40tmNNXJoW/fBaZtw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="B5ePbJqpgkY="
+            IV="JTzOYnEP3U/FQgBAMAAMfg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>c7u2c40tmNNXJoW/fBaZt7PgC7VcKCPE+PwboluyWpyBQjb7hsIOd5INwGD2+BAWRsfoHwAsoY7AQhkeA4+okCQY3O1MroDHgNjQVhE+q5LBr1X3PQFDizOmPNkWnENRIrT/Xn/I7b+pZOELiSwhdWCCbHFX0lmzmX6mnCLi1anESzDwgzbr6hE8UNXM+gQ3bQun7Pfoe9Z6BdsuAhxyYgRS7oli6RZBfFaurJh1jZw=</CipherValue>
+              <CipherValue>JTzOYnEP3U/FQgBAMAAMfnvc2j8Jej7yNGtD+Qu55bfTAnBrd5869l7vGG1Y+yaRYF9f+jq4dP+CnDfu9JWpJ4IThSVU67DbNkIi7e7it/dIX7XmAp7MCKgp2xpKfd+kobfjx5Rcn/J91nQMIdQs5wy0megAND+C/O4dM5UG8Oe/eDuLLmjtIsMeGJFe6QG4cmYy59TBwDvlEkQyHoAyzsDIvWY4aEKMQzZDzLF89yA=</CipherValue>
             </CipherData>
           </EncryptedData>
         </ConnectionManager>
@@ -5583,18 +5583,117 @@ where [refTable].[CustomerId] = ?</property>
                 </output>
               </outputs>
             </component>
+            <component
+              id="738"
+              name="Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              usesDispositions="true"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  id="739"
+                  name="Conditional Split Input"
+                  description="Input to the Conditional Split Transformation">
+                  <inputColumns>
+                    <inputColumn
+                      id="874"
+                      lineageId="468"
+                      cachedName="SSIS_Batch_ID__c"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  id="880"
+                  name="Classifications to be marked inactive"
+                  description="Output 1 of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="739"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="IgnoreFailure"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      id="881"
+                      name="Expression"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      containsID="true">#468 != @[User::BatchID]</property>
+                    <property
+                      id="882"
+                      name="FriendlyExpression"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      containsID="true"
+                      expressionType="Notify">SSIS_Batch_ID__c != @[User::BatchID]</property>
+                    <property
+                      id="883"
+                      name="EvaluationOrder"
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value.">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="740"
+                  name="Conditional Split Default Output"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="739">
+                  <properties>
+                    <property
+                      id="741"
+                      name="IsDefaultOut"
+                      dataType="System.Boolean">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  id="742"
+                  name="Conditional Split Error Output"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="739"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      id="743"
+                      name="ErrorCode"
+                      lineageId="743"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      id="744"
+                      name="ErrorColumn"
+                      lineageId="744"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
-            <path
-              id="204"
-              name="Salesforce Source Output"
-              startId="16"
-              endId="199" />
             <path
               id="205"
               name="Derived Column Output"
               startId="200"
               endId="36" />
+            <path
+              id="745"
+              name="Salesforce Source Output"
+              startId="16"
+              endId="739" />
+            <path
+              id="1017"
+              name="Classifications to be marked inactive"
+              startId="880"
+              endId="199" />
           </paths>
           <ScriptProject
             Name="ST_8d173d25185245ce9f5fe4edb3d5dcbc"
@@ -5621,7 +5720,7 @@ where [refTable].[CustomerId] = ?</property>
           <components>
             <component
               id="295"
-              name="Salesforce Destination To Forecast classifications"
+              name="Salesforce Destination To Invoice classifications"
               componentClassID="Microsoft.ManagedComponentHost"
               description="Populates Salesforce destination object."
               usesDispositions="true"
@@ -5718,7 +5817,7 @@ where [refTable].[CustomerId] = ?</property>
                       externalMetadataColumnId="321"
                       cachedName="BrandId"
                       cachedDataType="wstr"
-                      cachedLength="6" />
+                      cachedLength="255" />
                     <inputColumn
                       id="312"
                       lineageId="438"
@@ -7999,7 +8098,7 @@ where [refTable].[CustomerId] = ?</property>
                       id="1481"
                       name="BrandId"
                       lineageId="1481"
-                      length="6"
+                      length="255"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -8699,7 +8798,7 @@ where [refTable].[CustomerId] = ?</property>
                       id="393"
                       name="BrandId"
                       dataType="wstr"
-                      length="6" />
+                      length="255" />
                     <externalMetadataColumn
                       id="395"
                       name="Size"
@@ -9030,7 +9129,7 @@ where [refTable].[CustomerId] = ?</property>
                       id="1482"
                       name="BrandId"
                       lineageId="1482"
-                      length="6"
+                      length="255"
                       dataType="wstr" />
                     <outputColumn
                       id="1484"
@@ -9628,7 +9727,7 @@ where [refTable].[AccountId] = ?</property>
                       lineageId="1481"
                       cachedName="BrandId"
                       cachedDataType="wstr"
-                      cachedLength="6" />
+                      cachedLength="255" />
                     <inputColumn
                       id="433"
                       lineageId="817"
@@ -17140,11 +17239,11 @@ WHERE ForecastId = ?</property>
         <NodeLayout
           Size="160,42"
           Id="Package\Expression Task"
-          TopLeft="79.2727272727273,13.4545454545455" />
+          TopLeft="79.2727272727273,12.4545454545455" />
         <NodeLayout
           Size="234,42"
           Id="Package\Forecast Classification Cleanup"
-          TopLeft="255.181818181818,362" />
+          TopLeft="254.181818181818,361" />
         <NodeLayout
           Size="213,42"
           Id="Package\Invoice Push To Salesforce"
@@ -17335,14 +17434,14 @@ WHERE ForecastId = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="22.8181818181819,0"
+              EndConnector="22.818181818182,0"
               Start="0,0"
-              End="15.3181818181819,0">
+              End="15.318181818182,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="15.3181818181819,0" />
+                    End="15.318181818182,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17353,18 +17452,18 @@ WHERE ForecastId = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="489.181818181818,382.727272727273">
+          TopLeft="488.181818181818,382.227272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="147.636363636364,0"
+              EndConnector="148.636363636364,0"
               Start="0,0"
-              End="140.136363636364,0">
+              End="141.136363636364,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="140.136363636364,0" />
+                    End="141.136363636364,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17375,18 +17474,18 @@ WHERE ForecastId = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="156.757574778652,55.4545454545455">
+          TopLeft="156.757574778652,54.4545454545455">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.9090905474894"
+              EndConnector="0,37.9090905474894"
               Start="0,0"
-              End="0,29.4090905474894">
+              End="0,30.4090905474894">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.4090905474894" />
+                    End="0,30.4090905474894" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17401,26 +17500,26 @@ WHERE ForecastId = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-520.136363636364,59"
+              EndConnector="-521.136363636364,58"
               Start="0,0"
-              End="-520.136363636364,51.5">
+              End="-521.136363636364,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="-4,29.5" />
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="-4,29" />
                   <mssgle:LineSegment
-                    End="-516.136363636364,29.5" />
+                    End="-517.136363636364,29" />
                   <mssgle:CubicBezierSegment
-                    Point1="-516.136363636364,29.5"
-                    Point2="-520.136363636364,29.5"
-                    Point3="-520.136363636364,33.5" />
+                    Point1="-517.136363636364,29"
+                    Point2="-521.136363636364,29"
+                    Point3="-521.136363636364,33" />
                   <mssgle:LineSegment
-                    End="-520.136363636364,51.5" />
+                    End="-521.136363636364,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17593,32 +17692,74 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="159,42"
+          Id="738"
+          TopLeft="653,113" />
         <EdgeLayout
-          Id="204"
-          TopLeft="550.25,93">
+          Id="745"
+          TopLeft="637,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,97"
+              EndConnector="95.5,41"
               Start="0,0"
-              End="0,89.5">
+              End="95.5,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,89.5" />
+                    End="91.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="91.5,0"
+                    Point2="95.5,0"
+                    Point3="95.5,4" />
+                  <mssgle:LineSegment
+                    End="95.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="1017"
+          TopLeft="732.5,155">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-184.5,35"
+              Start="0,0"
+              End="-184.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
+                  <mssgle:LineSegment
+                    End="-180.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-180.5,17.5"
+                    Point2="-184.5,17.5"
+                    Point3="-184.5,21.5" />
+                  <mssgle:LineSegment
+                    End="-184.5,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-172.9038671875,22.5,161.307734375,9.7978515625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17639,7 +17780,7 @@ WHERE ForecastId = ?</property>
           Id="403"
           TopLeft="354,28" />
         <NodeLayout
-          Size="322,42"
+          Size="314,42"
           Id="295"
           TopLeft="397,380" />
         <NodeLayout
@@ -17669,9 +17810,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17680,9 +17819,9 @@ WHERE ForecastId = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="139,133"
+              EndConnector="135,133"
               Start="0,0"
-              End="139,125.5">
+              End="135,125.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -17693,21 +17832,19 @@ WHERE ForecastId = ?</property>
                     Point2="0,66.5"
                     Point3="4,66.5" />
                   <mssgle:LineSegment
-                    End="135,66.5" />
+                    End="131,66.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="135,66.5"
-                    Point2="139,66.5"
-                    Point3="139,70.5" />
+                    Point1="131,66.5"
+                    Point2="135,66.5"
+                    Point3="135,70.5" />
                   <mssgle:LineSegment
-                    End="139,125.5" />
+                    End="135,125.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17729,9 +17866,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17761,6 +17896,19 @@ WHERE ForecastId = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Invoice Push To Salesforce\376">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Process Records">
     <LayoutInfo>
@@ -18294,7 +18442,7 @@ WHERE ForecastId = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="15.8919466145833,87.8713550600343,96.3827734375,11.609375"
+              BoundingBox="15.8919466145835,87.8713550600343,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -18317,9 +18465,7 @@ WHERE ForecastId = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
